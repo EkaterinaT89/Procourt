@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fcgpp_game_in_process"
+    android:layout_width="match_parent"
+    android:layout_height="149dp"
+    android:layout_marginTop="15dp"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="5dp"
+    tools:context=".fragment.player.CardFragmentGamePlayerPersonal" >
+
+    <TextView
+        android:id="@+id/fcgpp_game_in_process_title"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/yellow"
+        android:gravity="center"
+        android:text="@string/game_in_process_title"
+        android:textColor="@color/dark_orange"
+        android:visibility="visible"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/fcgpp_game_is_over"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/yellow"
+        android:visibility="gone"
+        android:gravity="center"
+        android:text="@string/game_is_over"
+        android:textColor="@color/dark_orange"
+        tools:ignore="TextContrastCheck" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/fcgpp_player_photo_left"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginBottom="45dp"
+        android:foregroundGravity="center"
+        app:cardCornerRadius="160dp"
+        app:cardElevation="16dp">
+
+        <ImageView
+            android:id="@+id/fcgpp_player_photo_left_input"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_temp_pic" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/fcgpp_player_photo_right"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="260dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginBottom="45dp"
+        android:foregroundGravity="center"
+        app:cardCornerRadius="160dp"
+        app:cardElevation="16dp">
+
+        <ImageView
+            android:id="@+id/fcgpp_player_photo_right_input"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_temp_pic" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/fcgpp_name_player_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lines="2"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="112dp"
+        android:gravity="center"
+        android:text="@string/name_player_tools"
+        android:textColor="@color/dark_blue"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/fcgpp_name_player_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="270dp"
+        android:layout_marginTop="112dp"
+        android:lines="2"
+        android:gravity="center"
+        android:text="@string/name_player_tools"
+        android:textColor="@color/dark_blue"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/fcgpp_count_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center"
+        android:layout_marginTop="51dp"
+        android:layout_marginEnd="25dp"
+        android:gravity="center"
+        tools:text="4"
+        android:textColor="@color/dark_blue"
+        android:textSize="25sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center"
+        android:layout_marginTop="51dp"
+        android:layout_marginEnd="5dp"
+        android:gravity="center"
+        android:text=" : "
+        android:textColor="@color/dark_blue"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/fcgpp_count_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center"
+        android:layout_marginTop="51dp"
+        android:layout_marginStart="15dp"
+        android:gravity="center"
+        tools:text="5"
+        android:textColor="@color/dark_blue"
+        android:textSize="25sp" />
+
+
+    <TextView
+        android:id="@+id/fcgpp_when_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center"
+        android:layout_marginTop="85dp"
+        android:gravity="center"
+        android:text="@string/today_tools"
+        android:textColor="@color/first_intro_screen"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/fcgpp_clock"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="113dp"
+        android:src="@drawable/ic_clock" />
+
+    <TextView
+        android:id="@+id/fcgpp_time_playing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="170dp"
+        android:layout_marginTop="115dp"
+        android:layout_gravity="start"
+        android:gravity="center"
+        android:text="@string/thirty_min_tools"
+        android:textColor="@color/dark_grey"
+        android:textSize="11sp" />
+
+</androidx.cardview.widget.CardView>

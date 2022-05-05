@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/player_item"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_margin="8dp"
+    android:backgroundTint="@color/first_intro_screen"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="4dp"
+    tools:context=".fragment.club.CardPlayerForPlayersClubFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/dotted_line_grey_line"
+        android:backgroundTint="@color/first_intro_screen"
+        android:padding="16dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/fcpfpc_player_photo"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:foregroundGravity="center"
+            app:cardCornerRadius="160dp">
+
+            <ImageView
+                android:id="@+id/fcpfpc_player_photo_input"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_temp_pic" />
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/fcpfpc_player_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:gravity="center|start"
+                android:text="@string/tools_name"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/fcpfpc_player_rank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:gravity="center|start"
+                android:text="@string/rank"
+                android:textColor="@color/white" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/fcpfpc_choose_time"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:backgroundTint="@color/first_intro_screen"
+                android:gravity="top"
+                android:text="@string/ct"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ball_pic"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="end|center"
+            android:layout_marginStart="70dp"
+            android:src="@drawable/ic_ball" />
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

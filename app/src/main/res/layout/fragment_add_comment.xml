@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.news.AddCommentFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/fac_avatar"
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="10dp"
+        android:foregroundGravity="center"
+        app:cardCornerRadius="160dp"
+        app:layout_constraintBottom_toBottomOf="@id/fac_top_barrier"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_temp_pic" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/fac_author_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@color/first_intro_screen"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@id/fac_menu_button"
+        app:layout_constraintStart_toEndOf="@+id/fac_avatar"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Procourt" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/fac_group_for_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="fac_video_link, fac_play_video" />
+
+    <TextView
+        android:id="@+id/fac_video_link"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autoLink="web"
+        android:ellipsize="end"
+        android:singleLine="true"
+        app:layout_constraintBottom_toBottomOf="@+id/bottom_barrier"
+        app:layout_constraintEnd_toEndOf="@+id/fac_content"
+        app:layout_constraintStart_toStartOf="@+id/fac_content"
+        app:layout_constraintTop_toBottomOf="@id/bottom_barrier"
+        tools:text="video" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fac_play_video"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autoLink="web"
+        android:background="@drawable/ic_temp_pic"
+        android:checkable="false"
+        app:icon="@drawable/ic_play_video"
+        app:iconGravity="textStart"
+        app:layout_constraintBottom_toTopOf="@id/fac_video_link"
+        app:layout_constraintEnd_toEndOf="@+id/fac_content"
+        app:layout_constraintStart_toStartOf="@+id/fac_content"
+        app:layout_constraintTop_toBottomOf="@id/fac_content" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/fac_video_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:barrierDirection="top"
+        app:constraint_referenced_ids="fac_video_link, fac_play_video" />
+
+    <TextView
+        android:id="@+id/fac_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/dark_grey"
+        app:layout_constraintStart_toEndOf="@+id/fac_author_name"
+        app:layout_constraintStart_toStartOf="@+id/fac_author_name"
+        app:layout_constraintTop_toBottomOf="@+id/fac_author_name"
+        tools:text="33 минуты назад" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/fac_top_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="fac_avatar, fac_date, fac_author_name" />
+
+    <TextView
+        android:id="@+id/fac_content"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:autoLink="web"
+        android:background="@drawable/rounded_corner"
+        android:scrollbars="vertical"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/fac_attachments"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fac_top_barrier"
+        tools:text="@string/tools_text" />
+
+    <ImageView
+        android:id="@+id/fac_attachments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/rounded_corner"
+        android:src="@drawable/ic_temp_pic"
+        app:layout_constraintBottom_toTopOf="@id/bottom_barrier"
+        app:layout_constraintEnd_toEndOf="@+id/fac_content"
+        app:layout_constraintStart_toStartOf="@+id/fac_content"
+        app:layout_constraintTop_toBottomOf="@id/fac_content" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/bottom_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="fac_content, fac_video_link, fac_attachments" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fac_share_vk"
+        style="@style/Widget.AppTheme.VkButton"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="17dp"
+        android:background="@android:color/transparent"
+        android:checkable="true"
+        app:icon="@drawable/vk"
+        app:iconTint="@color/dark_grey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bottom_barrier" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fac_share_fb"
+        style="@style/Widget.AppTheme.VkButton"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="17dp"
+        android:background="@android:color/transparent"
+        android:checkable="true"
+        app:icon="@drawable/fb"
+        app:iconTint="@color/dark_grey"
+        app:layout_constraintStart_toEndOf="@id/fac_share_vk"
+        app:layout_constraintTop_toBottomOf="@id/bottom_barrier" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fac_comments"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/transparent"
+        app:icon="@drawable/ic_comment"
+        app:iconTint="@color/dark_grey"
+        app:layout_constraintStart_toEndOf="@id/fac_share_fb"
+        app:layout_constraintTop_toBottomOf="@id/bottom_barrier"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fac_share_out"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/transparent"
+        app:icon="@drawable/share_out"
+        app:iconTint="@color/dark_grey"
+        app:layout_constraintStart_toEndOf="@id/fac_comments"
+        app:layout_constraintTop_toBottomOf="@id/bottom_barrier"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <!--кнопка редактирования новости (доступна если пользователь зашел от своего имени,
+    если нет - не показывается. -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fac_menu_button"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:background="@android:color/transparent"
+        android:checkable="false"
+        app:icon="@drawable/ic_menu_button"
+        app:iconTint="@color/dark_grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bottom_barrier"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/fac_comments_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="fac_share_fb, fac_share_out, fac_share_vk, fac_menu_button" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fac_container_for_comments"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:scrollbars="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@id/fac_write_comment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fac_comments_barrier"
+        tools:listitem="@layout/fragment_card_comment" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fac_write_comment"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:hint="@string/write_comment"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:clickable="true"
+        android:focusable="true"
+        android:textColorHint="@color/first_intro_screen"
+        app:layout_constraintBottom_toTopOf="@id/fac_bottom_nav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TouchTargetSizeCheck">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fac_write_comment_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corners_for_comments"
+            android:clickable="true"
+            android:focusable="true"
+            android:inputType="text"
+            tools:ignore="RtlSymmetry,TouchTargetSizeCheck,DuplicateClickableBoundsCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+<!--    <androidx.constraintlayout.widget.Group-->
+<!--        android:id="@+id/fac_if_it_your_comment_group"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:visibility="gone"-->
+<!--        app:constraint_referenced_ids="fac_is_you_comment_to_write, fac_comment_sent_button" />-->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fac_is_you_comment_to_write"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="25dp"
+        android:hint="@string/my_comment"
+        android:importantForAutofill="no"
+        android:visibility="gone"
+        android:inputType="text"
+        android:clickable="true"
+        android:focusable="true"
+        android:textColorHint="@color/first_intro_screen"
+        app:layout_constraintBottom_toTopOf="@id/fac_bottom_nav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/your_comment"
+            android:layout_width="match_parent"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_height="32dp"
+            android:background="@drawable/rounded_corners_for_comments"
+            android:inputType="text"
+            tools:ignore="RtlSymmetry,TouchTargetSizeCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fac_comment_sent_button_your_comment"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="15dp"
+        app:icon="@drawable/ic_send"
+        app:iconTint="@color/first_intro_screen"
+        android:backgroundTint="@color/light_grey"
+        app:layout_constraintEnd_toEndOf="@id/fac_is_you_comment_to_write"
+        app:layout_constraintTop_toTopOf="@id/fac_is_you_comment_to_write"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fac_comment_sent_button"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="15dp"
+        android:backgroundTint="@color/light_grey"
+        android:visibility="gone"
+        app:icon="@drawable/ic_send"
+        app:iconGravity="top"
+        app:iconTint="@color/first_intro_screen"
+        app:layout_constraintEnd_toEndOf="@id/fac_write_comment"
+        app:layout_constraintTop_toTopOf="@id/fac_write_comment"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/fac_bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/white"
+        android:elevation="20dp"
+        android:scrollbars="none"
+        app:itemIconSize="25sp"
+        app:itemIconTint="@color/first_intro_screen"
+        app:itemTextColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragment.club.CardComfortClubFragment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp" >
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/fclesrc_every_day"
+            android:layout_width="125dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="15dp"
+            android:padding="5dp"
+            android:background="@drawable/rounded_corner_blue_stroke_white_background"
+            android:text="@string/every_day"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/first_intro_screen"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/fclesrc_every_week"
+            android:layout_width="125dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="15dp"
+            android:padding="5dp"
+            android:background="@drawable/rounded_corner_blue_stroke_white_background"
+            android:text="@string/every_week"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/first_intro_screen"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/fclesrc_every_month"
+            android:layout_width="125dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="15dp"
+            android:padding="5dp"
+            android:background="@drawable/rounded_corner_blue_stroke_white_background"
+            android:text="@string/every_month"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/first_intro_screen"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragment.intro.IntroGeoFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/balls" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/fig_text_intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="@dimen/margin_top_procourt"
+        android:text="@string/procourt"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_1_intro_screen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_editor_absoluteY="100dp"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <ImageButton
+        android:id="@+id/fig_back_button"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="@dimen/margin_for_intro"
+        android:layout_marginTop="75dp"
+        android:background="@drawable/rounded_corner"
+        android:src="@drawable/ic_back"
+        android:elevation="60dp"
+        app:layout_constraintBottom_toBottomOf="@+id/fig_text_intro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/fig_text_about_service"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="@dimen/margin_for_intro"
+        android:layout_marginEnd="@dimen/margin_for_intro"
+        android:background="@drawable/rounded_corner"
+        android:gravity="top|center"
+        android:paddingTop="25dp"
+        android:paddingStart="17dp"
+        android:paddingEnd="18dp"
+        android:text="@string/auto_geo_location_text"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        android:textColor="@color/first_intro_screen"
+        android:textSize="@dimen/text_size_for_intro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fig_text_intro"
+        app:layout_editor_absoluteY="100dp"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <ImageView
+        android:id="@+id/fig_geo_picture"
+        android:layout_width="30dp"
+        android:layout_height="42dp"
+        android:src="@drawable/ic_location"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintStart_toStartOf="@id/fig_text_about_service"
+        app:layout_constraintEnd_toEndOf="@id/fig_text_about_service"
+        app:layout_constraintBottom_toBottomOf="@id/fig_text_about_service"
+        app:layout_constraintTop_toTopOf="@id/fig_text_about_service" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fig_skip_button"
+        android:layout_width="275dp"
+        android:layout_height="50dp"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_marginStart="@dimen/margin_for_intro"
+        android:layout_marginEnd="@dimen/margin_for_intro"
+        android:text="@string/miss"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/first_intro_screen"
+        android:textSize="@dimen/text_size_for_intro"
+        app:backgroundTint="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/fig_turn_on_button"
+        app:layout_constraintEnd_toEndOf="@id/fig_text_about_service"
+        app:layout_constraintStart_toStartOf="@id/fig_text_about_service"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fig_turn_on_button"
+        android:layout_width="275dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="@dimen/margin_for_intro"
+        android:layout_marginEnd="@dimen/margin_for_intro"
+        android:layout_marginTop="150dp"
+        android:text="@string/turn_on"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_for_intro"
+        app:backgroundTint="@color/first_intro_screen"
+        app:layout_constraintTop_toTopOf="@id/fig_text_about_service"
+        app:layout_constraintEnd_toEndOf="@id/fig_text_about_service"
+        app:layout_constraintStart_toStartOf="@id/fig_text_about_service"
+        tools:ignore="TouchTargetSizeCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

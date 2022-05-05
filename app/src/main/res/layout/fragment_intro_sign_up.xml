@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="SpeakableTextPresentCheck">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/balls"
+        tools:context=".fragment.intro.IntroSignUpFragment">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/gradient_transparent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/fisu_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="108dp"
+            android:layout_marginTop="@dimen/margin_top_procourt"
+            android:gravity="start"
+            android:text="@string/register_title"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_1_intro_screen"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_editor_absoluteY="100dp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/background_register"
+            android:layout_width="match_parent"
+            android:layout_height="605dp"
+            android:layout_marginTop="38dp"
+            android:layout_marginStart="@dimen/margin_for_intro"
+            android:layout_marginEnd="@dimen/margin_for_intro"
+            android:background="@drawable/rounded_corner"
+            android:textSize="@dimen/text_size_1_intro_screen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fisu_start"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageButton
+            android:id="@+id/fisu_back_button"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="@dimen/margin_for_intro"
+            android:layout_marginTop="75dp"
+            android:src="@drawable/ic_back"
+            android:background="@drawable/rounded_corner"
+            app:layout_constraintBottom_toBottomOf="@+id/fisu_start"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+        <RadioGroup
+            android:id="@+id/fisu_choose_who_register"
+            android:layout_width="300dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/white"
+            android:checkedButton="@id/fisu_player"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/fisu_back_button"
+            app:layout_constraintTop_toBottomOf="@+id/fisu_back_button">
+
+            <RadioButton
+                android:id="@+id/fisu_player"
+                android:layout_width="150dp"
+                android:layout_height="51dp"
+                android:text="@string/player_button_for_register"
+                android:textSize="@dimen/text_size_for_buttons_start"
+                app:layout_constraintBottom_toBottomOf="@+id/couch"
+                app:layout_constraintEnd_toStartOf="@+id/couch"
+                app:layout_constraintStart_toStartOf="@+id/back_button_start"
+                app:layout_constraintTop_toTopOf="@+id/couch" />
+
+            <RadioButton
+                android:id="@+id/fisu_couch"
+                android:layout_width="150dp"
+                android:layout_height="51dp"
+                android:text="@string/couch_button_for_register"
+                android:textSize="@dimen/text_size_for_buttons_start"
+                tools:layout_editor_absoluteX="201dp"
+                tools:layout_editor_absoluteY="197dp" />
+
+        </RadioGroup>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fisu_name"
+            android:layout_width="300dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:hint="@string/hint_name"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="@+id/background_register"
+            app:layout_constraintStart_toStartOf="@+id/background_register"
+            app:layout_constraintTop_toBottomOf="@+id/fisu_choose_who_register">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/fisu_name_input"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:paddingStart="20dp"
+                android:background="@drawable/dotted_line_grey_line"
+                android:inputType="text"
+                tools:ignore="RtlSymmetry"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fisu_surname"
+            android:layout_width="300dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="15dp"
+            android:hint="@string/input_surname"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="@+id/fisu_name"
+            app:layout_constraintStart_toStartOf="@+id/fisu_name"
+            app:layout_constraintTop_toBottomOf="@+id/fisu_name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/fisu_surname_input"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:paddingStart="20dp"
+                android:background="@drawable/dotted_line_grey_line"
+                android:inputType="text"
+                tools:ignore="RtlSymmetry" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fisu_email"
+            android:layout_width="300dp"
+            android:layout_height="58dp"
+            android:hint="@string/input_e_mail"
+            android:layout_marginTop="15dp"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="@+id/fisu_surname"
+            app:layout_constraintStart_toStartOf="@+id/fisu_surname"
+            app:layout_constraintTop_toBottomOf="@+id/fisu_surname">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/fisu_email_input"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:paddingStart="20dp"
+                android:background="@drawable/dotted_line_grey_line"
+                android:inputType="text"
+                tools:ignore="RtlSymmetry" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fisu_phone_number"
+            android:layout_width="300dp"
+            android:layout_height="58dp"
+            android:hint="@string/input_phone_number"
+            android:layout_marginTop="15dp"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="@+id/fisu_email"
+            app:layout_constraintStart_toStartOf="@+id/fisu_email"
+            app:layout_constraintTop_toBottomOf="@+id/fisu_email">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/fisu_phone_number_input"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:paddingStart="20dp"
+                android:background="@drawable/dotted_line_grey_line"
+                android:inputType="number"
+                tools:ignore="RtlSymmetry" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fisu_password"
+            android:layout_width="300dp"
+            android:layout_height="58dp"
+            android:hint="@string/input_password"
+            android:layout_marginTop="15dp"
+            android:importantForAutofill="no"
+            android:inputType="textVisiblePassword"
+            app:layout_constraintEnd_toEndOf="@+id/fisu_phone_number"
+            app:layout_constraintStart_toStartOf="@+id/fisu_phone_number"
+            app:layout_constraintTop_toBottomOf="@+id/fisu_phone_number">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/fisu_password_input"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:paddingStart="20dp"
+                android:background="@drawable/dotted_line_grey_line"
+                android:inputType="textVisiblePassword"
+                tools:ignore="RtlSymmetry" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fisu_password_confirm"
+            android:layout_width="300dp"
+            android:layout_height="58dp"
+            android:hint="@string/input_confirm_password"
+            android:layout_marginTop="15dp"
+            android:importantForAutofill="no"
+            android:inputType="textVisiblePassword"
+            app:layout_constraintEnd_toEndOf="@+id/fisu_password"
+            app:layout_constraintStart_toStartOf="@+id/fisu_password"
+            app:layout_constraintTop_toBottomOf="@+id/fisu_password">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/fisu_password_confirm_input"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:paddingStart="20dp"
+                android:background="@drawable/dotted_line_grey_line"
+                android:inputType="textVisiblePassword"
+                tools:ignore="RtlSymmetry" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fisu_sign_up_button"
+            android:layout_width="300dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/register_button"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="16sp"
+            android:backgroundTint="@color/first_intro_screen"
+            app:layout_constraintEnd_toEndOf="@+id/fisu_password_confirm"
+            app:layout_constraintStart_toStartOf="@+id/fisu_password_confirm"
+            app:layout_constraintTop_toBottomOf="@+id/fisu_password_confirm" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/background_already_registed"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginStart="@dimen/margin_for_intro"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="@dimen/margin_for_intro"
+            android:background="@drawable/round_corners_for_top"
+            android:gravity="start|center"
+            android:paddingStart="60dp"
+            android:text="@string/background_already_registed"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/dark_grey"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@+id/background_register"
+            app:layout_constraintEnd_toEndOf="@+id/background_register"
+            app:layout_constraintStart_toStartOf="@+id/background_register"
+            app:layout_editor_absoluteY="100dp"
+            tools:ignore="RtlSymmetry,TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/fisu_already_registed_button"
+            android:layout_width="201dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="30dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/sign_in"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            style="?android:attr/borderlessButtonStyle"
+            android:textColor="@color/first_intro_screen"
+            android:textSize="16sp"
+            android:gravity="end|center"
+            android:paddingEnd="95dp"
+            app:layout_constraintBottom_toBottomOf="@+id/background_already_registed"
+            app:layout_constraintEnd_toEndOf="@+id/background_already_registed"
+            app:layout_constraintTop_toTopOf="@+id/background_already_registed"
+            app:layout_constraintVertical_bias="0.285"
+            tools:ignore="RtlSymmetry,TouchTargetSizeCheck" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

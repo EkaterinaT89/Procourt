@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragment.player.ShedulePlayerPersonalFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/dark_blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"  >
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fspp_back_button"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="30dp"
+            app:icon="@drawable/ic_left"
+            app:iconSize="32dp"
+            app:iconTint="@color/white"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/fspp_shedule_text"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/my_shedule_text"
+            android:textColor="@color/white"
+            android:layout_gravity="top|center"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fspp_calendar_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="85dp"
+        android:orientation="horizontal"
+        android:scrollbars="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/fragment_card_shedule_player_personal" />
+
+    <TextView
+        android:id="@+id/dotted"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/dotted_line_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fspp_calendar_container" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fspp_add_time_for_playing_button"
+        android:layout_width="match_parent"
+        android:visibility="visible"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:backgroundTint="@color/first_intro_screen"
+        android:textColor="@color/white"
+        android:text="@string/add_time_for_playing_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dotted" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/choose_time_visibility"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="fspp_sum, fspp_sum_player, fspp_choosen_time, fspp_choosen_time_player,
+                fspp_cont, fspp_club, fspp_club_player, fspp_minus, fspp_plus, fspp_lasts,
+                fspp_loop_event_switcher, fspp_cancel_button, fspp_save_button, fspp_delete_time"
+        />
+
+    <TextView
+        android:id="@+id/fspp_sum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/sum"
+        android:textColor="@color/first_intro_screen"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dotted" />
+
+    <TextView
+        android:id="@+id/fspp_sum_player"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="15dp"
+        android:text="@string/tools_sum"
+        android:textColor="@color/dark_blue"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dotted" />
+
+    <TextView
+        android:id="@+id/fspp_choosen_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/choosen_time"
+        android:textColor="@color/first_intro_screen"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fspp_sum" />
+
+    <TextView
+        android:id="@+id/fspp_choosen_time_player"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="15dp"
+        android:text="@string/tools_choosen_time"
+        android:textColor="@color/dark_blue"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fspp_sum_player" />
+
+    <TextView
+        android:id="@+id/fspp_cont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/lasts_title"
+        android:textColor="@color/first_intro_screen"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fspp_choosen_time" />
+
+    <TextView
+        android:id="@+id/fspp_club"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/club_title"
+        android:textColor="@color/first_intro_screen"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fspp_cont"
+        app:layout_constraintBottom_toTopOf="@+id/fspp_loop_event_switcher"/>
+
+    <TextView
+        android:id="@+id/fspp_club_player"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="15dp"
+        android:text="@string/tools_club_k"
+        android:textColor="@color/dark_blue"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fspp_cont" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fspp_minus"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="130dp"
+        app:icon="@drawable/ic_minus"
+        app:iconGravity="start"
+        app:iconTint="@color/first_intro_screen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fspp_choosen_time_player"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/fspp_lasts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/tools_60_m"
+        android:textColor="@color/dark_blue"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/fspp_minus"
+        app:layout_constraintTop_toBottomOf="@id/fspp_choosen_time" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fspp_plus"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        app:icon="@drawable/ic_plus"
+        app:iconTint="@color/first_intro_screen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fspp_choosen_time_player"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fspp_see_clubs"
+        android:text="@string/see_clubs"
+        android:visibility="gone"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/dark_blue"
+        android:textSize="16sp"
+        android:background="@drawable/dotted_line_rounded_corners"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fspp_loop_event_switcher" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/fspp_loop_event_switcher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/loop_event_switcher"
+        android:textColor="@color/first_intro_screen"
+        android:textSize="16sp"
+        app:thumbTint="@color/white"
+        app:trackTint="@color/first_intro_screen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fspp_club"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fspp_cancel_button"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="155dp"
+        android:backgroundTint="@color/dark_grey"
+        android:text="@string/cancel_edit_button"
+        app:layout_constraintTop_toBottomOf="@+id/fspp_see_clubs"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fspp_save_button"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="155dp"
+        android:backgroundTint="@color/first_intro_screen"
+        android:text="@string/save"
+        app:layout_constraintTop_toBottomOf="@+id/fspp_see_clubs"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fspp_delete_time"
+        android:layout_width="match_parent"
+        android:visibility="visible"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:text="@string/delete_time"
+        android:textColor="@color/dark_blue"
+        android:textSize="16sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fspp_save_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

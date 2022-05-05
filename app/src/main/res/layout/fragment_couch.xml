@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:ignore="SpeakableTextPresentCheck">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="16dp"
+        tools:context=".fragment.CouchFragment">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/picture_for_couch"
+            android:layout_marginTop="60dp"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:foregroundGravity="center"
+            app:cardCornerRadius="160dp"
+            app:cardElevation="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/ic_temp_pic"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/couch_name"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="150dp"
+            android:background="@drawable/round_corners_for_top"
+            android:elevation="5dp"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            android:textColor="@color/first_intro_screen"
+            android:gravity="bottom|center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Иван Иванов" />
+
+        <TextView
+            android:id="@+id/couch_occupation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/first_intro_screen"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/couch_name"
+            tools:text="Тренер" />
+
+        <TextView
+            android:id="@+id/about_couch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/first_intro_screen"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/couch_occupation"
+            app:layout_constraintStart_toStartOf="@id/couch_occupation"
+            app:layout_constraintTop_toBottomOf="@id/couch_occupation"
+            tools:text="@string/tools_text" />
+
+        <TextView
+            android:id="@+id/buttons_background"
+            android:layout_width="380dp"
+            android:layout_height="12dp"
+            android:background="@drawable/round_corners_buttom"
+            android:elevation="5dp"
+            app:layout_constraintStart_toStartOf="@id/about_couch"
+            app:layout_constraintTop_toBottomOf="@id/add_couch_to_friends_text" />
+
+        <TextView
+            android:id="@+id/buttons_background_2"
+            android:layout_width="380dp"
+            android:layout_height="130dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toTopOf="@id/buttons_background"
+            app:layout_constraintEnd_toEndOf="@id/buttons_background"
+            app:layout_constraintStart_toStartOf="@id/buttons_background"
+            app:layout_constraintTop_toBottomOf="@id/about_couch" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/add_couch_to_friends"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="121dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="@color/white"
+            android:gravity="center"
+            android:text="@string/add_as_friend"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/first_intro_screen"
+            android:src="@drawable/ic_add_freind"
+            app:layout_constraintBottom_toBottomOf="@+id/couch_chat"
+            app:layout_constraintEnd_toStartOf="@+id/couch_chat"
+            app:layout_constraintStart_toStartOf="@id/about_couch"
+            app:layout_constraintTop_toBottomOf="@id/about_couch" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/add_couch_to_friends_text"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="121dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="@color/white"
+            android:gravity="center"
+            android:text="@string/add_as_friend"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/first_intro_screen"
+            app:layout_constraintBottom_toBottomOf="@+id/couch_chat"
+            app:layout_constraintEnd_toStartOf="@+id/couch_chat"
+            app:layout_constraintStart_toStartOf="@id/about_couch"
+            app:layout_constraintTop_toBottomOf="@id/add_couch_to_friends" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/couch_chat"
+            android:layout_width="114dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/ic_baseline_chat_24"
+            app:iconGravity="top"
+            style="?android:attr/borderlessButtonStyle"
+            app:layout_constraintBottom_toBottomOf="@+id/add_couch_to_friends"
+            app:layout_constraintEnd_toEndOf="@id/about_couch"
+            app:layout_constraintStart_toEndOf="@+id/add_couch_to_friends"
+            app:layout_constraintTop_toBottomOf="@id/about_couch" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/couch_chat_text"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="121dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="@color/white"
+            android:gravity="center"
+            android:text="@string/club_chat"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/first_intro_screen"
+            app:layout_constraintBottom_toBottomOf="@+id/add_couch_to_friends"
+            app:layout_constraintEnd_toEndOf="@id/about_couch"
+            app:layout_constraintStart_toEndOf="@+id/add_couch_to_friends"
+            app:layout_constraintTop_toBottomOf="@id/couch_chat" />
+
+        <TextView
+            android:id="@+id/couch_location_title"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:background="@drawable/round_corners_for_couch_top"
+            android:gravity="start|center"
+            android:padding="16dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/couch_location_title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/first_intro_screen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/add_couch_to_friends_text" />
+
+        <TextView
+            android:id="@+id/dotted_location"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@drawable/dotted_line_bottom"
+            app:layout_constraintBottom_toTopOf="@+id/couch_level"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/couch_location"
+            android:layout_width="200dp"
+            android:layout_height="55dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/rounded_corner_for_basket"
+            android:gravity="end"
+            android:padding="16dp"
+            tools:text="Москва"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@id/couch_location_title"
+            app:layout_constraintBottom_toBottomOf="@id/couch_location_title" />
+
+        <TextView
+            android:id="@+id/couch_level"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:background="@drawable/round_corners_for_couch_buttom"
+            android:gravity="start|center"
+            android:padding="16dp"
+            android:text="@string/couch_level"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/first_intro_screen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/couch_location_title"
+            app:layout_constraintTop_toBottomOf="@id/couch_location_title" />
+
+        <TextView
+            android:id="@+id/couch_level_input"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:background="@drawable/rounded_corner_for_basket"
+            android:gravity="end|center"
+            android:padding="16dp"
+            tools:text="Не указано"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@id/couch_level"
+            app:layout_constraintTop_toBottomOf="@id/couch_location_title" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_of_friends"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="horizontal"
+            android:scrollbars="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:background="@drawable/rounded_corner_for_basket"
+            app:layout_constraintEnd_toEndOf="@id/couch_level"
+            app:layout_constraintTop_toBottomOf="@id/show_all"
+            tools:listitem="@layout/fragment_card_friend_player_personal"/>
+
+        <TextView
+            android:id="@+id/list_of_friends_background"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:background="@drawable/round_corners_for_couch_top"
+            android:gravity="start"
+            android:padding="16dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/Friends"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/first_intro_screen"
+            app:layout_constraintEnd_toEndOf="@id/couch_level"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/couch_level_input" />
+
+        <Button
+            android:id="@+id/show_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(показать всех)"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/first_intro_screen"
+            android:layout_marginStart="85dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="@id/list_of_friends_background"
+            app:layout_constraintTop_toTopOf="@id/list_of_friends_background"
+            app:backgroundTint="@drawable/rounded_corner_for_basket"
+            style="?android:attr/borderlessButtonStyle"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
+

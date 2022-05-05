@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fftc"
+    tools:context=".fragment.search.FiltrTournamentChildFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_blue">
+
+    <TextView
+        android:id="@+id/filtr_tournaments_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/transparent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/top_thing"
+        android:layout_width="50dp"
+        android:layout_height="7dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/rounded_corner"
+        app:layout_constraintBottom_toTopOf="@id/background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="410dp"
+        android:background="@drawable/round_corners_for_top"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/filtr_tournaments_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/filtr_title"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/background" />
+
+    <TextView
+        android:id="@+id/dotted_line"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/dotted_line_white_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/filtr_tournaments_title" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fftc_part_info_button"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="14dp"
+        android:backgroundTint="@color/white"
+        android:gravity="center"
+        android:text="@string/ffta_part_info_button"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/first_intro_screen"
+        android:textSize="14sp"
+        app:icon="@drawable/ic_rent_image"
+        app:iconGravity="textStart"
+        app:iconTint="@color/first_intro_screen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dotted_line"
+        tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/fftc_location_title"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/rounded_corners_top_grey"
+        android:gravity="start|center"
+        android:padding="16dp"
+        android:text="ЛОКАЦИЯ"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/first_intro_screen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fftc_part_info_button" />
+
+    <Spinner
+        android:id="@+id/fftc_spinner_city"
+        android:layout_marginTop="15dp"
+        android:layout_width="152dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/rounded_corner_for_basket"
+        android:backgroundTint="@color/light_grey"
+        android:entries="@array/countries"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fftc_part_info_button"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <ImageView
+        android:id="@+id/fftc_spinner_city_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_right"
+        app:layout_constraintBottom_toBottomOf="@id/fftc_spinner_city"
+        app:layout_constraintEnd_toEndOf="@id/fftc_spinner_city"
+        app:layout_constraintTop_toTopOf="@+id/fftc_spinner_city" />
+
+    <TextView
+        android:id="@+id/dotted_location"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/dotted_line_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fftc_location_title" />
+
+    <TextView
+        android:id="@+id/fftc_date"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/rounded_courners_bottom_white_grey_stroke"
+        android:backgroundTint="@color/light_grey"
+        android:gravity="start|center"
+        android:padding="16dp"
+        android:text="@string/rent_date"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/first_intro_screen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fftc_location_title"
+        tools:ignore="TextContrastCheck" />
+
+    <Spinner
+        android:id="@+id/fftc_spinner_date"
+        android:visibility="invisible"
+        android:layout_width="152dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/rounded_corner_for_basket"
+        android:backgroundTint="@color/grey"
+        android:entries="@array/countries"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dotted_location"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fftc_date_button"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:icon="@drawable/ic_right"
+        app:iconGravity="end"
+        app:iconTint="@color/first_intro_screen"
+        app:layout_constraintBottom_toBottomOf="@id/fftc_spinner_date"
+        app:layout_constraintEnd_toEndOf="@id/fftc_spinner_date"
+        app:layout_constraintTop_toTopOf="@+id/fftc_spinner_date"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/fftc_level_text"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/round_corners_for_top"
+        android:backgroundTint="@color/light_grey"
+        android:padding="10dp"
+        android:text="УРОВЕНЬ"
+        android:textColor="@color/first_intro_screen"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fftc_date" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/fftc_level_slider"
+        android:layout_width="match_parent"
+        android:layout_height="137dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/round_corners_buttom"
+        android:backgroundTint="@color/light_grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fftc_level_text"
+        app:thumbColor="@color/dark_blue"
+        app:trackColor="@color/first_intro_screen"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fftc_apply_button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:backgroundTint="@color/yellow"
+        android:text="@string/apply"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/dark_orange"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fftc_level_slider" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

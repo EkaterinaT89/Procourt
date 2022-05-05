@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/dark_blue" >
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fcfgc_back_button"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@android:color/transparent"
+            app:icon="@drawable/ic_left"
+            app:iconTint="@color/white"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/chat_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/red_chat"
+            android:textColor="@color/white"
+            android:layout_marginStart="65dp"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="80dp"
+            android:backgroundTint="@android:color/transparent"
+            app:icon="@drawable/ic_settings"
+            app:iconTint="@color/white"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="90dp"
+        android:layout_marginBottom="100dp"
+        android:orientation="vertical"
+        android:scrollbars="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/fragment_card_one_message_for_chat" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@drawable/strokes_grey_white_back"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="80dp"
+
+        />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/write_message"
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginEnd="80dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="20dp"
+            android:hint="@string/write_message"
+            app:hintTextColor="@color/first_intro_screen" >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/surname_for_input"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/rounded_corner_for_chat"
+                android:inputType="text"
+                android:textColor="@color/first_intro_screen"
+                tools:ignore="TouchTargetSizeCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/smiles_button"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="265dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="@color/grey"
+        app:icon="@drawable/ic_smiling_face"
+        app:iconTint="@color/first_intro_screen"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/voice_input"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="340dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/light_grey"
+        app:cornerRadius="40dp"
+        app:icon="@drawable/ic_voice_input"
+        app:iconTint="@color/first_intro_screen"
+        app:iconGravity="textStart"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_for_start_intro">
+
+    <TextView
+        android:id="@+id/top_thing"
+        android:layout_width="50dp"
+        android:layout_height="7dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/rounded_corner"
+        app:layout_constraintBottom_toTopOf="@id/background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-10dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toTopOf="@id/bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"
+            android:text="Ошибка"
+            android:textColor="@color/first_intro_screen"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/dotted"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginTop="45dp"
+            android:background="@drawable/dotted_line_bottom" />
+
+        <TextView
+            android:id="@+id/your_offer_sent"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginTop="75dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="Отсутствует подключение \nк сети Интернет"
+            android:textColor="@color/dark_blue"
+            android:textSize="18sp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/etry_again_button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="14dp"
+            android:layout_marginBottom="15dp"
+            android:backgroundTint="@color/first_intro_screen"
+            android:text="Повторить попытку"
+            app:cornerRadius="6sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_size_1_intro_screen">25sp</dimen>
+    <dimen name="padding_for_first_intro">28dp</dimen>
+    <dimen name="text_size_for_intro">16sp</dimen>
+    <dimen name="margin_for_intro">26dp</dimen>
+    <dimen name="text_size_for_buttons_start">18sp</dimen>
+    <dimen name="margin_top_procourt">72dp</dimen>
+    <dimen name="margin_top_for_bascket">40dp</dimen>
+</resources>

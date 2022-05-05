@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fenp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/dark_blue"
+    tools:context=".fragment.news.EditNewsPopUpFragment">
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="7dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/background"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/rounded_corner" />
+
+    <TextView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="243dp"
+        android:background="@drawable/round_corners_for_top"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fenp_edit_news_button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/yellow"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginTop="29dp"
+        android:text="@string/edit_news"
+        android:textColor="@color/dark_orange"
+        android:textSize="16sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/background"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fenp_delete_news_button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/yellow"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/delete_news"
+        android:textSize="16sp"
+        android:textColor="@color/dark_orange"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fenp_edit_news_button"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fenp_cancel_news_button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/dotted_line_rounded_corners"
+        app:backgroundTint="@color/white"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/cancel_news"
+        android:textSize="16sp"
+        android:textColor="@color/first_intro_screen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fenp_delete_news_button"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

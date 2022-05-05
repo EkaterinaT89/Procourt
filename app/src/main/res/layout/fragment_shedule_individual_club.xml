@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".fragment.club.ClubSheduleIndividualFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="30dp"
+        tools:context=".fragment.club.ClubSheduleRentFragment">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/dark_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/fsic_back_button"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="30dp"
+                app:icon="@drawable/ic_left"
+                app:iconSize="32dp"
+                app:iconTint="@color/white"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/fsic_shedule_text"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="top|center"
+                android:layout_marginTop="30dp"
+                android:text="@string/shedule"
+                android:textColor="@color/white"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fsic_rent_button"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="90dp"
+            android:text="@string/rent_court"
+            android:textColor="@color/dark_blue_transparent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/top" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fsic_individual_button"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="170dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="90dp"
+            android:text="@string/individual"
+            android:textColor="@color/dark_blue"
+            app:layout_constraintStart_toEndOf="@id/fsic_rent_button"
+            app:layout_constraintTop_toTopOf="@id/top" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fsic_group_button"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="90dp"
+            android:text="@string/group"
+            android:textColor="@color/dark_blue_transparent"
+            app:layout_constraintStart_toEndOf="@id/fsic_individual_button"
+            app:layout_constraintTop_toTopOf="@id/top" />
+
+        <TextView
+            android:id="@+id/dotted_add_top"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@drawable/dotted_line_white_background"
+            app:layout_constraintBottom_toBottomOf="@+id/fsic_individual_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/fsic_first_court"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:gravity="start|center"
+            android:padding="16dp"
+            android:text="@string/first_court_tools"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/dark_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dotted_add_top" />
+
+        <TextView
+            android:id="@+id/fsic_price_first_court"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="170dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="55dp"
+            android:gravity="end|center"
+            android:padding="16dp"
+            android:text="@string/price_court_tools"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/dark_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dotted_add_top" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fsicopen_shedule_first_court"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="330dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            app:icon="@drawable/ic_arrow"
+            app:iconTint="@color/first_intro_screen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dotted_add_top"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/fsic_second_court"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:gravity="start|center"
+            android:padding="16dp"
+            android:text="@string/second_court"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/dark_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fsic_first_court_shedule_container" />
+
+        <TextView
+            android:id="@+id/fsic_price_second_court"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="170dp"
+            android:layout_marginEnd="55dp"
+            android:gravity="end|center"
+            android:padding="16dp"
+            android:text="@string/price_court_tools"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/dark_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fsic_first_court_shedule_container" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fsic_open_shedule_second_court"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="330dp"
+            android:layout_marginEnd="15dp"
+            app:icon="@drawable/ic_arrow"
+            app:iconTint="@color/first_intro_screen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fsic_first_court_shedule_container"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/fsic_third_court"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:gravity="start|center"
+            android:padding="16dp"
+            android:text="@string/third_court"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/dark_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fsic_second_court_shedule_container" />
+
+        <TextView
+            android:id="@+id/fsic_price_third_court"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="170dp"
+            android:layout_marginEnd="55dp"
+            android:gravity="end|center"
+            android:padding="16dp"
+            android:text="@string/price_court_tools"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/dark_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fsic_second_court_shedule_container" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fsic_open_shedule_third_court"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="330dp"
+            android:layout_marginEnd="15dp"
+            app:icon="@drawable/ic_arrow"
+            app:iconTint="@color/first_intro_screen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fsic_second_court_shedule_container"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/fsic_fourth_court"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:gravity="start|center"
+            android:padding="16dp"
+            android:text="@string/fourth_court"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/dark_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fsic_third_court_shedule_container" />
+
+        <TextView
+            android:id="@+id/fsic_price_fourth_court"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="170dp"
+            android:layout_marginEnd="55dp"
+            android:gravity="end|center"
+            android:padding="16dp"
+            android:text="@string/price_court_tools"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/dark_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fsic_third_court_shedule_container" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fsic_open_shedule_fourth_court"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="330dp"
+            android:layout_marginEnd="15dp"
+            app:icon="@drawable/ic_arrow"
+            app:iconTint="@color/first_intro_screen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fsic_third_court_shedule_container"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/fsic_first_court_choose_couch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/choose_couch"
+            android:textColor="@color/dark_blue"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:padding="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fsic_first_court" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fsic_first_court_choose_couch_arrow_button"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="20dp"
+            android:padding="16dp"
+            app:icon="@drawable/ic_arrow"
+            android:visibility="gone"
+            app:iconTint="@color/first_intro_screen"
+            app:layout_constraintBottom_toBottomOf="@id/fsic_first_court_choose_couch"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fsic_first_court_couches_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:scrollbars="vertical"
+            tools:itemCount="2"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fsic_first_court_choose_couch"
+            tools:listitem="@layout/fragment_card_choose_couch_individual_club" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fsic_first_court_shedule_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            android:scrollbars="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@id/fsic_second_court"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fsic_first_court_couches_container"
+            tools:listitem="@layout/fragment_card_shedule_individual_club_first_court" />
+
+        <TextView
+            android:id="@+id/fsic_second_court_choose_couch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/choose_couch"
+            android:textColor="@color/dark_blue"
+            android:textSize="16sp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:padding="16dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fsic_second_court" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fsic_second_court_choose_couch_arrow_button"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="20dp"
+            android:padding="16dp"
+            app:icon="@drawable/ic_arrow"
+            android:visibility="gone"
+            app:iconTint="@color/first_intro_screen"
+            app:layout_constraintBottom_toBottomOf="@id/fsic_second_court_choose_couch"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fsic_second_court_couches_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:scrollbars="vertical"
+            tools:itemCount="2"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fsic_second_court_choose_couch"
+            tools:listitem="@layout/fragment_card_choose_couch_individual_club" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fsic_second_court_shedule_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            android:scrollbars="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fsic_second_court_couches_container"
+            tools:listitem="@layout/fragment_card_shedule_individual_club_second_court" />
+
+        <TextView
+            android:id="@+id/fsic_third_court_choose_couch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/choose_couch"
+            android:textColor="@color/dark_blue"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:padding="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fsic_third_court" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fsic_third_court_choose_couch_arrow_button"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="20dp"
+            android:padding="16dp"
+            app:icon="@drawable/ic_arrow"
+            android:visibility="gone"
+            app:iconTint="@color/first_intro_screen"
+            app:layout_constraintBottom_toBottomOf="@id/fsic_third_court_choose_couch"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fsic_third_court_couches_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:scrollbars="vertical"
+            tools:itemCount="2"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fsic_third_court_choose_couch"
+            tools:listitem="@layout/fragment_card_choose_couch_individual_club" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fsic_third_court_shedule_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            android:scrollbars="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fsic_third_court_couches_container"
+            tools:listitem="@layout/fragment_card_shedule_individual_club_third_court" />
+
+        <TextView
+            android:id="@+id/fsic_fourth_court_choose_couch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/choose_couch"
+            android:textColor="@color/dark_blue"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:padding="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fsic_fourth_court" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fsic_fourth_court_choose_couch_arrow_button"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="20dp"
+            android:padding="16dp"
+            app:icon="@drawable/ic_arrow"
+            android:visibility="gone"
+            app:iconTint="@color/first_intro_screen"
+            app:layout_constraintBottom_toBottomOf="@id/fsic_fourth_court_choose_couch"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fsic_fourth_court_couches_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:scrollbars="vertical"
+            tools:itemCount="2"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fsic_fourth_court_choose_couch"
+            tools:listitem="@layout/fragment_card_choose_couch_individual_club" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fsic_fourth_shedule_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            android:scrollbars="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fsic_fourth_court_couches_container"
+            tools:listitem="@layout/fragment_card_shedule_individual_club_fourth_court" />
+
+        <TextView
+            android:id="@+id/fsic_sum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/sum"
+            android:textColor="@color/first_intro_screen"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fsic_fourth_shedule_container" />
+
+        <TextView
+            android:id="@+id/fsic_sum_player"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:text="@string/tools_sum"
+            android:textColor="@color/dark_blue"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fsic_fourth_shedule_container" />
+
+        <TextView
+            android:id="@+id/fsic_choosen_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/choosen_time"
+            android:textColor="@color/first_intro_screen"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fsic_sum" />
+
+        <TextView
+            android:id="@+id/fsic_choosen_time_player"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:text="@string/tools_choosen_time"
+            android:textColor="@color/dark_blue"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fsic_sum_player" />
+
+        <TextView
+            android:id="@+id/fsic_cont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/lasts_title"
+            android:textColor="@color/first_intro_screen"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fsic_choosen_time" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fsic_minus"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="130dp"
+            app:icon="@drawable/ic_minus"
+            app:iconGravity="start"
+            app:iconTint="@color/first_intro_screen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fsic_choosen_time_player"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/fsic_lasts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/tools_60_m"
+            android:textColor="@color/dark_blue"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/fsic_minus"
+            app:layout_constraintTop_toBottomOf="@id/fsic_choosen_time" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fsic_plus"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            app:icon="@drawable/ic_plus"
+            app:iconTint="@color/first_intro_screen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fsic_choosen_time_player"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/fsic_loop_event_switcher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/loop_event_switcher"
+            android:textColor="@color/first_intro_screen"
+            android:textSize="16sp"
+            app:thumbTint="@color/white"
+            app:trackTint="@color/first_intro_screen"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fsic_lasts"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fsic_loop_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:visibility="visible"
+            android:orientation="horizontal"
+            android:scrollbars="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fsic_loop_event_switcher"
+            tools:listitem="@layout/fragment_card_loop_event_shedule_rent_club" />
+
+        <ImageView
+            android:id="@+id/fsic_calendar_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_calendar"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="40dp"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fsic_loop_container"  />
+
+        <TextView
+            android:id="@+id/fsic_period"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tools_text_period"
+            android:textColor="@color/first_intro_screen"
+            android:visibility="visible"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="170dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fsic_loop_container" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fsic_choose_button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:backgroundTint="@color/first_intro_screen"
+            android:text="@string/choose"
+            app:layout_constraintTop_toBottomOf="@+id/fsic_calendar_image"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

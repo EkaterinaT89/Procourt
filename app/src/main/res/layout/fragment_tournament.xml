@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="SpeakableTextPresentCheck">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/buttons_top"
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            android:backgroundTint="@color/dark_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/back_button"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="34dp"
+                android:backgroundTint="@android:color/transparent"
+                app:icon="@drawable/ic_left"
+                app:iconTint="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|center"
+                android:layout_marginTop="50dp"
+                android:text="Natalia Open by Razliv"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/picture_for_club"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="90dp"
+            android:foregroundGravity="center"
+            app:cardCornerRadius="160dp"
+            app:cardElevation="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/ic_temp_pic" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/about_tournament"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:elevation="15dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttons_top" >
+
+            <TextView
+                android:id="@+id/tournament_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="15dp"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/dark_blue"
+                android:textSize="16sp"
+                tools:text="Организатор \nООО ТЕННИС ДОМ" />
+
+            <TextView
+                android:id="@+id/about_tournament_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="105dp"
+                android:layout_marginEnd="14dp"
+                android:layout_marginBottom="80dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/first_intro_screen"
+                tools:text="@string/tools_text" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/take_part_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:layout_marginTop="250dp"
+                android:gravity="top"
+                android:text="@string/take_part_button"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/first_intro_screen"
+                android:textSize="15sp"
+                app:icon="@drawable/ic_ball"
+                app:iconGravity="top"
+                app:iconTint="@color/yellow" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/tournament_chat_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:layout_marginTop="250dp"
+                android:gravity="center"
+                android:text="@string/club_chat"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/first_intro_screen"
+                android:textSize="15sp"
+                android:visibility="gone"
+                app:icon="@drawable/ic_baseline_chat_24"
+                app:iconGravity="top"
+                app:iconTint="@color/yellow" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/tournament_location_title"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/rounded_corners_top_grey"
+            android:gravity="start|center"
+            android:padding="16dp"
+            android:text="@string/couch_location_title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/first_intro_screen"
+            app:layout_constraintEnd_toEndOf="@id/about_tournament"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/about_tournament" />
+
+        <TextView
+            android:id="@+id/tournament_location"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/rounded_corners_top_grey"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="Москва, Клуб Коломенский"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/about_tournament" />
+
+        <TextView
+            android:id="@+id/dotted_location"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/dotted_line_bottom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tournament_location" />
+
+        <TextView
+            android:id="@+id/tournament_category"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/light_grey"
+            android:gravity="start|center"
+            android:padding="16dp"
+            android:text="РАЗРЯД"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/first_intro_screen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tournament_location_title"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/tournament_category_info"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/light_grey"
+            android:gravity="end|center"
+            android:padding="16dp"
+            android:text="Парный женский"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tournament_location_title" />
+
+        <TextView
+            android:id="@+id/dotted_category"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/dotted_line_bottom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tournament_category_info" />
+
+        <TextView
+            android:id="@+id/tournament_date"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/light_grey"
+            android:gravity="start|center"
+            android:padding="16dp"
+            android:text="ДАТА ПРОВЕДЕНИЯ"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/first_intro_screen"
+            app:layout_constraintEnd_toEndOf="@id/tournament_category"
+            app:layout_constraintStart_toStartOf="@id/tournament_category"
+            app:layout_constraintTop_toBottomOf="@id/tournament_category"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/tournament_date_info"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/light_grey"
+            android:gravity="end|center"
+            android:padding="16dp"
+            android:text="21.10.2018 13:00"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@id/tournament_date"
+            app:layout_constraintTop_toBottomOf="@id/tournament_category_info" />
+
+        <TextView
+            android:id="@+id/dotted_date"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/dotted_line_bottom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tournament_date_info" />
+
+        <TextView
+            android:id="@+id/tournament_level"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/light_grey"
+            android:gravity="start|center"
+            android:padding="16dp"
+            android:text="УРОВЕНЬ"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/first_intro_screen"
+            app:layout_constraintEnd_toEndOf="@id/tournament_date"
+            app:layout_constraintStart_toStartOf="@id/tournament_date"
+            app:layout_constraintTop_toBottomOf="@id/tournament_date"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/tournament_level_info"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/light_grey"
+            android:gravity="end|center"
+            android:padding="16dp"
+            android:text="Средний"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@id/tournament_level"
+            app:layout_constraintTop_toBottomOf="@id/tournament_date_info" />
+
+        <TextView
+            android:id="@+id/dotted_level"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/dotted_line_bottom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tournament_level_info" />
+
+        <TextView
+            android:id="@+id/tournament_price"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/light_grey"
+            android:gravity="start|center"
+            android:padding="16dp"
+            android:text="СТОИМОСТЬ"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/first_intro_screen"
+            app:layout_constraintEnd_toEndOf="@id/tournament_level"
+            app:layout_constraintStart_toStartOf="@id/tournament_level"
+            app:layout_constraintTop_toBottomOf="@id/tournament_level"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/tournament_price_info"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/light_grey"
+            android:gravity="end|center"
+            android:padding="16dp"
+            android:text="4000 рублей"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@id/tournament_price"
+            app:layout_constraintTop_toBottomOf="@id/tournament_level_info" />
+
+        <TextView
+            android:id="@+id/dotted_price"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/dotted_line_bottom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tournament_price_info" />
+
+        <TextView
+            android:id="@+id/tournament_parts"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/round_corners_bottom_grey"
+            android:gravity="start|center"
+            android:padding="16dp"
+            android:text="@string/parts_t"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/first_intro_screen"
+            app:layout_constraintEnd_toEndOf="@id/tournament_price"
+            app:layout_constraintStart_toStartOf="@id/tournament_price"
+            app:layout_constraintTop_toBottomOf="@id/tournament_price" />
+
+        <TextView
+            android:id="@+id/tournament_parts_info"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/round_corners_bottom_grey"
+            android:gravity="end|center"
+            android:padding="16dp"
+            android:text="24/24"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@id/tournament_price"
+            app:layout_constraintTop_toBottomOf="@id/tournament_price_info" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/tournaments_places_background"
+            android:layout_width="match_parent"
+            android:layout_height="171dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/rounded_corner_for_basket"
+            android:backgroundTint="@color/light_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tournament_parts">
+
+            <TextView
+                android:id="@+id/prices_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="11dp"
+                android:text="@string/price_title"
+                android:textColor="@color/first_intro_screen"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/tournaments_places"
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="40dp"
+                android:background="@color/transparent" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/participants"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/rounded_corners_top_grey"
+            android:gravity="start|center"
+            android:paddingStart="15dp"
+            android:text="@string/participants_t"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/first_intro_screen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tournaments_places_background"
+            tools:ignore="RtlSymmetry" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_of_participants"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/round_corners_bottom_grey"
+            android:orientation="horizontal"
+            android:scrollbars="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="@id/participants"
+            app:layout_constraintTop_toBottomOf="@id/participants"
+            tools:listitem="@layout/fragment_card_participants_tournament" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/games"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/rounded_corners_top_grey"
+            app:backgroundTint="@color/light_grey"
+            android:gravity="top"
+            android:paddingStart="15dp"
+            android:paddingTop="10dp"
+            android:text="@string/games_t"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/first_intro_screen"
+            app:layout_constraintEnd_toEndOf="@id/list_of_participants"
+            app:layout_constraintStart_toStartOf="@id/list_of_participants"
+            app:layout_constraintTop_toBottomOf="@id/list_of_participants"
+            tools:ignore="RtlSymmetry" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_of_games"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            android:background="@drawable/round_corners_bottom_grey"
+            android:orientation="horizontal"
+            android:scrollbars="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/games"
+            app:layout_constraintTop_toTopOf="@id/games"
+            tools:listitem="@layout/fragment_card_games_tournament" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
+

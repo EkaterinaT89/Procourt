@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/light_grey" >
+
+    <TextView
+        android:id="@+id/fcpps_day_of_week"
+        android:padding="8dp"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:background="@color/light_grey"
+        android:gravity="center"
+        android:text="@string/day_of_week_tools"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/first_intro_screen"
+        tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/fcpps_numder"
+        android:padding="8dp"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:background="@color/light_grey"
+        android:gravity="center"
+        android:text="@string/number_tools"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/dark_blue"
+        tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/fcpps_hour"
+        android:padding="8dp"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:background="@color/light_grey"
+        android:gravity="center"
+        android:text="@string/hour_tools"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/first_intro_screen"
+        tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
+
+
+
+</LinearLayout>

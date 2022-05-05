@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/girl"
+    tools:context=".fragment.intro.IntroFirstFragment">
+
+    <View
+        android:id="@+id/fif_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/fif_firstintro"
+        android:layout_width="149dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="72dp"
+        android:text="@string/procourt"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_1_intro_screen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_editor_absoluteY="100dp"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/fif_text_about_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_for_intro"
+        android:layout_marginEnd="@dimen/margin_for_intro"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/rounded_corner"
+        android:gravity="center"
+        android:padding="@dimen/padding_for_first_intro"
+        android:paddingStart="17dp"
+        android:paddingTop="25dp"
+        android:paddingEnd="18sp"
+        android:paddingBottom="24.73dp"
+        android:text="@string/text_about_service"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        android:textColor="@color/first_intro_screen"
+        android:textSize="@dimen/text_size_for_intro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fif_firstintro"
+        tools:ignore="RtlSymmetry,TouchTargetSizeCheck" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fif_skip_button"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:layout_marginStart="@dimen/margin_for_intro"
+        android:layout_marginEnd="@dimen/margin_for_intro"
+        android:elevation="60dp"
+        android:text="@string/miss"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/first_intro_screen"
+        android:textSize="@dimen/text_size_for_intro"
+        app:backgroundTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fif_next_button"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:layout_marginStart="@dimen/margin_for_intro"
+        android:layout_marginEnd="@dimen/margin_for_intro"
+        android:layout_marginBottom="4dp"
+        android:elevation="60dp"
+        android:text="@string/next"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/first_intro_screen"
+        android:textSize="@dimen/text_size_for_intro"
+        app:backgroundTint="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/fif_skip_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/news_from_acc"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.player.PhotoMediaPlayerPersonalFragment">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/dark_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fpmpp_back_button"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="30dp"
+            app:icon="@drawable/ic_left"
+            app:iconSize="32dp"
+            app:iconTint="@color/white"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/fpmpp_media_text"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_gravity="top|center"
+            android:layout_marginTop="30dp"
+            android:text="@string/media_text"
+            android:textColor="@color/white"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fpmpp_video"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="90dp"
+        android:text="@string/video"
+        android:textColor="@color/dark_blue_transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fpmpp_photo"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="90dp"
+        android:text="@string/photo"
+        android:textColor="@color/dark_blue"
+        app:layout_constraintStart_toEndOf="@id/fpmpp_video"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fpmpp_news"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="90dp"
+        android:text="@string/news"
+        android:textColor="@color/dark_blue_transparent"
+        app:layout_constraintStart_toEndOf="@id/fpmpp_photo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dotted_add_top"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/dotted_line_white_background"
+        app:layout_constraintBottom_toBottomOf="@+id/fpmpp_photo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fpmpp_add_news"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/dotted_line_rounded_corners"
+        android:text="@string/add_news"
+        android:textColor="@color/first_intro_screen"
+        app:backgroundTint="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dotted_add_top" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/fpmpp_container_album_tournaments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/fpmpp_my_trains_album_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fpmpp_my_tournaments_album_button">
+
+        <TextView
+            android:id="@+id/fpmpp_my_tournaments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:paddingStart="15dp"
+            android:text="@string/my_tournaments"
+            android:textColor="@color/first_intro_screen"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fpmpp_add_news" />
+
+        <TextView
+            android:id="@+id/fpmpp_player_photo_counts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="60dp"
+            android:text="@string/tools_count"
+            android:textColor="@color/first_intro_screen"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/fpmpp_my_tournaments"
+            app:layout_constraintEnd_toEndOf="@id/fpmpp_my_tournaments" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fpmpp_down_tor_button"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="15dp"
+            app:icon="@drawable/ic_arrow_up"
+            app:iconTint="@color/first_intro_screen"
+            app:backgroundTint="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/fpmpp_my_tournaments"
+            app:layout_constraintEnd_toEndOf="@id/fpmpp_my_tournaments" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="204dp"
+            android:layout_marginTop="50dp">
+
+            <ImageView
+                android:id="@+id/fpmpp_big_photo"
+                android:layout_width="306dp"
+                android:layout_height="204dp"
+                android:src="@drawable/ic_temp_pic" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="204dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/fpmpp_first_photo"
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:src="@drawable/ic_temp_pic" />
+
+                <ImageView
+                    android:id="@+id/fpmpp_second_photo"
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:src="@drawable/ic_temp_pic" />
+
+                <ImageView
+                    android:id="@+id/fpmpp_third_photo"
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:src="@drawable/ic_temp_pic" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/fpmpp_container_album_trains"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/fpmpp_my_trains_album_button">
+
+        <TextView
+            android:id="@+id/fpmpp_my_trains"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="15dp"
+            android:text="@string/trains_title"
+            android:textColor="@color/first_intro_screen"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fpmpp_container_album_tournaments" />
+
+        <TextView
+            android:id="@+id/fpmpp_player_train_counts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="60dp"
+            android:text="@string/tools_count"
+            android:textColor="@color/first_intro_screen"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/fpmpp_my_trains"
+            app:layout_constraintEnd_toEndOf="@id/fpmpp_my_trains" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fpmpp_train_down_button"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="15dp"
+            app:icon="@drawable/ic_arrow_up"
+            app:iconTint="@color/first_intro_screen"
+            app:backgroundTint="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/fpmpp_my_trains"
+            app:layout_constraintEnd_toEndOf="@id/fpmpp_my_trains"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/fpmpp_container_trains"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            app:layout_constraintTop_toBottomOf="@id/fpmpp_my_trains">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="204dp">
+
+                <ImageView
+                    android:layout_width="306dp"
+                    android:layout_height="204dp"
+                    android:src="@drawable/ic_temp_pic" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="204dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="68dp"
+                        android:layout_height="68dp"
+                        android:src="@drawable/ic_temp_pic" />
+
+                    <ImageView
+                        android:layout_width="68dp"
+                        android:layout_height="68dp"
+                        android:src="@drawable/ic_temp_pic" />
+
+                    <ImageView
+                        android:layout_width="68dp"
+                        android:layout_height="68dp"
+                        android:src="@drawable/ic_temp_pic" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
+
+    <!--    <androidx.constraintlayout.widget.Group-->
+    <!--        android:id="@+id/fpmpp_album_titles_visibility"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        app:constraint_referenced_ids="fpmpp_my_tournaments_album_button,-->
+    <!--                dotted_t, fpmpp_my_trains_album_button, dotted_tr, fpmpp_my_photos_album_button,-->
+    <!--                dotted_p" />-->
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fpmpp_my_tournaments_album_button"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="start"
+        android:text="@string/my_tournaments_album"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textColor="@color/first_intro_screen"
+        android:textSize="16sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fpmpp_add_news" />
+
+    <TextView
+        android:id="@+id/dotted_t"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/dotted_line_white_background"
+        app:layout_constraintBottom_toBottomOf="@+id/fpmpp_my_tournaments_album_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fpmpp_my_trains_album_button"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:gravity="start"
+        android:text="@string/my_trains_album"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textColor="@color/first_intro_screen"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fpmpp_container_album_tournaments" />
+
+    <TextView
+        android:id="@+id/dotted_tr"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/dotted_line_white_background"
+        app:layout_constraintBottom_toBottomOf="@+id/fpmpp_my_trains_album_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fpmpp_my_photos_album_button"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="start"
+        android:text="@string/my_photos_album"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textColor="@color/first_intro_screen"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fpmpp_container_album_trains" />
+
+    <TextView
+        android:id="@+id/dotted_p"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/dotted_line_white_background"
+        app:layout_constraintBottom_toBottomOf="@+id/fpmpp_my_photos_album_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/fpmpp_container_album_photos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fpmpp_my_photos_album_button">
+
+        <TextView
+            android:id="@+id/fpmpp_my_photos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:paddingStart="15dp"
+            android:text="@string/different_photos"
+            android:textColor="@color/first_intro_screen"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fpmpp_add_news" />
+
+        <TextView
+            android:id="@+id/fpmpp_photo_counts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="60dp"
+            android:text="@string/tools_count"
+            android:textColor="@color/first_intro_screen"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/fpmpp_my_tournaments"
+            app:layout_constraintEnd_toEndOf="@id/fpmpp_my_tournaments" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fpmpp_photo_down_button"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="15dp"
+            app:icon="@drawable/ic_arrow_up"
+            app:iconTint="@color/first_intro_screen"
+            app:backgroundTint="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/fpmpp_my_tournaments"
+            app:layout_constraintEnd_toEndOf="@id/fpmpp_my_tournaments" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="204dp"
+            android:layout_marginTop="50dp">
+
+            <ImageView
+                android:id="@+id/fpmpp_big_image"
+                android:layout_width="306dp"
+                android:layout_height="204dp"
+                android:src="@drawable/ic_temp_pic" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="204dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/fpmpp_first_image"
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:src="@drawable/ic_temp_pic" />
+
+                <ImageView
+                    android:id="@+id/fpmpp_second_image"
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:src="@drawable/ic_temp_pic" />
+
+                <ImageView
+                    android:id="@+id/fpmpp_third_image"
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:src="@drawable/ic_temp_pic" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

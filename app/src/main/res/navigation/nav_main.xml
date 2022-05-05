@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/introFirstFragment">
+    <fragment
+        android:id="@+id/introSignUpFragment"
+        android:name="ru.procourt.fragment.intro.IntroSignUpFragment" />
+    <fragment
+        android:id="@+id/introAuthFragment"
+        android:name="ru.procourt.fragment.intro.IntroAuthFragment"
+        android:label="fragment_intro_auth"
+        tools:layout="@layout/fragment_intro_auth" >
+        <action
+            android:id="@+id/action_introAuthFragment_to_introEmailAuthFragment"
+            app:destination="@id/introEmailAuthFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/introChooseAuthFragment"
+        android:name="ru.procourt.fragment.intro.IntroChooseAuthFragment"
+        android:label="fragment_intro_auth_choose"
+        tools:layout="@layout/fragment_intro_auth_choose" />
+    <fragment
+        android:id="@+id/introEmailAuthFragment"
+        android:name="ru.procourt.fragment.intro.IntroEmailAuthFragment"
+        android:label="fragment_intro_auth_email"
+        tools:layout="@layout/fragment_intro_auth_email" >
+        <action
+            android:id="@+id/action_introEmailAuthFragment_to_introChooseAuthFragment"
+            app:destination="@id/introChooseAuthFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/introAuthReccomendFragment"
+        android:name="ru.procourt.fragment.intro.IntroAuthReccomendFragment"
+        android:label="fragment_intro_auth_reccomend"
+        tools:layout="@layout/fragment_intro_auth_reccomend" >
+        <action
+            android:id="@+id/action_introAuthReccomendFragment_to_introAuthFragment"
+            app:destination="@id/introAuthFragment" />
+        <action
+            android:id="@+id/action_introAuthReccomendFragment_to_introSignUpFragment"
+            app:destination="@id/introSignUpFragment" />
+        <action
+            android:id="@+id/action_introAuthReccomendFragment_to_newsFragment"
+            app:destination="@id/newsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/introFirstFragment"
+        android:name="ru.procourt.fragment.intro.IntroFirstFragment"
+        android:label="fragment_intro_first"
+        tools:layout="@layout/fragment_intro_first" >
+        <action
+            android:id="@+id/action_introFirstFragment_to_introSecondFragment"
+            app:destination="@id/introSecondFragment" />
+        <action
+            android:id="@+id/action_introFirstFragment_to_introAuthReccomendFragment"
+            app:destination="@id/introAuthReccomendFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/introGeoFragment"
+        android:name="ru.procourt.fragment.intro.IntroGeoFragment"
+        android:label="fragment_intro_geo"
+        tools:layout="@layout/fragment_intro_geo" >
+        <action
+            android:id="@+id/action_introGeoFragment_to_introAuthReccomendFragment"
+            app:destination="@id/introAuthReccomendFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/introSecondFragment"
+        android:name="ru.procourt.fragment.intro.IntroSecondFragment"
+        android:label="fragment_intro_second"
+        tools:layout="@layout/fragment_intro_second" >
+        <action
+            android:id="@+id/action_introSecondFragment_to_introThirdFragment"
+            app:destination="@id/introThirdFragment" />
+        <action
+            android:id="@+id/action_introSecondFragment_to_introAuthReccomendFragment"
+            app:destination="@id/introAuthReccomendFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/introThirdFragment"
+        android:name="ru.procourt.fragment.intro.IntroThirdFragment"
+        android:label="fragment_intro_third"
+        tools:layout="@layout/fragment_intro_third" >
+        <action
+            android:id="@+id/action_introThirdFragment_to_introGeoFragment"
+            app:destination="@id/introGeoFragment" />
+        <action
+            android:id="@+id/action_introThirdFragment_to_introAuthReccomendFragment"
+            app:destination="@id/introAuthReccomendFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="ru.procourt.fragment.news.NewsFragment"
+        android:label="fragment_news"
+        tools:layout="@layout/fragment_news" >
+        <action
+            android:id="@+id/action_newsFragment_to_editNewsPopUpFragment"
+            app:destination="@id/editNewsPopUpFragment" />
+        <action
+            android:id="@+id/action_newsFragment_to_addCommentFragment"
+            app:destination="@id/addCommentFragment" />
+        <action
+            android:id="@+id/action_newsFragment_to_addNewsFragment"
+            app:destination="@id/addNewsFragment" />
+        <action
+            android:id="@+id/action_newsFragment_to_bascketFragment"
+            app:destination="@id/bascketFragment" />
+        <action
+            android:id="@+id/action_newsFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editNewsPopUpFragment"
+        android:name="ru.procourt.fragment.news.EditNewsPopUpFragment"
+        android:label="fragment_edit_news_pop_up"
+        tools:layout="@layout/fragment_edit_news_pop_up" >
+        <action
+            android:id="@+id/action_editNewsPopUpFragment_to_addNewsFragment"
+            app:destination="@id/editNewsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addCommentFragment"
+        android:name="ru.procourt.fragment.news.AddCommentFragment"
+        android:label="fragment_add_comment"
+        tools:layout="@layout/fragment_add_comment" />
+    <fragment
+        android:id="@+id/editNewsFragment"
+        android:name="ru.procourt.fragment.news.EditNewsFragment"
+        android:label="fragment_edit_news"
+        tools:layout="@layout/fragment_edit_news" />
+    <fragment
+        android:id="@+id/addNewsFragment"
+        android:name="ru.procourt.fragment.news.AddNewsFragment"
+        android:label="fragment_add_news"
+        tools:layout="@layout/fragment_add_news" />
+    <fragment
+        android:id="@+id/cardNewsFragment"
+        android:name="ru.procourt.fragment.news.CardNewsFragment"
+        android:label="fragment_card_news"
+        tools:layout="@layout/fragment_card_news" />
+    <fragment
+        android:id="@+id/bascketFragment"
+        android:name="ru.procourt.fragment.basket.BascketFragment"
+        android:label="Корзина"
+        tools:layout="@layout/fragment_bascket" >
+        <action
+            android:id="@+id/action_bascketFragment_to_deleteBascketPopUpFragment"
+            app:destination="@id/deleteBascketPopUpFragment" />
+        <action
+            android:id="@+id/action_bascketFragment_to_bascketPaymentFragment"
+            app:destination="@id/bascketPaymentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/deleteBascketPopUpFragment"
+        android:name="ru.procourt.fragment.basket.DeleteBascketPopUpFragment"
+        android:label="fragment_delete_bascket_pop_up"
+        tools:layout="@layout/fragment_delete_bascket_pop_up" />
+    <fragment
+        android:id="@+id/bascketPaymentFragment"
+        android:name="ru.procourt.fragment.basket.BascketPaymentFragment"
+        android:label="fragment_payment_bascket"
+        tools:layout="@layout/fragment_payment_bascket" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="ru.procourt.fragment.search.SearchFragment"
+        android:label="SearchFragment" >
+        <action
+            android:id="@+id/action_searchFragment_to_clubSearchFragment"
+            app:destination="@id/clubSearchFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_playerSearchFragment"
+            app:destination="@id/playerSearchFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_courtSearchFragment"
+            app:destination="@id/courtSearchFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_tournamentFragment"
+            app:destination="@id/tournamentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/clubSearchFragment"
+        android:name="ru.procourt.fragment.search.ClubSearchFragment"
+        android:label="fragment_club_search"
+        tools:layout="@layout/fragment_club_search" >
+        <action
+            android:id="@+id/action_clubSearchFragment_to_filtrClubSearchFragment"
+            app:destination="@id/filtrClubSearchFragment" />
+        <action
+            android:id="@+id/action_clubSearchFragment_to_clubFragment"
+            app:destination="@id/clubFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/playerSearchFragment"
+        android:name="ru.procourt.fragment.search.PlayerSearchFragment"
+        android:label="fragment_player_search"
+        tools:layout="@layout/fragment_player_search" >
+        <action
+            android:id="@+id/action_playerSearchFragment_to_filtrCouchSearchFragment"
+            app:destination="@id/filtrCouchSearchFragment" />
+        <action
+            android:id="@+id/action_playerSearchFragment_to_filtrPlayerSearchFragment"
+            app:destination="@id/filtrPlayerSearchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/filtrClubSearchFragment"
+        android:name="ru.procourt.fragment.search.FiltrClubSearchFragment"
+        android:label="fragment_filtr_club_search"
+        tools:layout="@layout/fragment_filtr_club_search" />
+    <fragment
+        android:id="@+id/filtrCourtSearchFragment"
+        android:name="ru.procourt.fragment.search.FiltrCourtSearchFragment"
+        android:label="fragment_filtr_court_search"
+        tools:layout="@layout/fragment_filtr_court_search" />
+    <fragment
+        android:id="@+id/courtSearchFragment"
+        android:name="ru.procourt.fragment.search.CourtSearchFragment"
+        android:label="fragment_court_search"
+        tools:layout="@layout/fragment_court_search" >
+        <action
+            android:id="@+id/action_courtSearchFragment_to_filtrCourtSearchFragment"
+            app:destination="@id/filtrCourtSearchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/filtrCouchSearchFragment"
+        android:name="ru.procourt.fragment.search.FiltrCouchSearchFragment"
+        android:label="fragment_filtr_couch_search"
+        tools:layout="@layout/fragment_filtr_couch_search" />
+    <fragment
+        android:id="@+id/filtrPlayerSearchFragment"
+        android:name="ru.procourt.fragment.search.FiltrPlayerSearchFragment"
+        android:label="fragment_filtr_player_search"
+        tools:layout="@layout/fragment_filtr_player_search" />
+    <fragment
+        android:id="@+id/tournamentsSearchFragment"
+        android:name="ru.procourt.fragment.search.TournamentsSearchFragment"
+        android:label="fragment_tournaments_search"
+        tools:layout="@layout/fragment_tournaments_search" >
+        <action
+            android:id="@+id/action_tournamentsSearchFragment_to_filtrTournamentAdultFragment"
+            app:destination="@id/filtrTournamentAdultFragment" />
+        <action
+            android:id="@+id/action_tournamentsSearchFragment_to_filtrTournamentChildFragment"
+            app:destination="@id/filtrTournamentChildFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/filtrTournamentAdultFragment"
+        android:name="ru.procourt.fragment.search.FiltrTournamentAdultFragment"
+        android:label="fragment_filtr_tournament_adult"
+        tools:layout="@layout/fragment_filtr_tournament_adult" />
+    <fragment
+        android:id="@+id/filtrTournamentChildFragment"
+        android:name="ru.procourt.fragment.search.FiltrTournamentChildFragment"
+        android:label="fragment_filtr_tournament_child"
+        tools:layout="@layout/fragment_filtr_tournament_child" />
+    <fragment
+        android:id="@+id/messagesNotificationsFragment"
+        android:name="ru.procourt.fragment.notifications.MessagesNotificationsFragment"
+        android:label="fragment_messages_notifications"
+        tools:layout="@layout/fragment_messages_notifications" />
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="ru.procourt.fragment.notifications.ChatFragment"
+        android:label="ChatFragment" />
+    <fragment
+        android:id="@+id/createGroupChatFragment"
+        android:name="ru.procourt.fragment.notifications.CreateGroupChatFragment"
+        android:label="CreateGroupChatFragment" >
+        <action
+            android:id="@+id/action_createGroupChatFragment_to_groupChatFragment"
+            app:destination="@id/groupChatFragment" />
+        <action
+            android:id="@+id/action_createGroupChatFragment_to_addParticipantsFragment"
+            app:destination="@id/addParticipantsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/groupChatFragment"
+        android:name="ru.procourt.fragment.notifications.GroupChatFragment"
+        android:label="GroupChatFragment" >
+        <action
+            android:id="@+id/action_groupChatFragment_to_chatForGroupFragment"
+            app:destination="@id/chatForGroupFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatForGroupFragment"
+        android:name="ru.procourt.fragment.notifications.ChatForGroupFragment"
+        android:label="ChatForGroupFragment" />
+    <fragment
+        android:id="@+id/addParticipantsFragment"
+        android:name="ru.procourt.fragment.notifications.AddParticipantsFragment"
+        android:label="AddParticipantsFragment" />
+    <fragment
+        android:id="@+id/playerPersonalFragment"
+        android:name="ru.procourt.fragment.player.PlayerPersonalFragment"
+        android:label="fragment_player_personal"
+        tools:layout="@layout/fragment_player_personal" >
+        <action
+            android:id="@+id/action_playerPersonalFragment_to_feedbackPlayerPersonalFragment"
+            app:destination="@id/feedbackPlayerPersonalFragment" />
+        <action
+            android:id="@+id/action_playerPersonalFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+        <action
+            android:id="@+id/action_playerPersonalFragment_to_editPlayerPersonalFragment"
+            app:destination="@id/editPlayerPersonalFragment" />
+        <action
+            android:id="@+id/action_playerPersonalFragment_to_newsMediaPlayerPersonalFragment"
+            app:destination="@id/newsMediaPlayerPersonalFragment" />
+        <action
+            android:id="@+id/action_playerPersonalFragment_to_shedulePlayerPersonalFragment"
+            app:destination="@id/shedulePlayerPersonalFragment" />
+        <action
+            android:id="@+id/action_playerPersonalFragment_to_gamesPersonalPlayerFragment"
+            app:destination="@id/gamesPersonalPlayerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/feedbackPlayerPersonalFragment"
+        android:name="ru.procourt.fragment.player.FeedbackPlayerPersonalFragment"
+        android:label="fragment_feedback_player_personal"
+        tools:layout="@layout/fragment_feedback_player_personal" />
+    <fragment
+        android:id="@+id/playerAnotherFragment"
+        android:name="ru.procourt.fragment.player.PlayerAnotherFragment"
+        android:label="fragment_player_another"
+        tools:layout="@layout/fragment_player_another" >
+        <action
+            android:id="@+id/action_playerAnotherFragment_to_feedbackPlayerPersonalFragment"
+            app:destination="@id/feedbackPlayerPersonalFragment" />
+        <action
+            android:id="@+id/action_playerAnotherFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+        <action
+            android:id="@+id/action_playerAnotherFragment_to_shedulePlayerAnotherFragment"
+            app:destination="@id/shedulePlayerAnotherFragment" />
+        <action
+            android:id="@+id/action_playerAnotherFragment_to_gamesAnotherPlayerFragment"
+            app:destination="@id/gamesAnotherPlayerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsPlayerPersonalFragment"
+        android:name="ru.procourt.fragment.player.SettingsPlayerPersonalFragment"
+        android:label="fragment_settings_player_personal"
+        tools:layout="@layout/fragment_settings_player_personal" />
+    <fragment
+        android:id="@+id/editPlayerPersonalFragment"
+        android:name="ru.procourt.fragment.player.EditPlayerPersonalFragment"
+        android:label="fragment_edit_player_personal"
+        tools:layout="@layout/fragment_edit_player_personal" />
+    <fragment
+        android:id="@+id/addVideoMediaPlayerPersonalFragment"
+        android:name="ru.procourt.fragment.player.AddVideoMediaPlayerPersonalFragment"
+        android:label="fragment_add_video_media_player_personal"
+        tools:layout="@layout/fragment_add_video_media_player_personal" />
+    <fragment
+        android:id="@+id/newsMediaPlayerPersonalFragment"
+        android:name="ru.procourt.fragment.player.NewsMediaPlayerPersonalFragment"
+        android:label="fragment_news_media_player_personal"
+        tools:layout="@layout/fragment_news_media_player_personal" >
+        <action
+            android:id="@+id/action_newsMediaPlayerPersonalFragment_to_videoMediaPlayerPersonalFragment"
+            app:destination="@id/videoMediaPlayerPersonalFragment" />
+        <action
+            android:id="@+id/action_newsMediaPlayerPersonalFragment_to_photoMediaPlayerPersonalFragment"
+            app:destination="@id/photoMediaPlayerPersonalFragment" />
+        <action
+            android:id="@+id/action_newsMediaPlayerPersonalFragment_to_fragmentAddNewsMediaPP"
+            app:destination="@id/fragmentAddNewsMediaPP" />
+    </fragment>
+    <fragment
+        android:id="@+id/photoMediaPlayerPersonalFragment"
+        android:name="ru.procourt.fragment.player.PhotoMediaPlayerPersonalFragment"
+        android:label="fragment_photo_media_player_personal"
+        tools:layout="@layout/fragment_photo_media_player_personal" />
+    <fragment
+        android:id="@+id/videoMediaPlayerPersonalFragment"
+        android:name="ru.procourt.fragment.player.VideoMediaPlayerPersonalFragment"
+        android:label="fragment_video_media_player_personal"
+        tools:layout="@layout/fragment_video_media_player_personal" >
+        <action
+            android:id="@+id/action_videoMediaPlayerPersonalFragment_to_addVideoMediaPlayerPersonalFragment"
+            app:destination="@id/addVideoMediaPlayerPersonalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addNewPhotoFragment"
+        android:name="ru.procourt.fragment.player.AddNewPhotoFragment"
+        android:label="AddNewPhotoFragment" />
+    <fragment
+        android:id="@+id/fragmentAddNewsMediaPP"
+        android:name="ru.procourt.fragment.player.FragmentAddNewsMediaPP"
+        android:label="FragmentAddNewsMediaPP" />
+    <fragment
+        android:id="@+id/shedulePlayerPersonalFragment"
+        android:name="ru.procourt.fragment.player.ShedulePlayerPersonalFragment"
+        android:label="fragment_shedule_player_personal"
+        tools:layout="@layout/fragment_shedule_player_personal" />
+    <fragment
+        android:id="@+id/gamesPersonalPlayerFragment"
+        android:name="ru.procourt.fragment.player.GamesPersonalPlayerFragment"
+        android:label="fragment_games_personal_player"
+        tools:layout="@layout/fragment_games_personal_player" />
+    <fragment
+        android:id="@+id/shedulePlayerAnotherFragment"
+        android:name="ru.procourt.fragment.player.ShedulePlayerAnotherFragment"
+        android:label="fragment_shedule_player_another"
+        tools:layout="@layout/fragment_shedule_player_another" />
+    <fragment
+        android:id="@+id/gamesAnotherPlayerFragment"
+        android:name="ru.procourt.fragment.player.GamesAnotherPlayerFragment"
+        android:label="fragment_games_another_player"
+        tools:layout="@layout/fragment_games_another_player" />
+    <fragment
+        android:id="@+id/clubFragment"
+        android:name="ru.procourt.fragment.club.ClubFragment"
+        android:label="fragment_club"
+        tools:layout="@layout/fragment_club" >
+        <action
+            android:id="@+id/action_clubFragment_to_clubPlayersFragment"
+            app:destination="@id/clubPlayersFragment" />
+        <action
+            android:id="@+id/action_clubFragment_to_clubCoushesFragment"
+            app:destination="@id/clubCoushesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/clubPlayersFragment"
+        android:name="ru.procourt.fragment.club.ClubPlayersFragment"
+        android:label="fragment_players_club"
+        tools:layout="@layout/fragment_players_club" />
+    <fragment
+        android:id="@+id/clubCoushesFragment"
+        android:name="ru.procourt.fragment.club.ClubCoushesFragment"
+        android:label="fragment_couches_club"
+        tools:layout="@layout/fragment_couches_club" />
+    <fragment
+        android:id="@+id/tournamentFragment"
+        android:name="ru.procourt.fragment.tournament.TournamentFragment"
+        android:label="TournamentFragment" >
+        <action
+            android:id="@+id/action_tournamentFragment_to_takePartTournamentPopUpFragment"
+            app:destination="@id/takePartTournamentPopUpFragment" />
+        <action
+            android:id="@+id/action_tournamentFragment_to_gamesTournamentFragment"
+            app:destination="@id/gamesTournamentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/takePartTournamentPopUpFragment"
+        android:name="ru.procourt.fragment.tournament.TakePartTournamentPopUpFragment"
+        android:label="fragment_take_a_part_tournament_pop_up"
+        tools:layout="@layout/fragment_take_a_part_tournament_pop_up" />
+    <fragment
+        android:id="@+id/gamesTournamentFragment"
+        android:name="ru.procourt.fragment.tournament.GamesTournamentFragment"
+        android:label="GamesTournamentFragment" >
+        <action
+            android:id="@+id/action_gamesTournamentFragment_to_setkaTournamentFragment"
+            app:destination="@id/setkaTournamentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/setkaTournamentFragment"
+        android:name="ru.procourt.fragment.tournament.SetkaTournamentFragment"
+        android:label="SetkaTournamentFragment" />
+
+</navigation>

@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.player.EditPlayerPersonalFragment"
+    tools:ignore="SpeakableTextPresentCheck">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        tools:context=".fragment.intro.IntroSignUpFragment">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/fepp_player_picture"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_marginTop="60dp"
+            android:foregroundGravity="center"
+            app:cardCornerRadius="160dp"
+            app:cardElevation="16dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/fepp_player_picture_input"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_plus" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/fepp_edit_photo_button"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_gravity="end|bottom"
+                android:layout_marginEnd="25dp"
+                android:backgroundTint="@color/first_intro_screen"
+                app:cornerRadius="80dp"
+                app:icon="@drawable/ic_pencil"
+                app:iconGravity="top"
+                app:iconTint="@color/white"
+                app:layout_constraintBottom_toBottomOf="@id/fepp_player_picture"
+                app:layout_constraintEnd_toEndOf="@id/fepp_player_picture"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        </androidx.cardview.widget.CardView>
+
+        <RadioGroup
+            android:id="@+id/fepp_sex"
+            android:layout_width="0dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="150dp"
+            android:background="@drawable/rounded_corner_for_settings_radiobutton"
+            android:checkedButton="@id/fepp_player"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/fepp_male"
+                android:layout_width="150dp"
+                android:layout_height="65dp"
+                android:layout_marginTop="-15dp"
+                android:button="@null"
+                android:drawableTop="?android:attr/listChoiceIndicatorSingle"
+                android:gravity="center_horizontal|bottom"
+                android:text="@string/male"
+                android:textColor="@color/first_intro_screen"
+                android:textSize="@dimen/text_size_for_buttons_start"
+                app:layout_constraintBottom_toBottomOf="@id/fepp_sex"
+                app:layout_constraintStart_toStartOf="@id/fepp_sex"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioButton
+                android:id="@+id/fepp_female"
+                android:layout_width="220dp"
+                android:layout_height="65dp"
+                android:layout_marginStart="65dp"
+                android:layout_marginTop="-15dp"
+                android:button="@null"
+                android:drawableTop="?android:attr/listChoiceIndicatorSingle"
+                android:gravity="center_horizontal|bottom"
+                android:text="@string/female"
+                android:textColor="@color/first_intro_screen"
+                android:textSize="@dimen/text_size_for_buttons_start"
+                app:layout_constraintBottom_toBottomOf="@id/fepp_sex"
+                app:layout_constraintEnd_toStartOf="@id/fepp_sex"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </RadioGroup>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fepp_name"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@color/white"
+            android:hint="@string/name_for_settings"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fepp_sex">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/fepp_name_for_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/white"
+                android:inputType="text"
+                android:textColor="@color/first_intro_screen" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/dotted_name"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/dotted_line_white_background"
+            app:layout_constraintBottom_toBottomOf="@+id/fepp_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fepp_surname"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@color/white"
+            android:hint="@string/surname_for_input"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fepp_name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/fepp_surname_for_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:inputType="text"
+                android:textColor="@color/first_intro_screen" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/dotted_surname"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/dotted_line_white_background"
+            app:layout_constraintBottom_toBottomOf="@+id/fepp_surname"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fepp_date_of_birth"
+            android:layout_width="149dp"
+            android:layout_height="96dp"
+            android:layout_marginStart="30dp"
+            android:background="@color/white"
+            android:hint="@string/date_of_birth"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fepp_surname">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/fepp_date_of_birth_for_input"
+                android:layout_width="149dp"
+                android:layout_height="96dp"
+                android:background="@color/white"
+                android:hint="день.мес.год"
+                android:inputType="date"
+                android:paddingBottom="-2dp"
+                android:textColor="@color/first_intro_screen" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/dotted_date_of_birth"
+            android:layout_width="149dp"
+            android:layout_height="10dp"
+            android:layout_marginStart="30dp"
+            android:background="@drawable/dotted_line_white_background"
+            app:layout_constraintBottom_toBottomOf="@+id/fepp_date_of_birth"
+            app:layout_constraintEnd_toEndOf="@+id/fepp_date_of_birth"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fepp_weight"
+            android:layout_width="70dp"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            android:hint="@string/weight"
+            app:layout_constraintStart_toEndOf="@id/fepp_date_of_birth"
+            app:layout_constraintTop_toBottomOf="@id/fepp_surname">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/fepp_weight_for_input"
+                android:layout_width="70dp"
+                android:layout_height="96dp"
+                android:background="@color/white"
+                android:hint="@string/kg"
+                android:inputType="numberDecimal"
+                android:paddingBottom="-2dp"
+                android:textColor="@color/first_intro_screen" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/dotted_weight"
+            android:layout_width="65dp"
+            android:layout_height="10dp"
+            android:background="@drawable/dotted_line_white_background"
+            app:layout_constraintBottom_toBottomOf="@+id/fepp_weight"
+            app:layout_constraintEnd_toEndOf="@+id/fepp_weight"
+            app:layout_constraintStart_toStartOf="@+id/fepp_weight" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fepp_height"
+            android:layout_width="70dp"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            android:hint="@string/height"
+            app:layout_constraintStart_toEndOf="@id/fepp_weight"
+            app:layout_constraintTop_toBottomOf="@id/fepp_surname">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/fepp_height_for_input"
+                android:layout_width="70dp"
+                android:layout_height="96dp"
+                android:background="@color/white"
+                android:hint="@string/sm"
+                android:inputType="numberDecimal"
+                android:paddingBottom="-2dp"
+                android:textColor="@color/first_intro_screen" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/dotted_height"
+            android:layout_width="65dp"
+            android:layout_height="10dp"
+            android:background="@drawable/dotted_line_white_background"
+            app:layout_constraintBottom_toBottomOf="@+id/fepp_height"
+            app:layout_constraintEnd_toEndOf="@+id/fepp_height"
+            app:layout_constraintStart_toStartOf="@+id/fepp_height" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fepp_experience"
+            android:layout_width="65dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="30dp"
+            android:background="@color/white"
+            android:hint="@string/experience"
+            app:layout_constraintStart_toEndOf="@id/fepp_height"
+            app:layout_constraintTop_toBottomOf="@id/fepp_surname">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/fepp_experience_for_input"
+                android:layout_width="75dp"
+                android:layout_height="96dp"
+                android:background="@color/white"
+                android:hint="@string/years"
+                android:inputType="numberDecimal"
+                android:paddingBottom="-2dp"
+                android:textColor="@color/first_intro_screen" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/dotted_experience"
+            android:layout_width="65dp"
+            android:layout_height="10dp"
+            android:background="@drawable/dotted_line_white_background"
+            app:layout_constraintBottom_toBottomOf="@+id/fepp_experience"
+            app:layout_constraintEnd_toEndOf="@+id/fepp_experience"
+            app:layout_constraintStart_toStartOf="@+id/fepp_experience" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fepp_about_yourself"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@color/white"
+            android:hint="@string/about_yourself"
+            android:padding="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fepp_date_of_birth">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/fepp_about_yourself_for_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:inputType="text"
+                android:textColor="@color/first_intro_screen" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/dotted_about_yourself"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/dotted_line_white_background"
+            app:layout_constraintBottom_toBottomOf="@+id/fepp_about_yourself"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fepp_phone_number_settings"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@color/white"
+            android:hint="@string/your_phone_number"
+            android:padding="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fepp_about_yourself">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/fepp_phone_number_settings_for_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:inputType="numberDecimal"
+                android:textColor="@color/first_intro_screen" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/dotted_phone"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/dotted_line_white_background"
+            app:layout_constraintBottom_toBottomOf="@+id/fepp_phone_number_settings"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/fepp_for_order_confirmation_only"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@color/white"
+            android:paddingStart="20dp"
+            android:paddingBottom="20dp"
+            android:text="@string/For_order_confirmation_only"
+            android:textSize="11sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fepp_phone_number_settings"
+            tools:ignore="RtlSymmetry" />
+
+        <Spinner
+            android:id="@+id/fepp_spinner_country"
+            android:layout_width="152dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/rounded_corner_for_basket"
+            android:backgroundTint="@color/light_grey"
+            android:entries="@array/countries"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fepp_for_order_confirmation_only"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageView
+            android:id="@+id/fepp_spinner_country_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_spinner_down"
+            app:layout_constraintBottom_toBottomOf="@id/fepp_spinner_country"
+            app:layout_constraintEnd_toEndOf="@id/fepp_spinner_country"
+            app:layout_constraintTop_toTopOf="@+id/fepp_spinner_country" />
+
+        <Spinner
+            android:id="@+id/fepp_spinner_city"
+            android:layout_width="152dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/rounded_corner_for_basket"
+            android:backgroundTint="@color/light_grey"
+            android:entries="@array/countries"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fepp_for_order_confirmation_only"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageView
+            android:id="@+id/fepp_spinner_city_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_spinner_down"
+            app:layout_constraintBottom_toBottomOf="@id/fepp_spinner_city"
+            app:layout_constraintEnd_toEndOf="@id/fepp_spinner_city"
+            app:layout_constraintTop_toTopOf="@+id/fepp_spinner_city" />
+
+        <TextView
+            android:id="@+id/fepp_level"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/rounded_corner_for_basket"
+            android:backgroundTint="@color/light_grey"
+            android:gravity="center"
+            android:padding="20dp"
+            android:paddingEnd="180dp"
+            android:text="@string/level"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fepp_spinner_country"
+            tools:ignore="RtlSymmetry" />
+
+        <Spinner
+            android:id="@+id/fepp_spinner_level"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/rounded_corner_for_basket"
+            android:backgroundTint="@color/light_grey"
+            android:entries="@array/levels"
+            android:textAlignment="textStart"
+            app:layout_constraintBottom_toBottomOf="@id/fepp_level"
+            app:layout_constraintEnd_toEndOf="@id/fepp_level"
+            app:layout_constraintTop_toTopOf="@+id/fepp_level"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageView
+            android:id="@+id/fepp_spinner_level_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:contentDescription="none"
+            android:src="@drawable/ic_spinner_down"
+            app:layout_constraintBottom_toBottomOf="@id/fepp_level"
+            app:layout_constraintEnd_toEndOf="@id/fepp_level"
+            app:layout_constraintTop_toTopOf="@+id/fepp_level" />
+
+        <RadioGroup
+            android:id="@+id/fepp_player_couch"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/rounded_corner_for_basket"
+            android:backgroundTint="@color/light_grey"
+            android:checkedButton="@id/fepp_player"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fepp_level">
+
+            <RadioButton
+                android:id="@+id/fepp_player"
+                android:layout_width="160dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:background="@color/light_grey"
+                android:text="@string/player_button_for_register"
+                android:textSize="@dimen/text_size_for_buttons_start" />
+
+            <RadioButton
+                android:id="@+id/fepp_couch"
+                android:layout_width="160dp"
+                android:layout_height="50dp"
+                android:background="@color/light_grey"
+                android:text="@string/couch_button_for_register"
+                android:textSize="@dimen/text_size_for_buttons_start" />
+
+        </RadioGroup>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fepp_save_button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:backgroundTint="@color/first_intro_screen"
+            android:text="@string/save"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fepp_player_couch" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fepp_settings_button"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/settings"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="@color/first_intro_screen"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fepp_save_button" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

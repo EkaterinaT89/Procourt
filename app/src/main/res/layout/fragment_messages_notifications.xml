@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:context=".fragment.notifications.MessagesNotificationsFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fmn_write_message"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="top|end"
+        android:background="@color/first_intro_screen"
+        app:icon="@drawable/ic_pencil"
+        app:iconGravity="end"
+        app:iconTint="@color/white"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fmn_write_message_background"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="top|end"
+        android:background="@color/first_intro_screen"
+        app:iconGravity="end"
+        app:iconTint="@color/white"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fmn_messages"
+        android:visibility="gone"
+        android:layout_width="195dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginStart="15dp"
+        android:background="@drawable/rounded_corner_for_basket"
+        app:backgroundTint="@color/grey"
+        android:text="@string/messages"
+        android:textColor="@color/dark_blue"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="16sp"
+        android:gravity="center" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fmn_notifications"
+        android:layout_width="195dp"
+        android:layout_height="50dp"
+        android:layout_gravity="end"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/rounded_corner_for_basket"
+        android:gravity="center"
+        android:text="@string/notifications"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/dark_blue"
+        android:textSize="16sp"
+        app:backgroundTint="@color/grey"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fmn_messages_light"
+        android:layout_width="195dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginStart="15dp"
+        android:background="@drawable/rounded_corner_for_basket"
+        app:backgroundTint="@color/grey"
+        android:text="@string/messages"
+        android:textColor="@color/first_intro_screen"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="16sp"
+        android:gravity="center" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fmn_notifications_light"
+        android:visibility="gone"
+        android:layout_width="195dp"
+        android:layout_height="50dp"
+        android:layout_gravity="end"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/rounded_corner_for_basket"
+        android:gravity="center"
+        android:text="@string/notifications"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/first_intro_screen"
+        android:textSize="16sp"
+        app:backgroundTint="@color/grey"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fmn_list_of_notifications_container"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginBottom="80dp"
+        android:orientation="vertical"
+        android:scrollbars="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/one_notification_for_list" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fmn_list_of_messages_container"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginBottom="80dp"
+        android:orientation="vertical"
+        android:scrollbars="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/one_message_for_list" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/fmn_bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/white"
+        android:elevation="20dp"
+        android:scrollbars="none"
+        app:itemIconTint="@color/first_intro_screen"
+        app:itemTextColor="@color/white"
+        app:itemIconSize="25sp"
+        android:layout_gravity="bottom"
+        app:menu="@menu/menu" />
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/time_message"
+        android:layout_width="69dp"
+        android:layout_height="24dp"
+        android:background="@drawable/rounded_corner_blue_stroke_white_background"
+        android:text="Вчера"
+        android:textColor="@color/first_intro_screen"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:layout_gravity="center|top" />
+
+<androidx.cardview.widget.CardView
+android:layout_width="match_parent"
+android:layout_height="80dp"
+    android:layout_marginTop="40dp"
+    app:background="@drawable/dotted_line_top"
+android:layout_gravity="center|top">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/avatar"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="10dp"
+        android:foregroundGravity="center"
+        app:cardCornerRadius="160dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_temp_pic" />
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:background="@drawable/rounded_corners_for_comments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="80dp"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/comment_color_blue"
+            tools:text="Some message for some user" />
+
+        <TextView
+            android:id="@+id/comment_time"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:textColor="@color/first_intro_screen"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="30dp"
+            android:textSize="10sp"
+            android:gravity="bottom"
+            tools:text="12:40"
+            tools:ignore="SmallSp" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+</com.google.android.material.card.MaterialCardView>

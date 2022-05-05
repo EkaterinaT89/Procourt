@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ffcos"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_blue"
+    tools:context=".fragment.search.FiltrCouchSearchFragment">
+
+    <TextView
+        android:id="@+id/filtr_couch_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/top_thing"
+        android:layout_width="50dp"
+        android:layout_height="7dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/rounded_corner"
+        app:layout_constraintBottom_toTopOf="@id/background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="650dp"
+        android:background="@drawable/round_corners_for_top"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/filtr_couch_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/filtr_title"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/background" />
+
+    <TextView
+        android:id="@+id/dotted_line"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@drawable/dotted_line_white_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/filtr_couch_title" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/ffcs_rent_couch_title"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="14dp"
+        android:backgroundTint="@color/white"
+        android:gravity="center"
+        android:text="@string/rent_couch_title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/first_intro_screen"
+        android:textSize="14sp"
+        app:icon="@drawable/ic_rent_image"
+        app:iconGravity="textStart"
+        app:iconTint="@color/first_intro_screen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dotted_line"
+        tools:ignore="TextContrastCheck,TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/ffcs_club_location_title"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/rounded_corners_top_grey"
+        android:gravity="start|center"
+        android:padding="16dp"
+        android:text="ЛОКАЦИЯ"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/first_intro_screen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ffcs_rent_couch_title" />
+
+    <Spinner
+        android:id="@+id/ffcs_spinner_city"
+        android:layout_width="152dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/rounded_corner_for_basket"
+        android:backgroundTint="@color/light_grey"
+        android:entries="@array/countries"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ffcs_rent_couch_title"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <ImageView
+        android:id="@+id/ffcs_spinner_city_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_right"
+        app:layout_constraintBottom_toBottomOf="@id/ffcs_spinner_city"
+        app:layout_constraintEnd_toEndOf="@id/ffcs_spinner_city"
+        app:layout_constraintTop_toTopOf="@+id/ffcs_spinner_city" />
+
+    <TextView
+        android:id="@+id/dotted_location"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/dotted_line_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ffcs_club_location_title" />
+
+    <TextView
+        android:id="@+id/ffcs_rent_date"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:background="@color/light_grey"
+        android:gravity="start|center"
+        android:padding="16dp"
+        android:text="@string/rent_date"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/first_intro_screen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ffcs_club_location_title"
+        tools:ignore="TextContrastCheck" />
+
+    <Spinner
+        android:id="@+id/ffcs_spinner_date"
+        android:layout_width="152dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/rounded_corner_for_basket"
+        android:backgroundTint="@color/grey"
+        android:entries="@array/countries"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dotted_location"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/ffcs_date_button"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        app:icon="@drawable/ic_right"
+        app:iconGravity="end"
+        app:iconTint="@color/first_intro_screen"
+        app:layout_constraintBottom_toBottomOf="@id/ffcs_spinner_date"
+        app:layout_constraintEnd_toEndOf="@id/ffcs_spinner_date"
+        app:layout_constraintTop_toTopOf="@+id/ffcs_spinner_date"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/dotted_phone"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/dotted_line_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ffcs_rent_date" />
+
+    <TextView
+        android:id="@+id/ffcs_rent_time"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/round_corners_for_couch_buttom"
+        android:gravity="start|center"
+        android:padding="16dp"
+        android:text="@string/rent_time"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/first_intro_screen"
+        app:layout_constraintEnd_toEndOf="@id/ffcs_rent_date"
+        app:layout_constraintStart_toStartOf="@id/ffcs_rent_date"
+        app:layout_constraintTop_toBottomOf="@id/ffcs_rent_date" />
+
+    <Spinner
+        android:id="@+id/ffcs_spinner_time"
+        android:layout_width="152dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/rounded_corner_for_basket"
+        android:backgroundTint="@color/light_grey"
+        android:entries="@array/countries"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dotted_phone"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <ImageView
+        android:id="@+id/ffcs_spinner_time_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_right"
+        app:layout_constraintBottom_toBottomOf="@id/ffcs_spinner_time"
+        app:layout_constraintEnd_toEndOf="@id/ffcs_spinner_time"
+        app:layout_constraintTop_toTopOf="@+id/ffcs_spinner_time" />
+
+    <TextView
+        android:id="@+id/ffcs_type_of_train_title"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/rounded_corners_top_grey"
+        android:gravity="start|center"
+        android:paddingStart="15dp"
+        android:text="@string/type_of_train"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/first_intro_screen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ffcs_rent_time"
+        tools:ignore="RtlSymmetry" />
+
+    <LinearLayout
+        android:id="@+id/ffcs_type_of_train"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/round_corners_bottom_grey"
+        android:backgroundTint="@color/light_grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ffcs_type_of_train_title">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/ffcs_personal_train"
+            style="@style/Widget.AppTheme.ListItemYellowButtons"
+            android:checkable="true"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="15dp"
+            android:layout_gravity="start|center"
+            android:text="@string/personal_train"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:cornerRadius="20dp"
+            app:strokeColor="@color/first_intro_screen"
+            app:strokeWidth="1dp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/ffcs_group_train"
+            style="@style/Widget.AppTheme.ListItemYellowButtons"
+            android:checkable="true"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="15dp"
+            android:layout_gravity="start|center"
+            android:text="@string/group_train"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:cornerRadius="20dp"
+            app:strokeColor="@color/first_intro_screen"
+            app:strokeWidth="1dp"
+            tools:ignore="TouchTargetSizeCheck" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/ffcs_couch_sex"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/rounded_corners_top_grey"
+        android:backgroundTint="@color/light_grey"
+        android:gravity="start|center"
+        android:paddingStart="15dp"
+        android:text="@string/couch_sex"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/first_intro_screen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ffcs_type_of_train"
+        tools:ignore="RtlSymmetry" />
+
+    <LinearLayout
+        android:id="@+id/ffcs_couch_sex_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/round_corners_bottom_grey"
+        android:backgroundTint="@color/light_grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ffcs_couch_sex">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/ffcs_couch_male"
+            style="@style/Widget.AppTheme.ListItemYellowButtons"
+            android:checkable="true"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="15dp"
+            android:layout_gravity="start|center"
+            android:text="@string/couch_male"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:cornerRadius="20dp"
+            app:strokeColor="@color/first_intro_screen"
+            app:strokeWidth="1dp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/ffcs_couch_female"
+            style="@style/Widget.AppTheme.ListItemYellowButtons"
+            android:checkable="true"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="15dp"
+            android:layout_gravity="start|center"
+            android:text="@string/couch_female"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:cornerRadius="20dp"
+            app:strokeColor="@color/first_intro_screen"
+            app:strokeWidth="1dp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/ffcs_couch_level"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/rounded_corners_top_grey"
+        android:backgroundTint="@color/light_grey"
+        android:gravity="start|center"
+        android:paddingStart="15dp"
+        android:text="@string/couch_level"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/first_intro_screen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ffcs_couch_sex_buttons"
+        tools:ignore="RtlSymmetry" />
+
+    <LinearLayout
+        android:id="@+id/ffcs_couch_level_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/round_corners_bottom_grey"
+        android:backgroundTint="@color/light_grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ffcs_couch_level">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/ffcs_master"
+            style="@style/Widget.AppTheme.ListItemYellowButtons"
+            android:checkable="true"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="15dp"
+            android:layout_gravity="start|center"
+            android:text="@string/master"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:cornerRadius="20dp"
+            app:layout_constraintBottom_toBottomOf="@id/ffcs_couch_level"
+            app:layout_constraintStart_toStartOf="@id/ffcs_couch_level"
+            app:strokeColor="@color/first_intro_screen"
+            app:strokeWidth="1dp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/ffcs_KMS"
+            style="@style/Widget.AppTheme.ListItemYellowButtons"
+            android:checkable="true"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="15dp"
+            android:layout_gravity="start|center"
+            android:text="@string/KMS"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:cornerRadius="20dp"
+            app:layout_constraintBottom_toBottomOf="@id/ffcs_couch_level"
+            app:layout_constraintStart_toEndOf="@id/ffcs_master"
+            app:strokeColor="@color/first_intro_screen"
+            app:strokeWidth="1dp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/ffcs_not_profi"
+            style="@style/Widget.AppTheme.ListItemYellowButtons"
+            android:checkable="true"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="15dp"
+            android:layout_gravity="start|center"
+            android:text="@string/not_profi"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:cornerRadius="20dp"
+            app:layout_constraintBottom_toBottomOf="@id/ffcs_couch_level"
+            app:layout_constraintStart_toEndOf="@id/ffcs_KMS"
+            app:strokeColor="@color/first_intro_screen"
+            app:strokeWidth="1dp"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/ffcs_apply_button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:backgroundTint="@color/yellow"
+        android:text="@string/apply"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/dark_orange"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ffcs_couch_level_buttons" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

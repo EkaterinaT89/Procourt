@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/buttons_top"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:backgroundTint="@color/dark_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/back_button"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="34dp"
+                android:backgroundTint="@android:color/transparent"
+                app:icon="@drawable/ic_left"
+                app:iconTint="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|center"
+                android:layout_marginTop="47dp"
+                android:text="@string/games"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/calendar_button"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/calendar_button"
+            android:textColor="@color/dark_blue"
+            app:layout_constraintTop_toBottomOf="@id/buttons_top"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/dotted"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/setka_button"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="60dp"
+            android:text="@string/setka_button"
+            android:textColor="@color/dark_blue_transparent"
+            app:layout_constraintTop_toBottomOf="@id/buttons_top"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/dotted"/>
+
+        <TextView
+            android:id="@+id/dotted"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@drawable/dotted_line_white_background"
+            app:layout_constraintTop_toBottomOf="@id/calendar_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/first_circle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/rounded_corners_top_white_grey_stroke"
+            android:gravity="start|center"
+            android:padding="16dp"
+            android:text="Круг 1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/dark_blue"
+            app:layout_constraintTop_toBottomOf="@+id/dotted"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/club_name_first_circle"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="170dp"
+            android:layout_marginEnd="55dp"
+            android:gravity="end|center"
+            android:padding="16dp"
+            android:text="Клуб Коломенский"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/dark_blue"
+            app:layout_constraintTop_toBottomOf="@+id/dotted"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/open_games_first_circle"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="330dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            app:icon="@drawable/ic_arrow"
+            app:iconTint="@color/first_intro_screen"
+            tools:ignore="SpeakableTextPresentCheck"
+            app:layout_constraintTop_toBottomOf="@+id/dotted"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/close_games_first_circle"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:visibility="gone"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="330dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            app:icon="@drawable/ic_arrow_up"
+            app:iconTint="@color/first_intro_screen"
+            tools:ignore="SpeakableTextPresentCheck"
+            app:layout_constraintTop_toBottomOf="@+id/dotted"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/second_circle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:gravity="start|center"
+            android:background="@drawable/strokes_grey_white_back"
+            android:padding="16dp"
+            android:text="Круг 2"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/dark_blue"
+            app:layout_constraintTop_toBottomOf="@+id/games_result_first_circle_container"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/club_name_second_circle"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="170dp"
+            android:layout_marginEnd="55dp"
+            android:gravity="end|center"
+            android:padding="16dp"
+            android:text="Клуб Коломенский"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/dark_blue"
+            app:layout_constraintTop_toBottomOf="@+id/first_circle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/open_games_second_circle"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="330dp"
+            android:layout_marginEnd="15dp"
+            app:icon="@drawable/ic_arrow"
+            app:iconTint="@color/first_intro_screen"
+            tools:ignore="SpeakableTextPresentCheck"
+            app:layout_constraintTop_toBottomOf="@+id/first_circle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/close_games_second_circle"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:visibility="gone"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="330dp"
+            android:layout_marginEnd="15dp"
+            app:icon="@drawable/ic_arrow_up"
+            app:iconTint="@color/first_intro_screen"
+            tools:ignore="SpeakableTextPresentCheck"
+            app:layout_constraintTop_toBottomOf="@+id/first_circle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/fird_circle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:gravity="start|center"
+            android:background="@drawable/strokes_grey_white_back"
+            android:padding="16dp"
+            android:text="Круг 3"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/dark_blue"
+            app:layout_constraintTop_toBottomOf="@+id/games_result_second_circle_container"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/club_name_fird_circle"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="170dp"
+            android:layout_marginEnd="55dp"
+            android:gravity="end|center"
+            android:padding="16dp"
+            android:text="Клуб Коломенский"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/dark_blue"
+            app:layout_constraintTop_toBottomOf="@+id/second_circle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/open_games_fird_circle"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="330dp"
+            android:layout_marginEnd="15dp"
+            app:icon="@drawable/ic_arrow"
+            app:iconTint="@color/first_intro_screen"
+            tools:ignore="SpeakableTextPresentCheck"
+            app:layout_constraintTop_toBottomOf="@+id/second_circle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/close_games_fird_circle"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:visibility="gone"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="330dp"
+            android:layout_marginEnd="15dp"
+            app:icon="@drawable/ic_arrow_up"
+            app:iconTint="@color/first_intro_screen"
+            tools:ignore="SpeakableTextPresentCheck"
+            app:layout_constraintTop_toBottomOf="@+id/second_circle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/fourth_circle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:gravity="start|center"
+            android:background="@drawable/rounded_courners_bottom_white_grey_stroke"
+            android:padding="16dp"
+            android:text="Круг 4"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/dark_blue"
+            app:layout_constraintTop_toBottomOf="@+id/games_result_fird_circle_container"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/club_name_fourth_circle"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="170dp"
+            android:layout_marginEnd="55dp"
+            android:gravity="end|center"
+            android:padding="16dp"
+            android:text="Клуб Коломенский"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/dark_blue"
+            app:layout_constraintTop_toBottomOf="@+id/fird_circle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/open_games_fourth_circle"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="330dp"
+            android:layout_marginEnd="15dp"
+            app:icon="@drawable/ic_arrow"
+            app:iconTint="@color/first_intro_screen"
+            tools:ignore="SpeakableTextPresentCheck"
+            app:layout_constraintTop_toBottomOf="@+id/fird_circle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/close_games_fourth_circle"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:visibility="gone"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="330dp"
+            android:layout_marginEnd="15dp"
+            app:icon="@drawable/ic_arrow_up"
+            app:iconTint="@color/first_intro_screen"
+            tools:ignore="SpeakableTextPresentCheck"
+            app:layout_constraintTop_toBottomOf="@+id/fird_circle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/games_result_first_circle_container"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            tools:itemCount="2"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            app:layout_constraintTop_toBottomOf="@id/first_circle"
+            app:layout_constraintBottom_toTopOf="@id/second_circle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/round_corners_bottom_grey"
+            android:backgroundTint="@color/grey"
+            tools:listitem="@layout/list_games_for_games_calendar" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/games_result_second_circle_container"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            tools:itemCount="2"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            app:layout_constraintTop_toBottomOf="@id/second_circle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/round_corners_bottom_grey"
+            android:backgroundTint="@color/grey"
+            tools:listitem="@layout/list_games_for_games_calendar" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/games_result_fird_circle_container"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            tools:itemCount="2"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            app:layout_constraintTop_toBottomOf="@id/fird_circle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/round_corners_bottom_grey"
+            android:backgroundTint="@color/grey"
+            tools:listitem="@layout/list_games_for_games_calendar" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/games_result_fourth_circle_container"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            tools:itemCount="2"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            app:layout_constraintTop_toBottomOf="@id/fourth_circle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/round_corners_bottom_grey"
+            android:backgroundTint="@color/grey"
+            tools:listitem="@layout/list_games_for_games_calendar" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

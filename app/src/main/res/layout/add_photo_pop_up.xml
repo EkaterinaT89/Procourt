@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/grop_for_add_news_photo_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/transparent"
+        app:constraint_referenced_ids="fpmpp_top_thing, fpmpp_background, fpmpp_transparent_color,
+        fpmpp_add_photo_album, fpmpp_dotted_line, fpmpp_add_photo_my_tournaments, fpmpp_dotted_line_2, fpmpp_add_photo_my_trains,
+        fpmpp_dotted_line_3, fpmpp_add_photo_others, fpmpp_dotted_line_4, fpmpp_add_photo_title" />
+
+    <TextView
+        android:id="@+id/fpmpp_transparent_color"
+        android:layout_width="match_parent"
+        android:layout_height="425dp"
+        android:background="@color/transparent"
+        app:layout_constraintBottom_toTopOf="@id/fpmpp_background"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/fpmpp_top_thing"
+        android:layout_width="50dp"
+        android:layout_height="7dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/rounded_corner"
+        app:layout_constraintBottom_toTopOf="@id/fpmpp_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/fpmpp_background"
+        android:layout_width="match_parent"
+        android:layout_height="345dp"
+        android:background="@drawable/round_corners_for_top"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/fpmpp_add_photo_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="Добавить фото"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/fpmpp_background" />
+
+    <TextView
+        android:id="@+id/fpmpp_dotted_line"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="13dp"
+        android:background="@drawable/dotted_line_white_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fpmpp_add_photo_title" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fpmpp_add_photo_album"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="14dp"
+        android:backgroundTint="@color/white"
+        android:gravity="start|center"
+        android:text="Создать новый фотоальбом"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/dark_blue"
+        android:textSize="16sp"
+        app:icon="@drawable/ic_plus"
+        app:iconTint="@color/dark_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fpmpp_dotted_line"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/fpmpp_dotted_line_2"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/dotted_line_white_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fpmpp_add_photo_album" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fpmpp_add_photo_my_tournaments"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="14dp"
+        android:backgroundTint="@color/white"
+        android:gravity="start|center"
+        android:text="Мои турниры"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/first_intro_screen"
+        android:textSize="16sp"
+        app:icon="@drawable/ic_plus"
+        app:iconTint="@color/first_intro_screen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fpmpp_dotted_line_2"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/fpmpp_dotted_line_3"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/dotted_line_white_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fpmpp_add_photo_my_tournaments" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fpmpp_add_photo_my_trains"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="14dp"
+        android:backgroundTint="@color/white"
+        android:gravity="start|center"
+        android:text="Тренировки"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/first_intro_screen"
+        android:textSize="16sp"
+        app:icon="@drawable/ic_plus"
+        app:iconTint="@color/first_intro_screen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fpmpp_dotted_line_3"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/fpmpp_dotted_line_4"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/dotted_line_white_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fpmpp_add_photo_my_trains" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fpmpp_add_photo_others"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="14dp"
+        android:backgroundTint="@color/white"
+        android:gravity="start|center"
+        android:text="Разное"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/first_intro_screen"
+        android:textSize="16sp"
+        app:icon="@drawable/ic_plus"
+        app:iconTint="@color/first_intro_screen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fpmpp_dotted_line_4"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/fpmpp_dotted_line_5"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/dotted_line_white_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fpmpp_add_photo_others" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

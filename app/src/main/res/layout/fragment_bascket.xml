@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".fragment.basket.BascketFragment"
+    tools:ignore="SpeakableTextPresentCheck">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/fb_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="fb_full_basket, fb_pay_button_for_short_text" />
+
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/fb_group_for_expand_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:constraint_referenced_ids="fb_expand_background_basket, fb_till, fb_from, fb_price,
+            fb_discount, fb_discount_fill, fb_from_date_time, fb_till_date_time, fb_price_fill, fb_delete_button_basket,
+            fb_pay_button_for_full_text, fb_dotted_line, fb_dotted_line_top" />
+
+    <TextView
+        android:id="@+id/fb_background_for_expand_basket"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/rounded_corner_for_basket"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        android:textColor="@color/first_intro_screen"
+        app:layout_constraintBottom_toTopOf="@+id/fb_pay_button_for_short_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fb_full_basket" />
+
+    <TextView
+        android:id="@+id/fb_expand_background_basket"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/rounded_corner_for_basket"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        android:textColor="@color/first_intro_screen"
+        app:layout_constraintBottom_toTopOf="@+id/fb_pay_button_for_full_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fb_full_basket" />
+
+    <TextView
+        android:id="@+id/fb_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="80dp"
+        android:text="@string/court_club_bascket"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/first_intro_screen"
+        app:layout_constraintEnd_toEndOf="@+id/fb_background_for_expand_basket"
+        app:layout_constraintTop_toBottomOf="@+id/fb_full_basket" />
+
+    <TextView
+        android:id="@+id/fb_dotted_line_top"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/dotted_line_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fb_title_text" />
+
+    <TextView
+        android:id="@+id/fb_sum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="32dp"
+        android:text="2600,00 р."
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/first_intro_screen"
+        app:layout_constraintStart_toStartOf="@+id/fb_background_for_expand_basket"
+        app:layout_constraintTop_toBottomOf="@+id/fb_full_basket" />
+
+    <TextView
+        android:id="@+id/fb_from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="90dp"
+        android:text="@string/date_time"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/first_intro_screen"
+        app:layout_constraintStart_toStartOf="@+id/fb_background_for_expand_basket"
+        app:layout_constraintTop_toBottomOf="@+id/fb_full_basket" />
+
+    <TextView
+        android:id="@+id/fb_till"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="120dp"
+        android:text="@string/amount"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/first_intro_screen"
+        app:layout_constraintStart_toStartOf="@+id/fb_background_for_expand_basket"
+        app:layout_constraintTop_toBottomOf="@+id/fb_full_basket" />
+
+    <TextView
+        android:id="@+id/fb_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="150dp"
+        android:text="@string/price"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/first_intro_screen"
+        app:layout_constraintStart_toStartOf="@+id/fb_background_for_expand_basket"
+        app:layout_constraintTop_toBottomOf="@+id/fb_full_basket" />
+
+    <TextView
+        android:id="@+id/fb_discount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="180dp"
+        android:text="@string/discount"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/first_intro_screen"
+        app:layout_constraintStart_toStartOf="@+id/fb_background_for_expand_basket"
+        app:layout_constraintTop_toBottomOf="@+id/fb_full_basket" />
+
+    <TextView
+        android:id="@+id/fb_from_date_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="90dp"
+        android:layout_marginEnd="15dp"
+        android:text="31 окт. СР, 16:30 - 17:00"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/first_intro_screen"
+        app:layout_constraintEnd_toEndOf="@+id/fb_background_for_expand_basket"
+        app:layout_constraintTop_toBottomOf="@+id/fb_full_basket" />
+
+    <TextView
+        android:id="@+id/fb_till_date_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="15dp"
+        android:text="0,5"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/first_intro_screen"
+        app:layout_constraintEnd_toEndOf="@+id/fb_background_for_expand_basket"
+        app:layout_constraintTop_toBottomOf="@+id/fb_full_basket" />
+
+    <TextView
+        android:id="@+id/fb_price_fill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="15dp"
+        android:text="@string/price_bold"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/first_intro_screen"
+        app:layout_constraintEnd_toEndOf="@+id/fb_background_for_expand_basket"
+        app:layout_constraintTop_toBottomOf="@+id/fb_full_basket" />
+
+    <TextView
+        android:id="@+id/fb_discount_fill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
+        android:layout_marginEnd="15dp"
+        android:text="@string/percent"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/first_intro_screen"
+        app:layout_constraintEnd_toEndOf="@+id/fb_background_for_expand_basket"
+        app:layout_constraintTop_toBottomOf="@+id/fb_full_basket" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fb_delete_button_basket"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:backgroundTint="@color/light_grey"
+        android:text="@string/delete"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/first_intro_screen"
+        app:layout_constraintBottom_toTopOf="@+id/fb_pay_button_for_full_text"
+        app:layout_constraintEnd_toEndOf="@+id/fb_background_for_expand_basket"
+        app:layout_constraintStart_toStartOf="@+id/fb_background_for_expand_basket" />
+
+    <ImageButton
+        android:id="@+id/fb_expand_button"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/light_grey"
+        android:src="@drawable/ic_arrow"
+        app:layout_constraintEnd_toEndOf="@+id/fb_background_for_expand_basket"
+        app:layout_constraintTop_toBottomOf="@+id/fb_full_basket"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/fb_expand_button_back"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/light_grey"
+        android:src="@drawable/ic_arrow_up"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/fb_background_for_expand_basket"
+        app:layout_constraintTop_toBottomOf="@+id/fb_full_basket"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/fb_empty_bascket"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_top_for_bascket"
+        android:gravity="top|center"
+        android:text="@string/your_backet_is_empty"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        android:textColor="@color/first_intro_screen"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="25dp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/fb_full_basket"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_top_for_bascket"
+        android:gravity="top|center"
+        android:text="@string/basket_title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/first_intro_screen"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fb_pay_button_for_short_text"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:backgroundTint="@color/first_intro_screen"
+        android:text="@string/get_pay"
+        android:textColor="@color/white"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fb_background_for_expand_basket"
+        tools:ignore="DuplicateClickableBoundsCheck" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fb_pay_button_for_full_text"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:backgroundTint="@color/first_intro_screen"
+        android:text="@string/get_pay"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fb_background_for_expand_basket" />
+
+    <FrameLayout
+        android:id="@+id/fb_container"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/fb_bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/white"
+        android:elevation="20dp"
+        android:scrollbars="none"
+        app:itemIconSize="25sp"
+        app:itemIconTint="@color/first_intro_screen"
+        app:itemTextColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu" />
+
+    <TextView
+        android:id="@+id/fb_dotted_line"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/dotted_line_bottom"
+        app:layout_constraintBottom_toTopOf="@id/fb_delete_button_basket"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

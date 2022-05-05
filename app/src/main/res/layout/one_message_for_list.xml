@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:background="@drawable/dotted_line_top"
+    android:layout_margin="8dp"
+    android:layout_marginBottom="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="100dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/avatar"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="10dp"
+        android:foregroundGravity="center"
+        app:cardCornerRadius="160dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_temp_pic" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/message_time"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_gravity="end"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/dark_grey"
+        android:textSize="14sp"
+        tools:ignore="SmallSp"
+        tools:text="10.01.2019" />
+
+    <TextView
+        android:id="@+id/author_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="20dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@color/dark_blue"
+        android:textSize="14sp"
+        tools:text="Procourt" />
+
+    <TextView
+        android:id="@+id/content_message"
+        android:layout_width="257dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:textColor="@color/first_intro_screen"
+        tools:text="Друзья! В разгар St-Petersburg Open предлагаем Вам стать участниками викторины и выиграть ценные
+                                призы: билеты на полуфинал и финал турнира!" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/full_message_button"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="50dp"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginTop="20dp"
+        app:icon="@drawable/ic_right"
+        app:iconTint="@color/dark_grey"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:backgroundTint="@color/white"
+        android:background="@drawable/dotted_line_bottom">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/friend_photo"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp"
+            android:foregroundGravity="center"
+            app:cardCornerRadius="160dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_temp_pic" />
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/friend_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:paddingStart="14dp"
+                android:text="Иван Иванов"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textColor="@color/dark_blue"
+                tools:ignore="RtlSymmetry" />
+
+            <TextView
+                android:id="@+id/online"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/online"
+                android:visibility="gone"
+                android:paddingStart="14dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/light_green" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30.12.2022"
+                android:paddingStart="14dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/dark_grey" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/write"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/grey"
+                android:gravity="top"
+                android:text="@string/write_to_friend"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/dark_blue"
+                tools:ignore="TouchTargetSizeCheck" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/delete_group_chat_part"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:icon="@drawable/ic_delete_group_chat_parts"
+            app:iconTint="@color/grey"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

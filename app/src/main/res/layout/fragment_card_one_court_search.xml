@@ -1,0 +1,241 @@
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="360dp"
+    android:layout_height="wrap_content"
+    tools:context=".fragment.search.CardOneCourtSearchFragent"
+    android:layout_margin="8dp">
+
+    <LinearLayout
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corner">
+
+        <TextView
+            android:id="@+id/fcocs_court_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="15dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/first_intro_screen"
+            tools:text="Корт 1 - ХАРД" />
+
+        <TextView
+            android:id="@+id/fcocs_court_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="15dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/first_intro_screen"
+            tools:text="от 500 руб/час" />
+
+        <ImageButton
+            android:id="@+id/fcocs_expand_courts_button"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/ic_arrow"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/fcocs_expand_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:backgroundTint="@color/light_grey">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/fcocs_expand_one_court"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/fcocs_group_for_auto_book"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:constraint_referenced_ids="fcocs_period_of_book, fcocs_period_of_book_text, fcocs_calendar_image"/>
+
+            <TextView
+                android:id="@+id/fcocs_court_name_expand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="@color/light_grey"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/first_intro_screen"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Корт 1 - ХАРД" />
+
+            <TextView
+                android:id="@+id/fcocs_price_expand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="50dp"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="@color/light_grey"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/first_intro_screen"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="от 500 руб/час" />
+
+            <ImageButton
+                android:id="@+id/fcocs_close_courts_button_expand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/light_grey"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/ic_arrow_up"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/fcocs_courts_list_container_expand"
+                android:layout_width="wrap_content"
+                android:layout_height="95dp"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="@color/light_grey"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fcocs_close_courts_button_expand"
+                tools:listitem="@layout/fragment_one_court_time_search" />
+
+            <TextView
+                android:id="@+id/fcocs_auto_book_title"
+                android:layout_width="75dp"
+                android:layout_height="19dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/auto_book_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fcocs_courts_list_container_expand"
+                android:textColor="@color/first_intro_screen" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/fcocs_auto_book_on_off"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                tools:ignore="TouchTargetSizeCheck"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fcocs_courts_list_container_expand"/>
+
+            <TextView
+                android:id="@+id/fcocs_no_payment_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:text="@string/no_payment_club_info"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/dark_grey"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fcocs_courts_list_container_expand"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/fcocs_period_of_book"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fcocs_auto_book_on_off"
+                android:backgroundTint="@color/light_grey"
+                android:background="@drawable/rounded_corner_for_basket" >
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/fcocs_every_day"
+                    style="@style/Widget.AppTheme.ListItemYellowButtons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="5dp"
+                    android:checkable="true"
+                    app:strokeColor="@color/first_intro_screen"
+                    app:strokeWidth="1dp"
+                    app:cornerRadius="30dp"
+                    android:text="@string/every_day"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/fcocs_every_week"
+                    style="@style/Widget.AppTheme.ListItemYellowButtons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="5dp"
+                    app:strokeColor="@color/first_intro_screen"
+                    app:strokeWidth="1dp"
+                    app:cornerRadius="30dp"
+                    android:checkable="true"
+                    android:text="@string/every_week"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/fcocs_every_month"
+                    style="@style/Widget.AppTheme.ListItemYellowButtons"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:checkable="true"
+                    app:strokeColor="@color/first_intro_screen"
+                    app:strokeWidth="1dp"
+                    app:cornerRadius="30dp"
+                    android:text="@string/every_month"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:gravity="start"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/fcocs_calendar_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fcocs_period_of_book"
+                android:src="@drawable/ic_baseline_calendar" />
+
+            <TextView
+                android:id="@+id/fcocs_period_of_book_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:text="С 2 октября по 2 декабря"
+                app:layout_constraintStart_toEndOf="@id/fcocs_calendar_image"
+                app:layout_constraintBottom_toBottomOf="@id/fcocs_calendar_image"
+                android:textColor="@color/first_intro_screen" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/fcocs_choose_button"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="@color/first_intro_screen"
+                android:text="@string/fcocs_choose_button"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fcocs_period_of_book_text"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</com.google.android.material.card.MaterialCardView>

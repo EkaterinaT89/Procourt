@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".fragment.news.CardNewsFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/fcn_avatar"
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="10dp"
+        android:foregroundGravity="center"
+        app:cardCornerRadius="160dp"
+        app:layout_constraintBottom_toBottomOf="@id/top_barrier"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/fcn_avatar_input"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_temp_pic" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/fcn_author_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@color/first_intro_screen"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@id/fcn_edit_news_button"
+        app:layout_constraintStart_toEndOf="@+id/fcn_avatar"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Procourt" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/fcn_group_for_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="fcn_video_link, fcn_play_video" />
+
+    <TextView
+        android:id="@+id/fcn_video_link"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autoLink="web"
+        android:ellipsize="end"
+        android:singleLine="true"
+        app:layout_constraintBottom_toBottomOf="@+id/fcn_bottom_barrier"
+        app:layout_constraintEnd_toEndOf="@+id/fcn_content"
+        app:layout_constraintStart_toStartOf="@+id/fcn_content"
+        app:layout_constraintTop_toBottomOf="@id/fcn_bottom_barrier"
+        tools:text="video" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fcn_play_video"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:autoLink="web"
+        android:background="@drawable/ic_temp_pic"
+        android:checkable="false"
+        app:icon="@drawable/ic_play_video"
+        app:iconGravity="textStart"
+        app:layout_constraintBottom_toTopOf="@id/fcn_video_link"
+        app:layout_constraintEnd_toEndOf="@+id/fcn_content"
+        app:layout_constraintStart_toStartOf="@+id/fcn_content"
+        app:layout_constraintTop_toBottomOf="@id/fcn_content" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/fcn_video_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:barrierDirection="top"
+        app:constraint_referenced_ids="fcn_video_link, fcn_play_video" />
+
+    <TextView
+        android:id="@+id/fcn_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toEndOf="@+id/fcn_author_name"
+        app:layout_constraintStart_toStartOf="@+id/fcn_author_name"
+        app:layout_constraintTop_toBottomOf="@+id/fcn_author_name"
+        android:textColor="@color/dark_grey"
+        tools:text="33 минуты назад" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/top_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="fcn_avatar, fcn_date, fcn_author_name" />
+
+    <TextView
+        android:id="@+id/fcn_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:autoLink="web"
+        android:background="@drawable/rounded_corner"
+        android:clickable="true"
+        android:ellipsize="end"
+        android:focusable="true"
+        android:lines="2"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/fcn_attachments"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_barrier"
+        tools:ignore="TouchTargetSizeCheck"
+        tools:text="@string/tools_text" />
+
+    <ImageView
+        android:id="@+id/fcn_attachments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/rounded_corner"
+        android:src="@drawable/ic_temp_pic"
+        app:layout_constraintBottom_toTopOf="@id/fcn_bottom_barrier"
+        app:layout_constraintEnd_toEndOf="@+id/fcn_content"
+        app:layout_constraintStart_toStartOf="@+id/fcn_content"
+        app:layout_constraintTop_toBottomOf="@id/fcn_content" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/fcn_bottom_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="fcn_content, fcn_video_link, fcn_attachments" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fcn_share_vk"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginBottom="17dp"
+        android:background="@android:color/transparent"
+        android:checkable="true"
+        app:icon="@drawable/vk"
+        app:iconTint="@color/dark_grey"
+        android:textColor="@color/dark_grey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fcn_bottom_barrier"
+        style="@style/Widget.AppTheme.VkButton"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fcn_share_fb"
+        style="@style/Widget.AppTheme.VkButton"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="17dp"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:checkable="true"
+        app:icon="@drawable/fb"
+        app:iconTint="@color/dark_grey"
+        android:textColor="@color/dark_grey"
+        app:layout_constraintStart_toEndOf="@id/fcn_share_vk"
+        app:layout_constraintTop_toBottomOf="@id/fcn_bottom_barrier" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fcn_comments"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/transparent"
+        app:icon="@drawable/ic_comment"
+        app:iconTint="@color/dark_grey"
+        app:layout_constraintStart_toEndOf="@id/fcn_share_fb"
+        app:layout_constraintTop_toBottomOf="@id/fcn_bottom_barrier"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fcn_share_out"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/transparent"
+        app:icon="@drawable/share_out"
+        app:iconTint="@color/dark_grey"
+        app:layout_constraintStart_toEndOf="@id/fcn_comments"
+        app:layout_constraintTop_toBottomOf="@id/fcn_bottom_barrier"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+<!--кнопка редактирования новости (доступна если пользователь зашел от своего имени,
+если нет - не показывается. -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fcn_edit_news_button"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:background="@android:color/transparent"
+        android:checkable="false"
+        app:icon="@drawable/ic_menu_button"
+        app:iconTint="@color/dark_grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fcn_bottom_barrier"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

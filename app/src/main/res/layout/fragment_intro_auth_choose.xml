@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragment.intro.IntroChooseAuthFragment"
+    android:background="@drawable/balls">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/fiac_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="@dimen/margin_top_procourt"
+        android:text="@string/procourt_auth"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_1_intro_screen"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_editor_absoluteY="100dp"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <ImageButton
+        android:id="@+id/fiac_back_button"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="@dimen/margin_for_intro"
+        android:layout_marginTop="75dp"
+        android:src="@drawable/ic_back"
+        android:background="@drawable/rounded_corner"
+        app:layout_constraintBottom_toBottomOf="@+id/fiac_start"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/background_p_c"
+        android:layout_width="367dp"
+        android:layout_height="155dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="@dimen/margin_for_intro"
+        android:background="@drawable/rounded_corner"
+        android:textSize="@dimen/text_size_1_intro_screen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/fiac_back_button"
+        app:layout_constraintTop_toBottomOf="@+id/fiac_start"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <RadioGroup
+        android:id="@+id/fiac_choose_who_sign_in"
+        android:layout_width="300dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/white"
+        android:checkedButton="@id/fiac_player"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/background_p_c"
+        app:layout_constraintTop_toTopOf="@+id/background_p_c">
+
+        <RadioButton
+            android:id="@+id/fiac_player"
+            android:layout_width="150dp"
+            android:layout_height="51dp"
+            android:text="@string/player_button_for_register"
+            android:textSize="@dimen/text_size_for_buttons_start"
+            android:textColor="@color/first_intro_screen"
+            app:layout_constraintBottom_toBottomOf="@+id/fiac_couch"
+            app:layout_constraintEnd_toStartOf="@+id/fiac_couch"
+            app:layout_constraintStart_toStartOf="@+id/back_button_start"
+            app:layout_constraintTop_toTopOf="@+id/fiac_couch" />
+
+        <RadioButton
+            android:id="@+id/fiac_couch"
+            android:layout_width="150dp"
+            android:layout_height="51dp"
+            android:text="@string/couch_button_for_register"
+            android:textSize="@dimen/text_size_for_buttons_start"
+            android:textColor="@color/first_intro_screen"
+            tools:layout_editor_absoluteX="201dp"
+            tools:layout_editor_absoluteY="197dp" />
+
+    </RadioGroup>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fiac_enter_button"
+        android:layout_width="275dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/first_intro_screen"
+        android:text="@string/enter"
+        android:textSize="16sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintEnd_toEndOf="@+id/background_p_c"
+        app:layout_constraintStart_toStartOf="@+id/background_p_c"
+        app:layout_constraintTop_toBottomOf="@+id/fiac_choose_who_sign_in" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

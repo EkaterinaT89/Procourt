@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragment.intro.IntroThirdFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/boy" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/fif_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="@dimen/margin_top_procourt"
+        android:text="@string/procourt"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_1_intro_screen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_editor_absoluteY="100dp"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/fif_text_about_service"
+        android:layout_width="match_parent"
+        android:layout_height="105dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="@dimen/margin_for_intro"
+        android:layout_marginEnd="@dimen/margin_for_intro"
+        android:background="@drawable/rounded_corner"
+        android:gravity="center"
+        android:text="@string/about_service_fird_intro"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        android:textColor="@color/first_intro_screen"
+        android:textSize="@dimen/text_size_for_intro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fif_text"
+        app:layout_editor_absoluteY="100dp"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <ImageButton
+        android:id="@+id/fif_back_button"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="@dimen/margin_for_intro"
+        android:layout_marginTop="75dp"
+        android:background="@drawable/rounded_corner"
+        android:src="@drawable/ic_back"
+        android:elevation="60dp"
+        app:layout_constraintBottom_toBottomOf="@+id/fif_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fif_skip_button"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:layout_marginStart="@dimen/margin_for_intro"
+        android:layout_marginEnd="@dimen/margin_for_intro"
+        android:text="@string/miss"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        android:textColor="@color/first_intro_screen"
+        android:textSize="@dimen/text_size_for_intro"
+        app:backgroundTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fif_next_button"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:layout_marginStart="@dimen/margin_for_intro"
+        android:layout_marginEnd="@dimen/margin_for_intro"
+        android:layout_marginBottom="4dp"
+        android:text="@string/next"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        android:textColor="@color/first_intro_screen"
+        android:textSize="@dimen/text_size_for_intro"
+        app:backgroundTint="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/fif_skip_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

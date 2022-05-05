@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/games_title"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:backgroundTint="@color/dark_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/back_button"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="34dp"
+            android:backgroundTint="@android:color/transparent"
+            app:icon="@drawable/ic_left"
+            app:iconTint="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center"
+            android:layout_marginTop="47dp"
+            android:text="@string/games"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/buttons_container"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/games_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" >
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/calendar_button"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="70dp"
+        android:layout_gravity="start|center"
+        android:text="@string/calendar_button"
+        android:textColor="@color/dark_blue_transparent"
+        app:layout_constraintTop_toBottomOf="@id/games_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/dotted"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/setka_button"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_gravity="end|center"
+        android:layout_marginEnd="77dp"
+        android:text="@string/setka_button"
+        android:textColor="@color/dark_blue"
+        app:layout_constraintTop_toBottomOf="@id/games_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/dotted"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/dotted"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@drawable/dotted_line_bottom"
+        app:layout_constraintTop_toBottomOf="@id/one_eight_final"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/one_eight_final"
+        style="@style/Widget.AppTheme.ListItemYellowButtons"
+        android:checkable="true"
+        app:strokeColor="@color/first_intro_screen"
+        app:strokeWidth="1dp"
+        app:cornerRadius="25dp"
+        android:layout_width="124dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="15dp"
+        android:text="@string/one_eight_final"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttons_container" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/one_four_final"
+        android:layout_width="124dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="15dp"
+        android:text="@string/one_four_final"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        style="@style/Widget.AppTheme.ListItemYellowButtons"
+        android:checkable="true"
+        app:strokeColor="@color/first_intro_screen"
+        app:strokeWidth="1dp"
+        app:cornerRadius="25dp"
+        app:layout_constraintStart_toEndOf="@+id/one_eight_final"
+        app:layout_constraintTop_toBottomOf="@id/buttons_container" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/one_two_final"
+        android:layout_width="124dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="15dp"
+        android:text="@string/one_two_final"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        style="@style/Widget.AppTheme.ListItemYellowButtons"
+        android:checkable="true"
+        app:strokeColor="@color/first_intro_screen"
+        app:strokeWidth="1dp"
+        app:cornerRadius="25dp"
+        app:layout_constraintStart_toEndOf="@+id/one_four_final"
+        app:layout_constraintTop_toBottomOf="@id/buttons_container" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/table_container_eight"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dotted"
+        tools:listitem="@layout/table_for_list"
+        android:scrollbars="vertical" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/table_container_four"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dotted"
+        tools:listitem="@layout/table_for_list"
+        android:scrollbars="vertical" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/table_container_two"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dotted"
+        tools:listitem="@layout/table_for_list"
+        android:scrollbars="vertical" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

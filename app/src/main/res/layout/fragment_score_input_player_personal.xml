@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/dark_blue"
+    tools:context=".fragment.player.ScoreInputPlayerPersonalFragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/top_thing"
+        android:layout_width="50dp"
+        android:layout_height="7dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/rounded_corner"
+        app:layout_constraintBottom_toTopOf="@id/background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"  >
+
+        <TextView
+            android:id="@+id/fsipp_add_score_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="@string/input_score"
+            android:textColor="@color/first_intro_screen"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/dotted_line"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginTop="45dp"
+            android:background="@drawable/dotted_line_white_background"/>
+
+        <TextView
+            android:id="@+id/fsipp_first_set"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/rounded_corners_top_white_grey_stroke"
+            android:gravity="start|center"
+            android:padding="16dp"
+            android:text="@string/first_set"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textSize="16sp"
+            android:textColor="@color/dark_blue" />
+
+        <TextView
+            android:id="@+id/fsipp_first_set_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zero_tools"
+            android:textColor="@color/first_intro_screen"
+            android:textSize="16sp"
+            android:layout_marginTop="85dp"
+            android:layout_marginStart="320dp" />
+
+        <TextView
+            android:id="@+id/fsipp_first_set_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/line_tools"
+            android:gravity="top"
+            android:textColor="@color/first_intro_screen"
+            android:textSize="25sp"
+            android:layout_marginTop="78dp"
+            android:layout_marginStart="340dp" />
+
+        <TextView
+            android:id="@+id/fsipp_first_set_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zero_tools"
+            android:textColor="@color/first_intro_screen"
+            android:textSize="16sp"
+            android:layout_marginTop="85dp"
+            android:layout_marginStart="360dp" />
+
+        <TextView
+            android:id="@+id/fsipp_second_set"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="120dp"
+            android:gravity="start|center"
+            android:background="@drawable/strokes_grey_white_back"
+            android:padding="16dp"
+            android:text="@string/second_set"
+            android:textColor="@color/dark_blue"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/fsipp_second_set_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zero_tools"
+            android:textColor="@color/first_intro_screen"
+            android:textSize="16sp"
+            android:layout_marginTop="135dp"
+            android:layout_marginStart="320dp" />
+
+        <TextView
+            android:id="@+id/fsipp_second_set_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/line_tools"
+            android:gravity="top"
+            android:textColor="@color/first_intro_screen"
+            android:textSize="25sp"
+            android:layout_marginTop="128dp"
+            android:layout_marginStart="340dp" />
+
+        <TextView
+            android:id="@+id/fsipp_second_set_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zero_tools"
+            android:textColor="@color/first_intro_screen"
+            android:textSize="16sp"
+            android:layout_marginTop="135dp"
+            android:layout_marginStart="360dp" />
+
+        <TextView
+            android:id="@+id/fsipp_fird_set"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="170dp"
+            android:layout_marginBottom="15dp"
+            android:gravity="start|center"
+            android:background="@drawable/rounded_courners_bottom_white_grey_stroke"
+            android:padding="16dp"
+            android:text="@string/fird_set"
+            android:textSize="16sp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="@color/dark_blue" />
+
+        <TextView
+            android:id="@+id/fsipp_fird_set_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zero_tools"
+            android:textColor="@color/first_intro_screen"
+            android:textSize="16sp"
+            android:layout_marginTop="185dp"
+            android:layout_marginStart="320dp" />
+
+        <TextView
+            android:id="@+id/fsipp_fird_set_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/line_tools"
+            android:gravity="top"
+            android:textColor="@color/first_intro_screen"
+            android:textSize="25sp"
+            android:layout_marginTop="178dp"
+            android:layout_marginStart="340dp" />
+
+        <TextView
+            android:id="@+id/fsipp_fird_set_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zero_tools"
+            android:textColor="@color/first_intro_screen"
+            android:textSize="16sp"
+            android:layout_marginTop="185dp"
+            android:layout_marginStart="360dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fsipp_confirm_button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="240dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/confirm"
+            android:backgroundTint="@color/first_intro_screen"
+            app:cornerRadius="10dp" />
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragment.player.GamesForConfirmPlayerPersonalFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/top_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/dark_blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"  >
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fgfcpp_back_button"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="30dp"
+            app:icon="@drawable/ic_left"
+            app:iconSize="32dp"
+            app:iconTint="@color/white"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/fgfcpp_games_text"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/games"
+            android:textColor="@color/white"
+            android:layout_gravity="top|center"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_background">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fgfcpp_finished_matches"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/finished_matches"
+            android:textColor="@color/dark_blue" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fgfcpp_confirm_score"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/confirm_score"
+            android:textColor="@color/dark_blue_transparent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fgfcpp_info_needed"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="280dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/info_needed"
+            android:textColor="@color/dark_blue_transparent" />
+
+        <TextView
+            android:id="@+id/dotted"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/dotted_line_white_background" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fgfcpp_list_of_games_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="15dp"
+            android:orientation="vertical"
+            android:scrollbars="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="1"
+            tools:listitem="@layout/fragment_card_game_player_personal" />
+
+        <TextView
+            android:id="@+id/dotted_confirm"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginTop="230dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/dotted_line_white_background" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fgfcpp_confirm_score_button"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="225dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            android:background="@drawable/rounded_courners_bottom_white_grey_stroke"
+            android:text="@string/confirm"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textColor="@color/dark_blue" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fgfcpp_input_score_button"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="50dp"
+            android:layout_marginTop="225dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            android:background="@drawable/rounded_courners_bottom_white_grey_stroke"
+            android:text="@string/input_score"
+            android:elevation="5dp"
+            android:textAppearance="@style/TextAppearance.AppCompat"
+            android:textColor="@color/dark_blue" />
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

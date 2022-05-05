@@ -1,0 +1,53 @@
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fcap_pick_photo"
+            android:layout_width="124dp"
+            android:layout_height="82dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/dotted_line_rounded_corners"
+            app:backgroundTint="@color/white"
+            android:text="@string/pick_photo"
+            android:textColor="@color/first_intro_screen" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:foregroundGravity="right">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/fcap_delete_photo"
+                android:layout_marginStart="75dp"
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                app:icon="@drawable/ic_delete_circle"
+                app:iconTint="@color/first_intro_screen"
+                android:background="@android:color/transparent"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/fcap_picked_photo"
+                android:layout_width="124dp"
+                android:layout_height="82dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/balls" />
+
+
+        </FrameLayout>
+
+
+
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

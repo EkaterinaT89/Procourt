@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/balls"
+    tools:context=".fragment.intro.IntroEmailAuthFragment">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/fiae_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="@dimen/margin_top_procourt"
+        android:text="@string/procourt_auth"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_1_intro_screen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_editor_absoluteY="100dp"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/background_email_auth"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="@dimen/margin_for_intro"
+        android:background="@drawable/rounded_corner"
+        android:textSize="@dimen/text_size_1_intro_screen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fiae_start"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <ImageButton
+        android:id="@+id/fiae_back_button"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="@dimen/margin_for_intro"
+        android:layout_marginTop="75dp"
+        android:background="@drawable/rounded_corner"
+        android:src="@drawable/ic_back"
+        app:layout_constraintBottom_toBottomOf="@+id/fiae_start"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fiae_email"
+        android:layout_width="275dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:hint="@string/e_mail_auth"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/background_email_auth"
+        app:layout_constraintStart_toStartOf="@+id/background_email_auth"
+        app:layout_constraintTop_toTopOf="@+id/background_email_auth">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fiae_email_input"
+            android:layout_width="275dp"
+            android:layout_height="50dp"
+            android:background="@drawable/dotted_line_grey_line"
+            android:inputType="text"
+            android:paddingStart="20dp"
+            tools:ignore="RtlSymmetry" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fiae_password"
+        android:layout_width="275dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:hint="@string/input_password"
+        android:importantForAutofill="no"
+        android:inputType="textVisiblePassword"
+        app:layout_constraintEnd_toEndOf="@+id/fiae_email"
+        app:layout_constraintStart_toStartOf="@+id/fiae_email"
+        app:layout_constraintTop_toBottomOf="@+id/fiae_email">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fiae_password_input"
+            android:layout_width="275dp"
+            android:layout_height="50dp"
+            android:background="@drawable/dotted_line_grey_line"
+            android:inputType="textVisiblePassword"
+            android:paddingStart="20dp"
+            tools:ignore="RtlSymmetry" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fiae_enter_button"
+        android:layout_width="275dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/first_intro_screen"
+        android:text="@string/enter"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/fiae_password"
+        app:layout_constraintStart_toStartOf="@+id/fiae_password"
+        app:layout_constraintTop_toBottomOf="@+id/fiae_password" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fiae_remaind_password_button"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="275dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="@color/white"
+        android:text="Напомнить пароль"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/first_intro_screen"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/fiae_enter_button"
+        app:layout_constraintStart_toStartOf="@+id/fiae_enter_button"
+        app:layout_constraintTop_toBottomOf="@+id/fiae_enter_button" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/fiae_group_for_remind_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="background_remind_password,
+        fiae_text_remaind_password,
+           text, fiae_email_for_remind_password, fiae_cancel_button_remind_password,
+           fiae_sent_button_password" />
+
+    <TextView
+        android:id="@+id/background_remind_password"
+        android:layout_width="match_parent"
+        android:layout_height="255dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/rounded_corner_for_basket"
+        android:textSize="@dimen/text_size_1_intro_screen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/fiae_text_remaind_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        android:text="@string/rp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/background_remind_password"
+        app:layout_constraintStart_toStartOf="@+id/background_remind_password"
+        app:layout_constraintTop_toTopOf="@+id/background_remind_password" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        android:text="@string/sent_password_to_email"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="@+id/background_remind_password"
+        app:layout_constraintStart_toStartOf="@+id/background_remind_password"
+        app:layout_constraintTop_toBottomOf="@+id/fiae_text_remaind_password" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fiae_email_for_remind_password"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="25dp"
+        android:background="@color/grey"
+        android:gravity="end"
+        android:hint="Введите E-mail"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="@id/background_remind_password"
+        app:layout_constraintStart_toStartOf="@id/background_remind_password"
+        app:layout_constraintTop_toBottomOf="@id/text">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fiae_email_for_remind_password_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corner"
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/fiae_cancel_button_remind_password"
+        android:layout_width="183dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/grey"
+        android:text="@string/cancel_text_small"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/first_intro_screen"
+        app:layout_constraintStart_toStartOf="@id/background_remind_password"
+        app:layout_constraintTop_toBottomOf="@id/fiae_email_for_remind_password" />
+
+    <Button
+        android:id="@+id/fiae_sent_button_password"
+        android:layout_width="185dp"
+        android:layout_height="50dp"
+        android:backgroundTint="@color/grey"
+        android:text="@string/sent_back"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/first_intro_screen"
+        app:layout_constraintEnd_toEndOf="@id/background_remind_password"
+        app:layout_constraintTop_toBottomOf="@id/fiae_email_for_remind_password" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/background_sign_in"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginStart="@dimen/margin_for_intro"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="@dimen/margin_for_intro"
+        android:background="@drawable/round_corners_for_top"
+        android:gravity="start|center"
+        android:paddingStart="43dp"
+        android:text="@string/no_accaunt"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/dark_grey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_editor_absoluteY="100dp"
+        tools:ignore="RtlSymmetry,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/fiae_sign_up_button"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="201dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/register_auth"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/first_intro_screen"
+        app:layout_constraintBottom_toBottomOf="@+id/background_sign_in"
+        app:layout_constraintEnd_toEndOf="@+id/background_sign_in"
+        app:layout_constraintTop_toTopOf="@+id/background_sign_in"
+        app:layout_constraintVertical_bias="0.285"
+        tools:ignore="TouchTargetSizeCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

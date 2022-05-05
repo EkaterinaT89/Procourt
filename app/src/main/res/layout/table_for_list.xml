@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TableLayout
+        android:id="@+id/setka_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corner"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:divider="@color/first_intro_screen"
+            android:background="@color/light_green">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="41dp"
+                android:gravity="center"
+                android:layout_marginStart="17dp"
+                android:layout_gravity="start"
+                android:text="Р. Надаль"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/light_green" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="41dp"
+                android:gravity="center"
+                android:layout_marginStart="80dp"
+                android:layout_column="2"
+                android:layout_gravity="center"
+                android:text="6"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/light_green" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="41dp"
+                android:gravity="center"
+                android:layout_column="2"
+                android:layout_gravity="center"
+                android:text="7"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/light_green" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="41dp"
+                android:layout_marginStart="25dp"
+                android:gravity="center"
+                android:layout_column="2"
+                android:layout_gravity="center"
+                android:text="2"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/light_green" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:divider="@color/first_intro_screen"
+            android:layout_height="41dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="41dp"
+                android:gravity="center"
+                android:layout_marginStart="17dp"
+                android:text="Р. Федерер"
+                android:textColor="@color/first_intro_screen"
+                android:backgroundTint="@color/light_green" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="41dp"
+                android:gravity="center"
+                android:layout_marginStart="98dp"
+                android:layout_column="2"
+                android:layout_gravity="center"
+                android:text="6"
+                android:textColor="@color/first_intro_screen"
+                android:backgroundTint="@color/light_green" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="41dp"
+                android:gravity="center"
+                android:layout_column="2"
+                android:layout_gravity="center"
+                android:text="7"
+                android:textColor="@color/first_intro_screen"
+                android:backgroundTint="@color/light_green" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="41dp"
+                android:layout_marginStart="25dp"
+                android:gravity="center"
+                android:layout_column="2"
+                android:layout_gravity="center"
+                android:text="2"
+                android:textColor="@color/first_intro_screen"
+                android:backgroundTint="@color/light_green" />
+
+
+        </TableRow>
+
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

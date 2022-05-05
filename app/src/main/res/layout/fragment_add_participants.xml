@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fap"
+    android:background="@color/dark_blue">
+
+    <TextView
+        android:id="@+id/top_thing"
+        android:layout_width="50dp"
+        android:layout_height="7dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/rounded_corner"
+        app:layout_constraintBottom_toTopOf="@id/background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="320dp"
+        android:background="@drawable/round_corners_for_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="Добавить участников"
+            android:textColor="@color/first_intro_screen"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/dotted"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/dotted_line_bottom" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/rounded_corner_for_basket"
+            android:gravity="center"
+            android:hint="Введите имя..."
+            app:hintTextColor="@color/first_intro_screen"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/e_mail">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/name_for_input"
+                android:layout_width="350dp"
+                android:layout_height="48dp"
+                android:backgroundTint="@color/light_grey"
+                android:inputType="text"
+                android:textColor="@color/first_intro_screen" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/add_parts_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="135dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/round_corners_for_top"
+            android:backgroundTint="@color/grey"
+            android:scrollbars="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dotted"
+            tools:itemCount="2"
+            tools:listitem="@layout/one_participant_for_added_to_group_chat" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/edit_news"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="350dp"
+            android:layout_marginEnd="14dp"
+            android:layout_marginBottom="15dp"
+            android:backgroundTint="@color/first_intro_screen"
+            android:text="Пригласить"
+            android:textColor="@color/white"
+            app:cornerRadius="6sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/background" />
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

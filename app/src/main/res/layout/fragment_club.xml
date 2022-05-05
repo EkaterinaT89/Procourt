@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.club.ClubFragment"
+    tools:ignore="SpeakableTextPresentCheck">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        tools:context=".fragment.club.ClubFragment">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/fc_club_image"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="90dp"
+            android:foregroundGravity="center"
+            app:cardCornerRadius="160dp"
+            app:cardElevation="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/fc_club_image_input"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_temp_pic" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/fc_club_background"
+            android:layout_width="0dp"
+            android:layout_height="700dp"
+            android:layout_marginTop="130dp"
+            android:background="@drawable/rounded_corner"
+            android:shadowColor="@color/grey"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/first_intro_screen"
+            app:layout_constraintBottom_toTopOf="@+id/fc_subscribe_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/fc_club_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/rounded_corner"
+            android:gravity="center"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            android:textColor="@color/first_intro_screen"
+            app:layout_constraintEnd_toEndOf="@id/fc_club_background"
+            app:layout_constraintStart_toStartOf="@id/fc_club_background"
+            app:layout_constraintTop_toBottomOf="@id/fc_club_image"
+            android:text="Клуб 'Коломенский'" />
+
+        <TextView
+            android:id="@+id/fc_about_club"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="14dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/first_intro_screen"
+            app:layout_constraintEnd_toEndOf="@id/fc_club_background"
+            app:layout_constraintStart_toStartOf="@id/fc_club_background"
+            app:layout_constraintTop_toBottomOf="@id/fc_club_name"
+            android:text="@string/tools_text" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fc_subscribe_button"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/subscribe"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/first_intro_screen"
+            app:icon="@drawable/ic_baseline_favorite_border_24"
+            app:iconGravity="textTop"
+            app:iconSize="30dp"
+            app:iconTint="@color/yellow"
+            app:layout_constraintEnd_toStartOf="@+id/fc_club_chat_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fc_about_club"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fc_unsubscribe_button"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/unsubscribe"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/first_intro_screen"
+            android:visibility="gone"
+            app:icon="@drawable/ic_unsubscribe"
+            app:iconGravity="textTop"
+            app:iconSize="30dp"
+            app:iconTint="@color/yellow"
+            app:layout_constraintBottom_toBottomOf="@+id/fc_club_chat_button"
+            app:layout_constraintEnd_toStartOf="@+id/fc_club_chat_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fc_about_club"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fc_club_chat_button"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="80dp"
+            android:backgroundTint="@color/white"
+            android:text="@string/club_chat"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/first_intro_screen"
+            app:icon="@drawable/ic_baseline_chat_24"
+            app:iconGravity="textTop"
+            app:iconSize="30dp"
+            app:iconTint="@color/yellow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fc_about_club"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/fc_club_location_title"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/rounded_corners_top_grey"
+            android:gravity="start|center"
+            android:padding="16dp"
+            android:text="@string/couch_location_title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/first_intro_screen"
+            app:layout_constraintEnd_toEndOf="@id/fc_club_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fc_club_background" />
+
+        <TextView
+            android:id="@+id/fc_club_location"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/rounded_corners_top_grey"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="@string/club_loc_tools"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fc_club_background" />
+
+        <TextView
+            android:id="@+id/dotted_location"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/dotted_line_bottom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fc_club_location" />
+
+        <TextView
+            android:id="@+id/fc_club_phone"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/grey"
+            android:gravity="start|center"
+            android:padding="16dp"
+            android:text="@string/phone_title_big"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/first_intro_screen"
+            android:backgroundTint="@color/light_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fc_club_location_title"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/fc_club_phone_number"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/grey"
+            android:gravity="end|center"
+            android:padding="16dp"
+            android:text="@string/phone_tools"
+            android:backgroundTint="@color/light_grey"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fc_club_location_title" />
+
+        <TextView
+            android:id="@+id/dotted_phone"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/dotted_line_bottom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fc_club_phone_number" />
+
+        <TextView
+            android:id="@+id/fc_club_works_title"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/round_corners_for_couch_buttom"
+            android:backgroundTint="@color/light_grey"
+            android:gravity="start|center"
+            android:padding="16dp"
+            android:text="@string/working_hours_title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/first_intro_screen"
+            app:layout_constraintEnd_toEndOf="@id/fc_club_phone"
+            app:layout_constraintStart_toStartOf="@id/fc_club_phone"
+            app:layout_constraintTop_toBottomOf="@id/fc_club_phone" />
+
+        <TextView
+            android:id="@+id/fc_club_works_hours"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/round_corners_for_couch_buttom"
+            android:gravity="end|center"
+            android:padding="16dp"
+            android:text="@string/working_hours_tools"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@id/fc_club_works_title"
+            app:layout_constraintTop_toBottomOf="@id/fc_club_phone_number" />
+
+        <TextView
+            android:id="@+id/fc_comforts"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/rounded_corners_top_grey"
+            android:gravity="start|center"
+            android:paddingStart="15dp"
+            android:text="@string/comforts"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/first_intro_screen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fc_club_works_title"
+            tools:ignore="RtlSymmetry" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fc_list_of_comforts_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/round_corners_bottom_grey"
+            android:orientation="horizontal"
+            android:scrollbars="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layoutAnimation="@anim/animation_slide_right"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_constraintEnd_toEndOf="@id/fc_comforts"
+            app:layout_constraintTop_toBottomOf="@id/fc_comforts"
+            tools:listitem="@layout/fragment_comfort_card_club" />
+
+        <TextView
+            android:id="@+id/fc_shedule"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/rounded_corners_top_grey"
+            android:gravity="start|center"
+            android:paddingStart="15dp"
+            android:text="@string/shedule_big"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/first_intro_screen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fc_list_of_comforts_container"
+            tools:ignore="RtlSymmetry" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fc_list_of_shedules_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/round_corners_bottom_grey"
+            android:orientation="horizontal"
+            android:scrollbars="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="@id/fc_shedule"
+            app:layout_constraintTop_toBottomOf="@id/fc_shedule"
+            tools:listitem="@layout/fragment_card_shedule_club" />
+
+        <TextView
+            android:id="@+id/fc_media"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/rounded_corners_top_grey"
+            android:gravity="start|center"
+            android:paddingStart="15dp"
+            android:text="@string/media_big"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/first_intro_screen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fc_list_of_shedules_container"
+            tools:ignore="RtlSymmetry" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fc_list_of_media_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/round_corners_bottom_grey"
+            android:orientation="horizontal"
+            android:scrollbars="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layoutAnimation="@anim/animation_slide_right"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_constraintEnd_toEndOf="@id/fc_media"
+            app:layout_constraintTop_toBottomOf="@id/fc_media"
+            tools:listitem="@layout/fragment_card_media_club" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fc_players"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/rounded_corners_top_grey"
+            android:gravity="start|center"
+            android:paddingStart="15dp"
+            android:text="@string/players_big"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/first_intro_screen"
+            app:backgroundTint="@color/light_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fc_list_of_media_container"
+            tools:ignore="RtlSymmetry,TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fc_list_of_players_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/round_corners_bottom_grey"
+            android:orientation="horizontal"
+            android:scrollbars="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layoutAnimation="@anim/animation_slide_right"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_constraintEnd_toEndOf="@id/fc_players"
+            app:layout_constraintTop_toBottomOf="@id/fc_players"
+            tools:listitem="@layout/fragment_card_player_club" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fc_couches"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/rounded_corners_top_grey"
+            app:backgroundTint="@color/light_grey"
+            android:gravity="start|center"
+            android:paddingStart="15dp"
+            android:text="@string/couches_big"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/first_intro_screen"
+            app:layout_constraintEnd_toEndOf="@id/fc_list_of_players_container"
+            app:layout_constraintStart_toStartOf="@id/fc_list_of_players_container"
+            app:layout_constraintTop_toBottomOf="@id/fc_list_of_players_container"
+            tools:ignore="RtlSymmetry" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fc_list_of_couches_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/round_corners_bottom_grey"
+            android:orientation="horizontal"
+            android:scrollbars="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layoutAnimation="@anim/animation_slide_right"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_constraintEnd_toEndOf="@id/fc_players"
+            app:layout_constraintTop_toBottomOf="@id/fc_couches"
+            tools:listitem="@layout/fragment_card_couch_club" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
+

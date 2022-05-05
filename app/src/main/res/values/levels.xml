@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="levels">
+        <item>Начинающий</item>
+        <item>Средний уровень</item>
+        <item>Высокий уровень</item>
+        <item>Профессионал</item>
+        <item>Мастер спорта</item>
+        <item>КМС</item>
+        <item>1 разряд</item>
+        <item>2 разряд</item>
+        <item>3 разряд</item>
+    </string-array>
+</resources>

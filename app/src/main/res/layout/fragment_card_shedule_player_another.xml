@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp">
+
+<LinearLayout
+    android:id="@+id/fcspa_container_for_dates"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/fcspa_day"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/first_intro_screen"
+        tools:text="Mon"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/fcspa_date"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:textColor="@color/dark_blue"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        tools:text="23" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fcspa_calendar_container"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        android:scrollbars="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/fragment_card_time_shedule_personal_player"/>
+
+</LinearLayout>
+</com.google.android.material.card.MaterialCardView>

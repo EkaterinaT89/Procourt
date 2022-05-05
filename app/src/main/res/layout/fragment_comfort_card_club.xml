@@ -1,0 +1,120 @@
+<LinearLayout android:id="@+id/fc_list_of_comforts_container"
+    android:layout_width="wrap_content"
+    android:layout_height="60dp"
+    android:layout_marginStart="15dp"
+    android:layout_marginEnd="15dp"
+    android:background="@drawable/round_corners_for_couch_buttom"
+    android:backgroundTint="@color/light_grey"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/fcсс_sauna"
+        android:text="@string/sauna"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/first_intro_screen"
+        android:gravity="center"
+        android:background="@drawable/rounded_corner_blue_stroke"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/fcсс_has_sauna"
+        android:visibility="gone"
+        android:text="@string/sauna"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/dark_orange"
+        android:gravity="center"
+        android:background="@drawable/reounded_corner_yellow"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/fcсс_light"
+        android:text="@string/light"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/first_intro_screen"
+        android:gravity="center"
+        android:background="@drawable/rounded_corner_blue_stroke"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/fcсс_has_light"
+        android:visibility="gone"
+        android:text="@string/light"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/dark_orange"
+        android:gravity="center"
+        android:background="@drawable/reounded_corner_yellow"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/fcсс_shower"
+        android:text="@string/shower"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/first_intro_screen"
+        android:gravity="center"
+        android:background="@drawable/rounded_corner_blue_stroke"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/fcсс_has_shower"
+        android:visibility="gone"
+        android:text="@string/shower"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/dark_orange"
+        android:gravity="center"
+        android:background="@drawable/reounded_corner_yellow"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/fcсс_massage"
+        android:text="@string/massage"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/first_intro_screen"
+        android:gravity="center"
+        android:background="@drawable/rounded_corner_blue_stroke"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/fcсс_has_massage"
+        android:visibility="gone"
+        android:text="@string/massage"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/dark_orange"
+        android:gravity="center"
+        android:background="@drawable/reounded_corner_yellow"
+        tools:ignore="TouchTargetSizeCheck" />
+
+</LinearLayout>

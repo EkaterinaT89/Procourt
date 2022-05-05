@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragment.intro.IntroAuthFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/balls" >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/fia_intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="@dimen/margin_top_procourt"
+        android:text="@string/procourt_auth"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_1_intro_screen"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_editor_absoluteY="100dp"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/authorization_background"
+        android:layout_width="match_parent"
+        android:layout_height="295dp"
+        android:layout_marginStart="@dimen/margin_for_intro"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="@dimen/margin_for_intro"
+        android:background="@drawable/rounded_corner"
+        android:gravity="top|center"
+        android:padding="@dimen/padding_for_first_intro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fia_intro"
+        app:layout_editor_absoluteY="100dp"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <ImageButton
+        android:id="@+id/fia_back_button"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="@dimen/margin_for_intro"
+        android:layout_marginTop="75dp"
+        android:src="@drawable/ic_back"
+        android:background="@drawable/rounded_corner"
+        app:layout_constraintBottom_toBottomOf="@+id/fia_intro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fia_vk_authorization"
+        android:layout_width="275dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:backgroundTint="@color/first_intro_screen"
+        android:text="@string/vk_auth"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_for_intro"
+        app:layout_constraintEnd_toEndOf="@+id/fia_email_authorization"
+        app:layout_constraintStart_toStartOf="@+id/fia_email_authorization"
+        app:layout_constraintTop_toBottomOf="@+id/fia_email_authorization"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fia_email_authorization"
+        android:layout_width="275dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginStart="25dp"
+        android:gravity="center"
+        android:text="@string/e_mail_auth"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_for_intro"
+        android:backgroundTint="@color/first_intro_screen"
+        app:layout_constraintEnd_toEndOf="@+id/authorization_background"
+        app:layout_constraintStart_toStartOf="@+id/authorization_background"
+        app:layout_constraintTop_toTopOf="@+id/authorization_background"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fia_twitter_authorization"
+        android:layout_width="275dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="40dp"
+        android:backgroundTint="@color/first_intro_screen"
+        android:text="@string/twitter"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_for_intro"
+        app:layout_constraintEnd_toEndOf="@+id/fia_vk_authorization"
+        app:layout_constraintStart_toStartOf="@+id/fia_vk_authorization"
+        app:layout_constraintTop_toBottomOf="@+id/fia_vk_authorization"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fia_facebook_authorization"
+        android:layout_width="275dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="40dp"
+        android:backgroundTint="@color/first_intro_screen"
+        android:text="@string/facebook_auth"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_for_intro"
+        app:layout_constraintEnd_toEndOf="@+id/fia_twitter_authorization"
+        app:layout_constraintStart_toStartOf="@+id/fia_twitter_authorization"
+        app:layout_constraintTop_toBottomOf="@+id/fia_twitter_authorization"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/fia_text_sign_up"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginStart="@dimen/margin_for_intro"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="@dimen/margin_for_intro"
+        android:background="@drawable/round_corners_for_top"
+        android:gravity="start|center"
+        android:paddingStart="43dp"
+        android:text="@string/no_accaunt"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/dark_grey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_editor_absoluteY="100dp"
+        tools:ignore="RtlSymmetry,TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/fia_sign_up_button"
+        android:layout_width="201dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="@color/white"
+        android:text="@string/register_auth"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        style="?android:attr/borderlessButtonStyle"
+        android:textColor="@color/first_intro_screen"
+        app:layout_constraintBottom_toBottomOf="@+id/fia_text_sign_up"
+        app:layout_constraintEnd_toEndOf="@+id/fia_text_sign_up"
+        app:layout_constraintTop_toTopOf="@+id/fia_text_sign_up"
+        app:layout_constraintVertical_bias="0.285"
+        tools:ignore="TouchTargetSizeCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

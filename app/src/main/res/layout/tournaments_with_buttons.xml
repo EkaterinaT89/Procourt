@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="SpeakableTextPresentCheck">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/buttons_top"
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            android:backgroundTint="@color/dark_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/back_button"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="34dp"
+                android:backgroundTint="@android:color/transparent"
+                app:icon="@drawable/ic_left"
+                app:iconTint="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|center"
+                android:layout_marginTop="50dp"
+                android:text="Natalia Open by Razliv"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/settings_tournament"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="30dp"
+                android:backgroundTint="@android:color/transparent"
+                app:icon="@drawable/ic_settings"
+                app:iconTint="@color/white"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/picture_for_club"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="90dp"
+            android:foregroundGravity="center"
+            app:cardCornerRadius="160dp"
+            app:cardElevation="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/ic_temp_pic" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/about_tournament"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="10dp"
+            app:cardCornerRadius="10dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttons_top" >
+
+            <TextView
+                android:id="@+id/tournament_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="15dp"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/dark_blue"
+                android:textSize="16sp"
+                tools:text="Организатор \nООО ТЕННИС ДОМ" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/take_part_button"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom|center"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="100dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="60dp"
+                android:gravity="center"
+                android:text="Участвовать"
+                android:textColor="@color/white"
+                app:backgroundTint="@color/first_intro_screen"
+                app:icon="@drawable/ic_ball"
+                app:iconGravity="textStart"
+                app:iconTint="@color/yellow" />
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="bottom">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/games_button"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="80dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="bottom|center"
+                        android:text="ИГРЫ"
+                        android:textColor="@color/dark_blue" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/about_button"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="110dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="bottom|center"
+                        android:text="ОПИСАНИЕ"
+                        android:textColor="@color/dark_blue" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/laywer_button"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="130dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="bottom|center"
+                        android:text="ПОЛОЖЕНИЕ"
+                        android:textColor="@color/dark_blue" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/tours_button"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="80dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="bottom|center"
+                        android:text="СЕТКА"
+                        android:textColor="@color/dark_blue" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/participants_button"
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="120dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="bottom|center"
+                        android:text="УЧАСТНИКИ"
+                        android:textColor="@color/dark_blue" />
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </HorizontalScrollView>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/about"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/rounded_corners_top_grey"
+            android:gravity="start|center"
+            android:padding="16dp"
+            android:text="ОПИСАНИЕ"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/first_intro_screen"
+            app:layout_constraintEnd_toEndOf="@id/about_tournament"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/about_tournament" />
+
+        <TextView
+            android:id="@+id/tournament_category_title"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:paddingStart="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/light_grey"
+            android:gravity="start|center"
+            android:text="Разряд:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/dark_blue"
+            app:layout_constraintEnd_toEndOf="@id/about"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/about"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/tournament_category"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:paddingEnd="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/light_grey"
+            android:gravity="center"
+            android:text="Москва, Клуб Коломенский"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/dark_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/about" />
+
+        <TextView
+            android:id="@+id/tournament_city"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:paddingStart="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/light_grey"
+            android:gravity="start|center"
+            android:text="Город:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/dark_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tournament_category"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/tournament_city_info"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:paddingEnd="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/light_grey"
+            android:gravity="end|center"
+            android:text="Москва"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/dark_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tournament_category" />
+
+        <TextView
+            android:id="@+id/tournament_price"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:paddingStart="15dp"
+            android:background="@color/light_grey"
+            android:gravity="start|center"
+            android:text="Стоимость участия:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/dark_blue"
+            app:layout_constraintEnd_toEndOf="@id/tournament_city"
+            app:layout_constraintStart_toStartOf="@id/tournament_city"
+            app:layout_constraintTop_toBottomOf="@id/tournament_city"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/tournament_price_info"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:paddingEnd="15dp"
+            android:background="@color/light_grey"
+            android:gravity="end|center"
+            android:text="4000 руб"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/dark_blue"
+            app:layout_constraintEnd_toEndOf="@id/tournament_city_info"
+            app:layout_constraintTop_toBottomOf="@id/tournament_city_info" />
+
+        <TextView
+            android:id="@+id/tournament_place"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:paddingStart="15dp"
+            android:background="@color/light_grey"
+            android:gravity="start|center"
+            android:text="Место проведения:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/dark_blue"
+            app:layout_constraintEnd_toEndOf="@id/tournament_price"
+            app:layout_constraintStart_toStartOf="@id/tournament_price"
+            app:layout_constraintTop_toBottomOf="@id/tournament_price"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/tournament_place_info"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:paddingEnd="15dp"
+            android:background="@color/light_grey"
+            android:gravity="end|center"
+            android:text="СК Разлив"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/dark_blue"
+            app:layout_constraintEnd_toEndOf="@id/tournament_price_info"
+            app:layout_constraintTop_toBottomOf="@id/tournament_price_info" />
+
+        <TextView
+            android:id="@+id/tournament_date"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:paddingStart="15dp"
+            android:background="@color/light_grey"
+            android:gravity="start|center"
+            android:text="Дата проведения:"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/dark_blue"
+            app:layout_constraintEnd_toEndOf="@id/tournament_place"
+            app:layout_constraintStart_toStartOf="@id/tournament_place"
+            app:layout_constraintTop_toBottomOf="@id/tournament_place"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/tournament_date_info"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:paddingEnd="15dp"
+            android:background="@color/light_grey"
+            android:gravity="end|center"
+            android:text="21.10.2018"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/dark_blue"
+            app:layout_constraintEnd_toEndOf="@id/tournament_place_info"
+            app:layout_constraintTop_toBottomOf="@id/tournament_place_info" />
+
+        <TextView
+            android:id="@+id/tournament_level"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:paddingStart="15dp"
+            android:background="@color/light_grey"
+            android:gravity="start|center"
+            android:text="Уровень: "
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/dark_blue"
+            app:layout_constraintEnd_toEndOf="@id/tournament_date"
+            app:layout_constraintStart_toStartOf="@id/tournament_date"
+            app:layout_constraintTop_toBottomOf="@id/tournament_date"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/tournament_level_info"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:paddingEnd="15dp"
+            android:background="@color/light_grey"
+            android:gravity="end|center"
+            android:text="Средний"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/dark_blue"
+            app:layout_constraintEnd_toEndOf="@id/tournament_date_info"
+            app:layout_constraintTop_toBottomOf="@id/tournament_date_info" />
+
+        <TextView
+            android:id="@+id/tournament_parts"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:paddingStart="15dp"
+            android:background="@drawable/round_corners_bottom_grey"
+            android:gravity="start|center"
+            android:text="Места: "
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/dark_blue"
+            app:layout_constraintEnd_toEndOf="@id/tournament_level"
+            app:layout_constraintStart_toStartOf="@id/tournament_level"
+            app:layout_constraintTop_toBottomOf="@id/tournament_level" />
+
+        <TextView
+            android:id="@+id/tournament_parts_info"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:paddingEnd="15dp"
+            android:background="@drawable/round_corners_bottom_grey"
+            android:gravity="end|center"
+            android:text="24/24"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/dark_blue"
+            app:layout_constraintEnd_toEndOf="@id/tournament_level_info"
+            app:layout_constraintTop_toBottomOf="@id/tournament_level_info" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/tournaments_places_background"
+            android:layout_width="match_parent"
+            android:layout_height="171dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/rounded_corner_for_basket"
+            android:backgroundTint="@color/grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tournament_parts">
+
+            <TextView
+                android:id="@+id/prices_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="11dp"
+                android:text="@string/price_title"
+                android:textColor="@color/first_intro_screen"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/tournaments_places"
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="40dp"
+                android:background="@color/transparent" />
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
+

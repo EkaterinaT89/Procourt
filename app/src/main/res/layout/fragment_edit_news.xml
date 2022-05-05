@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="bottom"
+    android:id="@+id/fen"
+    android:background="@color/dark_blue"
+    tools:context=".fragment.news.EditNewsFragment">
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="7dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/rounded_corner"
+        app:layout_constraintBottom_toTopOf="@id/card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-15dp"
+        app:cardCornerRadius="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/fen_news_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text="@string/edit_news_title"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/background" />
+
+            <TextView
+                android:id="@+id/dotted_line"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="13dp"
+                android:background="@drawable/dotted_line_white_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fen_news_title" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/fen_add_video_button"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="14dp"
+                android:backgroundTint="@color/white"
+                android:gravity="start|center"
+                android:text="@string/video_small"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/first_intro_screen"
+                android:textSize="16sp"
+                app:icon="@drawable/ic_plus"
+                app:iconTint="@color/first_intro_screen"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dotted_line"
+                tools:ignore="TextContrastCheck" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/fen_add_video_button_minus"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="14dp"
+                android:backgroundTint="@color/white"
+                android:gravity="start|center"
+                android:text="@string/video_small"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/first_intro_screen"
+                android:textSize="16sp"
+                android:visibility="gone"
+                app:icon="@drawable/ic_minus"
+                app:iconTint="@color/first_intro_screen"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dotted_line"
+                tools:ignore="TextContrastCheck" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/fen_add_video_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="fen_video_title, fen_loading_text, fen_video_slider,
+                            fen_delete_video_button" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/fen_video_title"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/rounded_corners_for_comments"
+                android:hint="@string/video_title"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:textColorHint="@color/first_intro_screen"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fen_add_video_button">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/fen_video_title_input"
+                    android:layout_width="350dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/light_grey"
+                    android:inputType="text"
+                    android:paddingStart="20dp"
+                    tools:ignore="RtlSymmetry,SpeakableTextPresentCheck" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/fen_video_slider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:valueFrom="0"
+                android:valueTo="100"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fen_loading_text"
+                app:thumbColor="@color/first_intro_screen"
+                app:tickColor="@color/first_intro_screen"
+                app:trackColor="@color/first_intro_screen"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/fen_loading_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:gravity="center"
+                android:text="@string/loading"
+                android:textColor="@color/dark_blue"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fen_video_title" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/fen_delete_video_button"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/dotted_line_rounded_corners"
+                android:text="@string/delete"
+                android:textColor="@color/first_intro_screen"
+                app:backgroundTint="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fen_video_slider" />
+
+            <TextView
+                android:id="@+id/dotted_line_video"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/dotted_line_white_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fen_delete_video_button" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/fen_add_photo_button"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="14dp"
+                android:backgroundTint="@color/white"
+                android:gravity="start|center"
+                android:text="@string/photo_small"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/first_intro_screen"
+                android:textSize="16sp"
+                android:visibility="visible"
+                app:icon="@drawable/ic_plus"
+                app:iconTint="@color/first_intro_screen"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dotted_line_video"
+                tools:ignore="TextContrastCheck" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/add_photo_visibility"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                app:constraint_referenced_ids="fen_add_photo_button_minus, fen_photos_list_container,
+                    dotted_line_photo_minus, dotted_line_photo_minus_button, fen_create_news_minus,
+                       fen_save_news_button_minus" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/fen_add_photo_button_minus"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="14dp"
+                android:backgroundTint="@color/white"
+                android:gravity="start|center"
+                android:text="@string/photo_small"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/first_intro_screen"
+                android:textSize="16sp"
+                android:visibility="gone"
+                app:icon="@drawable/ic_minus"
+                app:iconTint="@color/first_intro_screen"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dotted_line_video"
+                tools:ignore="TextContrastCheck" />
+
+            <ScrollView
+                android:id="@+id/fen_photos_list_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fen_add_photo_button_minus">
+
+                <LinearLayout
+                    android:id="@+id/fen_photos_list_container_"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:orientation="horizontal"
+                    android:scrollbars="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/fan_add_photo_button_minus">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/fen_pick_photo"
+                        android:layout_width="124dp"
+                        android:layout_height="82dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/dotted_line_rounded_corners"
+                        android:text="@string/pick_photo"
+                        android:textColor="@color/first_intro_screen"
+                        app:backgroundTint="@color/white" />
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:foregroundGravity="right">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/fen_delete_photo"
+                            android:layout_width="40dp"
+                            android:layout_height="20dp"
+                            android:layout_marginStart="75dp"
+                            android:background="@android:color/transparent"
+                            app:icon="@drawable/ic_delete_circle"
+                            app:iconTint="@color/first_intro_screen"
+                            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                        <androidx.constraintlayout.utils.widget.ImageFilterView
+                            android:id="@+id/fen_picked_photo"
+                            android:layout_width="124dp"
+                            android:layout_height="82dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/balls" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:foregroundGravity="right">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/fen_delete"
+                            android:layout_width="40dp"
+                            android:layout_height="20dp"
+                            android:layout_marginStart="75dp"
+                            android:background="@android:color/transparent"
+                            app:icon="@drawable/ic_delete_circle"
+                            app:iconTint="@color/first_intro_screen"
+                            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                        <androidx.constraintlayout.utils.widget.ImageFilterView
+                            android:id="@+id/fen_picked"
+                            android:layout_width="124dp"
+                            android:layout_height="82dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/balls" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:foregroundGravity="right">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/fen_delete_pf"
+                            android:layout_width="40dp"
+                            android:layout_height="20dp"
+                            android:layout_marginStart="75dp"
+                            android:background="@android:color/transparent"
+                            app:icon="@drawable/ic_delete_circle"
+                            app:iconTint="@color/first_intro_screen"
+                            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                        <androidx.constraintlayout.utils.widget.ImageFilterView
+                            android:id="@+id/fen_picked_pf"
+                            android:layout_width="124dp"
+                            android:layout_height="82dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/balls" />
+
+                    </FrameLayout>
+
+                </LinearLayout>
+            </ScrollView>
+
+            <TextView
+                android:id="@+id/dotted_line_photo_minus"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/dotted_line_white_background"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fen_photos_list_container" />
+
+            <TextView
+                android:id="@+id/dotted_line_photo_minus_button"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/dotted_line_white_background"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fen_add_photo_button_minus" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/fen_create_news"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:hint="@string/create_news"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:visibility="visible"
+                app:hintTextColor="@color/dark_grey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fen_add_photo_button">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/fen_create_news_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:backgroundTint="@color/white"
+                    android:inputType="text"
+                    android:paddingStart="20dp"
+                    tools:ignore="RtlSymmetry,SpeakableTextPresentCheck" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/fen_create_news_minus"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:hint="@string/create_news"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:visibility="gone"
+                app:hintTextColor="@color/dark_grey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fen_photos_list_container">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/fen_create_news_input_minus"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:backgroundTint="@color/white"
+                    android:inputType="text"
+                    android:paddingStart="20dp"
+                    tools:ignore="RtlSymmetry,SpeakableTextPresentCheck" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/fen_save_news_button"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="30dp"
+                android:backgroundTint="@color/first_intro_screen"
+                android:text="@string/save"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                app:cornerRadius="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/fen_create_news"
+                app:layout_constraintStart_toStartOf="@id/fen_create_news" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/fen_save_news_button_minus"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="30dp"
+                android:backgroundTint="@color/first_intro_screen"
+                android:text="@string/save"
+                android:textColor="@color/white"
+                app:cornerRadius="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/fen_create_news_minus"
+                app:layout_constraintStart_toStartOf="@id/fen_create_news_minus" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

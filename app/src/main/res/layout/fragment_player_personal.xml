@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.player.PlayerPersonalFragment"
+    tools:ignore="SpeakableTextPresentCheck">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        tools:context=".fragment.player.PlayerPersonalFragment">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/fpp_player_image"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="60dp"
+            android:foregroundGravity="center"
+            app:cardCornerRadius="160dp"
+            app:cardElevation="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/fpp_player_image_input"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/ic_temp_pic" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:backgroundTint="@color/dark_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/fpp_edit_profile_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="@dimen/margin_for_intro"
+                app:icon="@drawable/ic_settings"
+                app:iconGravity="end"
+                app:iconTint="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|center"
+                android:layout_marginTop="30dp"
+                android:text="@string/player"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/fpp_player_name"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/round_corners_for_top"
+            android:elevation="10dp"
+            android:gravity="center"
+            android:paddingTop="55dp"
+            android:text="ИВАН ИВАНОВ"
+            android:textAppearance="?attr/textAppearanceHeadline6"
+            android:textColor="@color/first_intro_screen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/fpp_parametres_player"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@color/white"
+            android:elevation="10dp"
+            android:gravity="top|center"
+            android:paddingStart="15dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="15dp"
+            android:text="30 лет | 180 см | 85 кг | 5 лет опыт"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/first_intro_screen"
+            app:layout_constraintEnd_toEndOf="@id/fpp_player_name"
+            app:layout_constraintStart_toStartOf="@id/fpp_player_name"
+            app:layout_constraintTop_toBottomOf="@id/fpp_player_name"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/fpp_about_player"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/round_corners_buttom"
+            android:elevation="10dp"
+            android:gravity="top|center"
+            android:paddingStart="15dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="15dp"
+            android:text="Познакомлюсь, пообщаюсь и поиграю. Увлекаюсь путешествиями и кино. Играю в тк «Коломенский»"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/first_intro_screen"
+            app:layout_constraintEnd_toEndOf="@id/fpp_player_name"
+            app:layout_constraintStart_toStartOf="@id/fpp_player_name"
+            app:layout_constraintTop_toBottomOf="@id/fpp_player_name" />
+
+        <TextView
+            android:id="@+id/fpp_player_location_title"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/round_corners_for_couch_top"
+            android:backgroundTint="@color/light_grey"
+            android:gravity="start|center"
+            android:padding="16dp"
+            android:text="@string/couch_location_title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/first_intro_screen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fpp_about_player" />
+
+        <TextView
+            android:id="@+id/dotted_location"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/dotted_line_bottom"
+            app:layout_constraintBottom_toTopOf="@+id/fpp_player_level"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fpp_player_location"
+            android:layout_width="190dp"
+            android:layout_height="45dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/rounded_corner_for_basket"
+            android:gravity="end"
+            android:hint="@string/your_city"
+            app:layout_constraintBottom_toBottomOf="@id/fpp_player_location_title"
+            app:layout_constraintEnd_toEndOf="@id/fpp_player_location_title">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/fpp_player_location_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/light_grey"
+                android:inputType="text"
+                tools:ignore="TouchTargetSizeCheck" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/fpp_player_level_text"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/round_corners_for_couch_buttom"
+            android:backgroundTint="@color/light_grey"
+            android:gravity="start|center"
+            android:padding="16dp"
+            android:text="@string/couch_level"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/first_intro_screen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fpp_player_location_title" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fpp_player_level"
+            android:layout_width="190dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/rounded_corner_for_basket"
+            android:gravity="end|center"
+            android:hint="@string/your_level"
+            app:layout_constraintEnd_toEndOf="@id/fpp_player_location_title"
+            app:layout_constraintTop_toBottomOf="@id/fpp_player_location_title">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/fpp_player_level_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/light_grey"
+                android:inputType="text"
+                tools:ignore="TouchTargetSizeCheck" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:backgroundTint="@color/light_grey"
+            android:elevation="25dp"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/fpp_shedule_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fpp_player_level">
+
+            <TextView
+                android:id="@+id/fpp_statistics"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="15dp"
+                android:gravity="start"
+                android:paddingStart="15dp"
+                android:paddingTop="10dp"
+                android:text="@string/statistics"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/first_intro_screen"
+                app:backgroundTint="@color/light_grey"
+                tools:ignore="RtlSymmetry" />
+
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fpp_shedule_button"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/rounded_corners_top_grey"
+            android:gravity="start|center"
+            android:paddingStart="15dp"
+            android:text="@string/shedule_big"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/first_intro_screen"
+            app:backgroundTint="@color/light_grey"
+            app:layout_constraintBottom_toTopOf="@id/fpp_list_of_shedules_container"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="RtlSymmetry,TouchTargetSizeCheck" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fpp_list_of_shedules_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/rounded_corner"
+            android:backgroundTint="@color/light_grey"
+            android:orientation="horizontal"
+            android:scrollbars="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fpp_shedule_button"
+            tools:listitem="@layout/fragment_card_player_personal_shedule" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fpp_media"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/rounded_corners_top_grey"
+            android:gravity="start|center"
+            android:paddingStart="15dp"
+            android:text="@string/media_big"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/first_intro_screen"
+            app:backgroundTint="@color/light_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fpp_list_of_shedules_container"
+            tools:ignore="RtlSymmetry,TouchTargetSizeCheck" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fpp_list_of_media_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/round_corners_bottom_grey"
+            android:backgroundTint="@color/light_grey"
+            android:layoutAnimation="@anim/animation_slide_right"
+            android:orientation="horizontal"
+            android:scrollbars="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_constraintEnd_toEndOf="@id/fpp_media"
+            app:layout_constraintTop_toBottomOf="@id/fpp_media"
+            tools:listitem="@layout/fragment_card_media_player_personal" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fpp_list_of_friends_container"
+            android:layout_width="match_parent"
+            android:layout_height="119dp"
+            android:layout_gravity="top|center"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/round_corners_bottom_grey"
+            android:backgroundTint="@color/light_grey"
+            android:layoutAnimation="@anim/animation_slide_right"
+            android:orientation="horizontal"
+            android:scrollbars="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/list_of_friends_background"
+            tools:listitem="@layout/fragment_card_friend_player_personal" />
+
+        <TextView
+            android:id="@+id/list_of_friends_background"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/rounded_corners_top_grey"
+            android:backgroundTint="@color/light_grey"
+            android:gravity="start"
+            android:padding="16dp"
+            android:text="@string/Friends"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/first_intro_screen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fpp_list_of_media_container" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fpp_list_of_tournaments_container"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_gravity="top|center"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="-10dp"
+            android:layout_marginEnd="7dp"
+            android:background="@drawable/round_corners_buttom"
+            android:layoutAnimation="@anim/animation_slide_right"
+            android:orientation="horizontal"
+            android:scrollbars="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fpp_tournaments"
+            tools:listitem="@layout/fragment_card_tournament_player_personal" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fpp_tournaments"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/rounded_corners_top_grey"
+            android:gravity="start|center"
+            android:text="@string/tournaments"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/first_intro_screen"
+            app:backgroundTint="@color/light_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fpp_list_of_friends_container" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fpp_licence_agreement"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:backgroundTint="@color/white"
+            android:gravity="center"
+            android:text="@string/licence_agreement"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/first_intro_screen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fpp_list_of_tournaments_container" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fpp_confidential_agreement"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:backgroundTint="@color/white"
+            android:gravity="center"
+            android:text="@string/confidential_agreement"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/first_intro_screen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fpp_licence_agreement"
+            tools:ignore="TextContrastCheck" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/fpp_feedback"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:backgroundTint="@color/white"
+            android:gravity="center"
+            android:text="@string/feedback_title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/first_intro_screen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fpp_confidential_agreement" />
+
+        <TextView
+            android:id="@+id/fpp_version"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="@string/version"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/first_intro_screen"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fpp_feedback"
+            tools:ignore="TextContrastCheck" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
+
