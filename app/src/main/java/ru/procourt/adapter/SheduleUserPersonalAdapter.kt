@@ -9,23 +9,23 @@ import ru.procourt.R
 import ru.procourt.databinding.*
 import ru.procourt.dto.*
 
-class ShedulePlayerPersonalAdapter() :
-    ListAdapter<Date, ShedulePlayerPersonalViewHolder>(ShedulePlayerPersonalDiffCallback()) {
+class SheduleUserPersonalAdapter() :
+    ListAdapter<Date, SheduleUserPersonalViewHolder>(SheduleUserPersonalDiffCallback()) {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ShedulePlayerPersonalViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SheduleUserPersonalViewHolder {
         val binding =
             FragmentCardPlayerPersonalSheduleBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return ShedulePlayerPersonalViewHolder(binding)
+        return SheduleUserPersonalViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: ShedulePlayerPersonalViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: SheduleUserPersonalViewHolder, position: Int) {
         val date = getItem(position)
         holder.bind(date)
     }
 
 }
 
-class ShedulePlayerPersonalViewHolder(
+class SheduleUserPersonalViewHolder(
     private val binding: FragmentCardPlayerPersonalSheduleBinding
 ) : RecyclerView.ViewHolder(binding.root) {
 
@@ -38,7 +38,7 @@ class ShedulePlayerPersonalViewHolder(
     }
 }
 
-class ShedulePlayerPersonalDiffCallback : DiffUtil.ItemCallback<Date>() {
+class SheduleUserPersonalDiffCallback : DiffUtil.ItemCallback<Date>() {
     override fun areItemsTheSame(oldItem: Date, newItem: Date): Boolean {
         return oldItem.id == newItem.id
     }

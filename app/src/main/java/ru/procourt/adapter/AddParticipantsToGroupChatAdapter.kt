@@ -11,13 +11,14 @@ import ru.procourt.R
 import ru.procourt.databinding.*
 import ru.procourt.dto.News
 import ru.procourt.dto.Player
+import ru.procourt.dto.User
 
-interface AddParticipsntaToGroupChatListener {
-    fun onChoose(player: Player)
+interface AddParticipantsToGroupChatListener {
+    fun onChoose(user: User)
 }
 
-class AddParticipsntaToGroupChatAdapter(private val groupChatListener: AddParticipsntaToGroupChatListener) :
-    ListAdapter<Player, AddParticipsntaToGroupChatViewHolder>(AddParticipsntaToGroupChatDiffCallback()) {
+class AddParticipantsToGroupChatAdapter(private val groupChatListener: AddParticipantsToGroupChatListener) :
+    ListAdapter<User, AddParticipsntaToGroupChatViewHolder>(AddParticipsntaToGroupChatDiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AddParticipsntaToGroupChatViewHolder {
         val binding =
@@ -30,24 +31,24 @@ class AddParticipsntaToGroupChatAdapter(private val groupChatListener: AddPartic
     }
 
     override fun onBindViewHolder(holder: AddParticipsntaToGroupChatViewHolder, position: Int) {
-        val player = getItem(position)
-        holder.bind(player)
+        val user = getItem(position)
+        holder.bind(user)
     }
 
 }
 
 class AddParticipsntaToGroupChatViewHolder(
-    private val groupChatListener: AddParticipsntaToGroupChatListener,
+    private val groupChatListener: AddParticipantsToGroupChatListener,
     private val binding: OneParticipantForAddedToGroupChatBinding
 ) : RecyclerView.ViewHolder(binding.root) {
 
-    fun bind(player: Player) {
+    fun bind(user: User) {
 
         binding.apply {
-            friendName.text = player.name
-            date.text = player.date
+            friendName.text = user.name
+            date.text = user.date
 
-            if (player.isOnline == true) {
+            if (user.isOnline) {
                 online.visibility = View.VISIBLE
                 date.visibility = View.GONE
             } else {
@@ -60,12 +61,12 @@ class AddParticipsntaToGroupChatViewHolder(
     }
 }
 
-class AddParticipsntaToGroupChatDiffCallback : DiffUtil.ItemCallback<Player>() {
-    override fun areItemsTheSame(oldItem: Player, newItem: Player): Boolean {
-        return oldItem.id == newItem.id
+class AddParticipsntaToGroupChatDiffCallback : DiffUtil.ItemCallback<User>() {
+    override fun areItemsTheSame(oldItem: User, newItem: User): Boolean {
+        return oldItem.userId == newItem.userId
     }
 
-    override fun areContentsTheSame(oldItem: Player, newItem: Player): Boolean {
+    override fun areContentsTheSame(oldItem: User, newItem: User): Boolean {
         return oldItem == newItem
     }
 }

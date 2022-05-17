@@ -13,13 +13,14 @@ import ru.procourt.databinding.FragmentCardPlayerSearchBinding
 import ru.procourt.databinding.FriendsForListGroupChatBinding
 import ru.procourt.dto.News
 import ru.procourt.dto.Player
+import ru.procourt.dto.User
 
 interface CreateGroupChatListener {
-    fun onWrite(player: Player)
+    fun onWrite(user: User)
 }
 
 class CreateGroupChatAdapter(private val createGroupChatListener: CreateGroupChatListener) :
-    ListAdapter<Player, CreateGroupChatViewHolder>(CreateGroupChatDiffCallback()) {
+    ListAdapter<User, CreateGroupChatViewHolder>(CreateGroupChatDiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CreateGroupChatViewHolder {
         val binding =
@@ -32,8 +33,8 @@ class CreateGroupChatAdapter(private val createGroupChatListener: CreateGroupCha
     }
 
     override fun onBindViewHolder(holder: CreateGroupChatViewHolder, position: Int) {
-        val player = getItem(position)
-        holder.bind(player)
+        val user = getItem(position)
+        holder.bind(user)
     }
 
 }
@@ -43,12 +44,12 @@ class CreateGroupChatViewHolder(
     private val binding: FriendsForListGroupChatBinding
 ) : RecyclerView.ViewHolder(binding.root) {
 
-    fun bind(player: Player) {
+    fun bind(user: User) {
 
         binding.apply {
-            friendName.text = player.name
+            friendName.text = user.name
 
-            if (player.isOnline == true) {
+            if (user.isOnline) {
                 online.visibility = View.VISIBLE
                 date.visibility = View.GONE
             } else {
@@ -57,7 +58,7 @@ class CreateGroupChatViewHolder(
             }
 
             write.setOnClickListener {
-                createGroupChatListener.onWrite(player)
+                createGroupChatListener.onWrite(user)
             }
 
         }
@@ -65,12 +66,12 @@ class CreateGroupChatViewHolder(
     }
 }
 
-class CreateGroupChatDiffCallback : DiffUtil.ItemCallback<Player>() {
-    override fun areItemsTheSame(oldItem: Player, newItem: Player): Boolean {
-        return oldItem.id == newItem.id
+class CreateGroupChatDiffCallback : DiffUtil.ItemCallback<User>() {
+    override fun areItemsTheSame(oldItem: User, newItem: User): Boolean {
+        return oldItem.userId == newItem.userId
     }
 
-    override fun areContentsTheSame(oldItem: Player, newItem: Player): Boolean {
+    override fun areContentsTheSame(oldItem: User, newItem: User): Boolean {
         return oldItem == newItem
     }
 }

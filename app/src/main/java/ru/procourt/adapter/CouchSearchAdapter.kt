@@ -14,13 +14,14 @@ import ru.procourt.databinding.FragmentCardPlayerSearchBinding
 import ru.procourt.dto.Couch
 import ru.procourt.dto.News
 import ru.procourt.dto.Player
+import ru.procourt.dto.User
 
 interface CouchSearchListener {
-    fun onChooseTime(couch: Couch)
+    fun onChooseTime(user: User)
 }
 
 class CouchSearchAdapter(private val couchSearchListener: CouchSearchListener) :
-    ListAdapter<Couch, CouchSearchViewHolder>(CouchSearchDiffCallback()) {
+    ListAdapter<User, CouchSearchViewHolder>(CouchSearchDiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CouchSearchViewHolder {
         val binding =
@@ -33,8 +34,8 @@ class CouchSearchAdapter(private val couchSearchListener: CouchSearchListener) :
     }
 
     override fun onBindViewHolder(holder: CouchSearchViewHolder, position: Int) {
-        val couch = getItem(position)
-        holder.bind(couch)
+        val user = getItem(position)
+        holder.bind(user)
     }
 
 }
@@ -44,14 +45,14 @@ class CouchSearchViewHolder(
     private val couchSearchListener: CouchSearchListener,
 ) : RecyclerView.ViewHolder(binding.root) {
 
-    fun bind(couch: Couch) {
+    fun bind(user: User) {
 
         binding.apply {
-            fccsCouchName.text = couch.name
-            fccsCouchRank.text = couch.rank
+            fccsCouchName.text = user.name
+            fccsCouchRank.text = user.level
 
             fccsChooseCouchTimeButton.setOnClickListener {
-                couchSearchListener.onChooseTime(couch)
+                couchSearchListener.onChooseTime(user)
             }
 
         }
@@ -59,12 +60,12 @@ class CouchSearchViewHolder(
     }
 }
 
-class CouchSearchDiffCallback : DiffUtil.ItemCallback<Couch>() {
-    override fun areItemsTheSame(oldItem: Couch, newItem: Couch): Boolean {
-        return oldItem.id == newItem.id
+class CouchSearchDiffCallback : DiffUtil.ItemCallback<User>() {
+    override fun areItemsTheSame(oldItem: User, newItem: User): Boolean {
+        return oldItem.userId == newItem.userId
     }
 
-    override fun areContentsTheSame(oldItem: Couch, newItem: Couch): Boolean {
+    override fun areContentsTheSame(oldItem: User, newItem: User): Boolean {
         return oldItem == newItem
     }
 }
