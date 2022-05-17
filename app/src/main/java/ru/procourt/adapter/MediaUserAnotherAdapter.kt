@@ -9,23 +9,23 @@ import ru.procourt.R
 import ru.procourt.databinding.*
 import ru.procourt.dto.*
 
-class MediaPlayerAnotherAdapter() :
-    ListAdapter<Media, MediaPlayerAnotherViewHolder>(MediaPlayerAnotherDiffCallback()) {
+class MediaUserAnotherAdapter() :
+    ListAdapter<Media, MediaUserAnotherViewHolder>(MediaUserAnotherDiffCallback()) {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MediaPlayerAnotherViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MediaUserAnotherViewHolder {
         val binding =
             FragmentCardMediaPlayerPersonalBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return MediaPlayerAnotherViewHolder(binding)
+        return MediaUserAnotherViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: MediaPlayerAnotherViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: MediaUserAnotherViewHolder, position: Int) {
         val media = getItem(position)
         holder.bind(media)
     }
 
 }
 
-class MediaPlayerAnotherViewHolder(
+class MediaUserAnotherViewHolder(
     private val binding: FragmentCardMediaPlayerPersonalBinding
 ) : RecyclerView.ViewHolder(binding.root) {
 
@@ -36,7 +36,7 @@ class MediaPlayerAnotherViewHolder(
     }
 }
 
-class MediaPlayerAnotherDiffCallback : DiffUtil.ItemCallback<Media>() {
+class MediaUserAnotherDiffCallback : DiffUtil.ItemCallback<Media>() {
     override fun areItemsTheSame(oldItem: Media, newItem: Media): Boolean {
         return oldItem.id == newItem.id
     }

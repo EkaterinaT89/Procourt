@@ -16,23 +16,23 @@ import ru.procourt.dto.Club
 import ru.procourt.dto.Player
 import ru.procourt.dto.Tournament
 
-class TournamentPlayerPersonalAdapter:
-    ListAdapter<Tournament, TournamentPlayerPersonalViewHolder>(TournamentPlayerPersonalDiffCallback()) {
+class TournamentUserPersonalAdapter:
+    ListAdapter<Tournament, TournamentUserPersonalViewHolder>(TournamentUserPersonalDiffCallback()) {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TournamentPlayerPersonalViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TournamentUserPersonalViewHolder {
         val binding =
             FragmentCardTournamentPlayerPersonalBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return TournamentPlayerPersonalViewHolder(binding)
+        return TournamentUserPersonalViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: TournamentPlayerPersonalViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: TournamentUserPersonalViewHolder, position: Int) {
         val tournament = getItem(position)
         holder.bind(tournament)
     }
 
 }
 
-class TournamentPlayerPersonalViewHolder(
+class TournamentUserPersonalViewHolder(
     private val binding: FragmentCardTournamentPlayerPersonalBinding
 ) : RecyclerView.ViewHolder(binding.root) {
 
@@ -60,7 +60,7 @@ class TournamentPlayerPersonalViewHolder(
     }
 }
 
-class TournamentPlayerPersonalDiffCallback : DiffUtil.ItemCallback<Tournament>() {
+class TournamentUserPersonalDiffCallback : DiffUtil.ItemCallback<Tournament>() {
     override fun areItemsTheSame(oldItem: Tournament, newItem: Tournament): Boolean {
         return oldItem.id == newItem.id
     }

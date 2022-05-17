@@ -14,23 +14,23 @@ import ru.procourt.dto.Game
 import ru.procourt.dto.Player
 import ru.procourt.dto.Tournament
 
-class GamesPlayerPersonalAdapter:
-    ListAdapter<Game, GamesPlayerPersonalViewHolder>(GamesPlayerPersonalDiffCallback()) {
+class GamesUserPersonalAdapter:
+    ListAdapter<Game, GamesUserPersonalViewHolder>(GamesUserPersonalDiffCallback()) {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GamesPlayerPersonalViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GamesUserPersonalViewHolder {
         val binding =
             FragmentCardGamePlayerPersonalBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return GamesPlayerPersonalViewHolder(binding)
+        return GamesUserPersonalViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: GamesPlayerPersonalViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: GamesUserPersonalViewHolder, position: Int) {
         val game = getItem(position)
         holder.bind(game)
     }
 
 }
 
-class GamesPlayerPersonalViewHolder(
+class GamesUserPersonalViewHolder(
     private val binding: FragmentCardGamePlayerPersonalBinding
 ) : RecyclerView.ViewHolder(binding.root) {
 
@@ -57,7 +57,7 @@ class GamesPlayerPersonalViewHolder(
     }
 }
 
-class GamesPlayerPersonalDiffCallback : DiffUtil.ItemCallback<Game>() {
+class GamesUserPersonalDiffCallback : DiffUtil.ItemCallback<Game>() {
     override fun areItemsTheSame(oldItem: Game, newItem: Game): Boolean {
         return oldItem.id == newItem.id
     }

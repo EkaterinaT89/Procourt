@@ -1,27 +1,19 @@
 package ru.procourt.adapter
 
-import android.animation.ObjectAnimator
-import android.util.Log
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import ru.procourt.R
-import ru.procourt.databinding.FragmentCardNewsBinding
-import ru.procourt.databinding.FragmentCardPlayerClubBinding
 import ru.procourt.databinding.FragmentCardPlayerForPlayersClubBinding
-import ru.procourt.databinding.FragmentCardPlayerSearchBinding
-import ru.procourt.dto.News
-import ru.procourt.dto.Player
+import ru.procourt.dto.User
 
 interface ClubPlayerListSeparateListener {
-    fun onChooseTime(player: Player)
+    fun onChooseTime(user: User)
 }
 
 class ClubPlayerListSeparateAdapter(private val clubPlayerListSeparateListener: ClubPlayerListSeparateListener) :
-    ListAdapter<Player, ClubPlayerListSeparateViewHolder>(ClubPlayerListSeparateDiffCallback()) {
+    ListAdapter<User, ClubPlayerListSeparateViewHolder>(ClubPlayerListSeparateDiffCallback()) {
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -37,8 +29,8 @@ class ClubPlayerListSeparateAdapter(private val clubPlayerListSeparateListener: 
     }
 
     override fun onBindViewHolder(holder: ClubPlayerListSeparateViewHolder, position: Int) {
-        val player = getItem(position)
-        holder.bind(player)
+        val user = getItem(position)
+        holder.bind(user)
     }
 
 }
@@ -48,14 +40,14 @@ class ClubPlayerListSeparateViewHolder(
     private val clubPlayerListSeparateListener: ClubPlayerListSeparateListener,
 ) : RecyclerView.ViewHolder(binding.root) {
 
-    fun bind(player: Player) {
+    fun bind(user: User) {
 
         binding.apply {
-            fcpfpcPlayerName.text = player.name
-            fcpfpcPlayerRank.text = player.rank
+            fcpfpcPlayerName.text = user.name
+            fcpfpcPlayerRank.text = user.level
 
             fcpfpcChooseTime.setOnClickListener {
-                clubPlayerListSeparateListener.onChooseTime(player)
+                clubPlayerListSeparateListener.onChooseTime(user)
             }
 
         }
@@ -63,12 +55,12 @@ class ClubPlayerListSeparateViewHolder(
     }
 }
 
-class ClubPlayerListSeparateDiffCallback : DiffUtil.ItemCallback<Player>() {
-    override fun areItemsTheSame(oldItem: Player, newItem: Player): Boolean {
-        return oldItem.id == newItem.id
+class ClubPlayerListSeparateDiffCallback : DiffUtil.ItemCallback<User>() {
+    override fun areItemsTheSame(oldItem: User, newItem: User): Boolean {
+        return oldItem.userId == newItem.userId
     }
 
-    override fun areContentsTheSame(oldItem: Player, newItem: Player): Boolean {
+    override fun areContentsTheSame(oldItem: User, newItem: User): Boolean {
         return oldItem == newItem
     }
 }

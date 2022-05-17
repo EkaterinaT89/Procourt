@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:id="@+id/fdbpu_delete_fragment"
     tools:context=".fragment.basket.DeleteBascketPopUpFragment"
-    android:background="@drawable/gradient_for_start_intro">
+    android:background="@color/dark_blue">
 
     <TextView
         android:id="@+id/top_thing"
@@ -68,6 +68,7 @@
             android:layout_marginBottom="15dp"
             android:backgroundTint="@color/first_intro_screen"
             android:text="@string/delete_button"
+            android:textColor="@color/white"
             app:cornerRadius="6sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

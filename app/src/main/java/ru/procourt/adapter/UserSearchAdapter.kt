@@ -9,45 +9,44 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import ru.procourt.R
 import ru.procourt.databinding.FragmentCardNewsBinding
-import ru.procourt.databinding.FragmentCardPlayerClubBinding
 import ru.procourt.databinding.FragmentCardPlayerSearchBinding
 import ru.procourt.dto.News
 import ru.procourt.dto.Player
 import ru.procourt.dto.User
 
-interface ClubPlayerListener {
+interface UserSearchListener {
     fun onChooseTime(user: User)
 }
 
-class ClubPlayerAdapter(private val clubPlayerListener: ClubPlayerListener) :
-    ListAdapter<User, ClubPlayerViewHolder>(ClubPlayerDiffCallback()) {
+class UserSearchAdapter(private val playerSearchListener: UserSearchListener) :
+    ListAdapter<User, UserSearchViewHolder>(PlayerSearchDiffCallback()) {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ClubPlayerViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserSearchViewHolder {
         val binding =
-            FragmentCardPlayerClubBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return ClubPlayerViewHolder(binding, clubPlayerListener)
+            FragmentCardPlayerSearchBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return UserSearchViewHolder(binding, playerSearchListener)
     }
 
-    override fun onBindViewHolder(holder: ClubPlayerViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: UserSearchViewHolder, position: Int) {
         val user = getItem(position)
         holder.bind(user)
     }
 
 }
 
-class ClubPlayerViewHolder(
-    private val binding: FragmentCardPlayerClubBinding,
-    private val clubPlayerListener: ClubPlayerListener,
+class UserSearchViewHolder(
+    private val binding: FragmentCardPlayerSearchBinding,
+    private val playerSearchListener: UserSearchListener,
 ) : RecyclerView.ViewHolder(binding.root) {
 
     fun bind(user: User) {
 
         binding.apply {
-            fcpcPlayerName.text = user.name
-            fcpcPlayerRank.text = user.level
+            fcpsPlayerName.text = user.name
+            fcpsPlayerRank.text = user.level
 
-            fcpcChoosePlayerTimeButton.setOnClickListener {
-                clubPlayerListener.onChooseTime(user)
+            fcpsChoosePlayerTimeButton.setOnClickListener {
+                playerSearchListener.onChooseTime(user)
             }
 
             }
@@ -55,7 +54,7 @@ class ClubPlayerViewHolder(
         }
     }
 
-class ClubPlayerDiffCallback : DiffUtil.ItemCallback<User>() {
+class PlayerSearchDiffCallback : DiffUtil.ItemCallback<User>() {
     override fun areItemsTheSame(oldItem: User, newItem: User): Boolean {
         return oldItem.userId == newItem.userId
     }

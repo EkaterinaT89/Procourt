@@ -1,21 +1,15 @@
 package ru.procourt.adapter
 
-import android.util.Log
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import ru.procourt.R
-import ru.procourt.databinding.FragmentCardNewsBinding
 import ru.procourt.databinding.FragmentCardParticipantsTournamentBinding
-import ru.procourt.databinding.FragmentCardPlayerSearchBinding
-import ru.procourt.dto.News
-import ru.procourt.dto.Player
+import ru.procourt.dto.User
 
 class TournamentPartsAdapter() :
-    ListAdapter<Player, TournamentPartsViewHolder>(TournamentPartsDiffCallback()) {
+    ListAdapter<User, TournamentPartsViewHolder>(TournamentPartsDiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TournamentPartsViewHolder {
         val binding =
@@ -28,8 +22,8 @@ class TournamentPartsAdapter() :
     }
 
     override fun onBindViewHolder(holder: TournamentPartsViewHolder, position: Int) {
-        val player = getItem(position)
-        holder.bind(player)
+        val user = getItem(position)
+        holder.bind(user)
     }
 
 }
@@ -38,23 +32,23 @@ class TournamentPartsViewHolder(
     private val binding: FragmentCardParticipantsTournamentBinding
 ) : RecyclerView.ViewHolder(binding.root) {
 
-    fun bind(player: Player) {
+    fun bind(user: User) {
 
         binding.apply {
-            playerName.text = player.name
-            playerRank.text = player.rank
-            playerPrice.text = "1 место"
+            playerName.text = user.name
+            playerRank.text = user.level
+            playerPrice.text = user.ratingValue
         }
 
     }
 }
 
-class TournamentPartsDiffCallback : DiffUtil.ItemCallback<Player>() {
-    override fun areItemsTheSame(oldItem: Player, newItem: Player): Boolean {
-        return oldItem.id == newItem.id
+class TournamentPartsDiffCallback : DiffUtil.ItemCallback<User>() {
+    override fun areItemsTheSame(oldItem: User, newItem: User): Boolean {
+        return oldItem.userId == newItem.userId
     }
 
-    override fun areContentsTheSame(oldItem: Player, newItem: Player): Boolean {
+    override fun areContentsTheSame(oldItem: User, newItem: User): Boolean {
         return oldItem == newItem
     }
 }
