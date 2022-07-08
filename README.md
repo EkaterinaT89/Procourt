@@ -30,7 +30,7 @@
 Языук: Kotlin, 
 Core, AppCompat, Android Jetpack: Recycle View, View model, Paging; Lifecycle, Material Design, Navigation, Room, SQLite, Retrofit, OkHttp, Glide, Coroutines, 
 Imagepicker, View, Exoplayer, Hilt Dagger, MVVM, Animations, Git, Gradle, ООП, CRUD, Figma, Debagger, custom View.
-
+Использован дизайн из Figma 
 
 Заставка:
 
